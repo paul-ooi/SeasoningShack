@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow|Lato');
+
+html {
+box-sizing: content-box;
+}
+
+*, *::before, *::after {
+box-sizing: inherit;
+}
+
+.border {
+border: 1px solid red;
+}
+
+body {
+font-family: 'Lato', sans-serif;
+/*font-family: 'Archivo Narrow', sans-serif;*/
+}
+
+nav li {
+text-transform: uppercase;
+}
+
+#logo {
+height: 100px;
+}
