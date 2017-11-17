@@ -19,6 +19,7 @@ font-family: 'Lato', sans-serif;
 
 nav li {
 text-transform: uppercase;
+list-style: none;
 }
 
 #logo {
