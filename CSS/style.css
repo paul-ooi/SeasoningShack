@@ -26,6 +26,7 @@ font-weight: bold;
 
 nav a {
 text-decoration: none;
+list-style: none;
 }
 
 #logo {
