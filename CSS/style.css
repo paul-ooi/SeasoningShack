@@ -14,11 +14,18 @@ border: 1px solid red;
 
 body {
 font-family: 'Lato', sans-serif;
-/*font-family: 'Archivo Narrow', sans-serif;*/
+font-size: 16px;
 }
 
 nav li {
 text-transform: uppercase;
+font-family: 'Archivo Narrow', sans-serif;
+font-size: 1.25rem;
+font-weight: bold;
+}
+
+nav a {
+text-decoration: none;
 }
 
 #logo {
