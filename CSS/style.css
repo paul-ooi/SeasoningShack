@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Archivo+Narrow|Lato');
+/*************************************************
+TABLE OF CONTENTS
+**************************************************
+1) GENERAL STYLING
+2) HEADINGS
+3) NAVIGATION
 
+*************************************************/
+
+/*1) GENERAL STYLING*/
 html {
 box-sizing: content-box;
 }
@@ -10,25 +19,30 @@ box-sizing: inherit;
 
 .border {
 border: 1px solid red;
-}
+} /*This is to help find the spacing on the page*/
 
 body {
 font-family: 'Lato', sans-serif;
 font-size: 16px;
 }
 
+
+/*2) HEADINGS*/
+
+#logo {
+height: 100px;
+}
+
+/*3) NAVIGATION*/
+
 nav li {
 text-transform: uppercase;
 font-family: 'Archivo Narrow', sans-serif;
 font-size: 1.25rem;
 font-weight: bold;
+list-style: none;
 }
 
 nav a {
 text-decoration: none;
-list-style: none;
-}
-
-#logo {
-height: 100px;
 }
