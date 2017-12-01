@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow|Lato');
+@import url('https://fonts.googleapis.com/css?family=Kalam|Lato');
 /*************************************************
 TABLE OF CONTENTS
 **************************************************
@@ -10,7 +10,8 @@ TABLE OF CONTENTS
 
 /*1) GENERAL STYLING*/
 html {
-box-sizing: content-box;
+box-sizing: border-box;
+font-size: 16px; /* this is to establish REM units, but can be deleted later*/
 }
 
 *, *::before, *::after {
@@ -22,27 +23,147 @@ border: 1px solid red;
 } /*This is to help find the spacing on the page*/
 
 body {
+max-width: 1024px;
+position: relative;
+margin: 0 auto;
 font-family: 'Lato', sans-serif;
-font-size: 16px;
 }
 
+header {
+position: fixed;
+top: 0px;
+z-index: 20;/*This keeps the Header and Navigavtion visible above the rest of the page*/
+width: 100%;
+height: 10rem;
+background-color: #a54f5085;
+color: #ffdec0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+main {
+position: relative;
+top: 10rem;
+}
+
+footer {
+clear: both;
+background-color: #a54f5085;
+color: #ffdec0;
+}
+
+#feature-slides {
+position: relative;
+width: 100%;
+height: 33rem;
+}
+
+#locations, #food {
+width: 100%;
+height: 27.6rem;
+}
+
+#services {
+position: relative;
+display: flex;
+flex-flow: nowrap;
+justify-content: space-between;
+width: 100%;
+height: 40rem;
+}
+
+#services div {
+flex: 1;
+text-align: center;
+}
+
+#social-media {
+display: flex;
+justify-content: flex-end;
+}
+
+.social {
+height: 50px;
+width: 50px;
+display: inline-block;
+margin: 1rem 0.5rem;
+background-color: #404040;
+}
 
 /*2) HEADINGS*/
 
 #logo {
 height: 100px;
+z-index: 10;
+}
+
+#company-branding {
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin: 0 auto;
+position: relative;
+font-size: 1.5rem;
+font-family: 'Kalam', Helvetica, Arial, sans-serif;
+text-align: center;
+text-transform: capitalize;
+font-weight:700;
+z-index: 10;
 }
 
 /*3) NAVIGATION*/
+nav ul {
+padding: 0;
+margin: 0;
+}
 
 nav li {
-text-transform: uppercase;
-font-family: 'Archivo Narrow', sans-serif;
+padding: 0 2rem;
+text-transform: capitalize;
+font-family: 'Lato', Helvetica, Arial, sans-serif;
 font-size: 1.25rem;
-font-weight: bold;
+font-weight: normal;
 list-style: none;
+}
+
+#main-nav {
+margin: 0 15%;
+position: relative;
+width: 70%;
+}
+
+#main-nav ul{
+display: flex;
+justify-content: space-between;
+}
+
+#main-nav li:first-of-type {
+padding-left: 0;
+}
+
+#main-nav li:last-of-type{
+padding-right: 0;
+}
+
+#main-nav li:nth-child(1n+0) {
+display: inline-block;
+/*float: left;*/
+}
+
+#main-nav li:nth-last-child(-n+3) {
+display: inline-block;
+/*float: right;*/
 }
 
 nav a {
 text-decoration: none;
+color: #ffdec0;
+}
+
+footer nav ul{
+display: flex;
+flex-direction: column;
+height: 70%;
 }
