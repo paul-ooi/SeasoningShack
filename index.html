@@ -7,31 +7,42 @@
 <body>
   <header class="border">
       <nav class="border" id="main-nav">
-        <ul>
-          <div>
-          <li><a href="#">menu</a></li>
-          <li><a href="#">specials</a></li>
-          <li><a href="#">locations</a></li></div><div>
-          <li><a href="#">event booking</a></li>
-          <li><a href="#">about</a></li>
-          <li><a href="#">contact</a></li></div>
+        <ul class="border">
+          <li>
+            <ul>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">specials</a></li>
+                <li><a href="#">locations</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+                <li><a href="#">event booking</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
 
-      <div id="company-branding"><img  class="border" src="Logo/Final Logo.svg" id="logo" height="50"/>seasoning shack</div>
+      <div id="company-branding"><img  class="border" src="Logo/Final Logo.svg" id="logo"/><h2>seasoning shack</h2></div>
   </header>
+  <div class="wrapper">
   <main class="border">
     <section class="border" id="feature-slides">
-        feature-slides
+        <h1>feature-slides</h1>
+        <h2>SUB heading</h2>
+
     </section>
     <section class="border" id="locations">
-        locations
+        <h2>locations</h2>
     </section>
     <section class="border" id="food">
-        <a href="#">Our menu</a>
-        <a href="#">Our specials</a>
+        <h2><a href="#">Our menu</a></h2>
+        <h2><a href="#">Our specials</a></h2>
     </section>
     <section class="border" id="services">
+      <h2 class="hidden">Additional Services</h2>
       <div class="border" id="contest">
           contest
       </div>
@@ -63,8 +74,15 @@
         <li><a href="#">contact</a></li>
       </ul>
     </nav>
-    &copy; Seasoning Shack <span id="copyright-year">2017</span>
+    <div id="copyright-privacy">
+        <ul>
+            <li>&copy; Seasoning Shack <span id="copyright-year">2017</span></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+        </ul>
+    </div>
   </footer>
+  </div>
 </body>
 
 </html>
