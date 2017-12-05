@@ -1,0 +1,65 @@
+/* General */
+body{
+  letter-spacing: 0.1rem;
+  line-height: 1.3rem;
+}
+div[class^="btn"]{
+  width: 180px;
+  height: 2.5rem;
+  position: absolute;
+  left: 110px;
+  background-color: #ffdec0;
+  color: #a54f50;
+  border-radius: 5px;
+  line-height: 2.5rem;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Entire Game Field */
+#game{
+  width: 750px;
+  display: flex;
+  margin: 0 auto;
+  border: 1px coral dotted;
+}
+
+/* Interface */
+#field{
+  height: 500px;
+  min-width: 400px;
+  position: relative;
+}
+.field-bg{
+  height: 500px;
+  min-width: 400px;
+}
+.btn-howto{
+  top: 360px;
+}
+.btn-play{
+  top: 300px;
+}
+/* Status Section */
+#status{
+  border: 1px coral dotted;
+  min-width: 300px;
+  height: 250px;
+}
+/* Rules(Display when user click "How to play?") */
+#rules{
+  height: 0;
+  min-width: 400px;
+  background-color: #333;
+  color: white;
+  opacity: 0.8;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+  overflow: hidden;
+}
+#rules li {
+  margin-top: 0.8rem;
+}

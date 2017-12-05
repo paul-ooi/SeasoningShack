@@ -2,9 +2,49 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Seasoning Shack -Kitchen Lab Simulation</title>
   </head>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/contest.css">
   <body>
+    <!-- TODO: Header -->
 
+    <!-- TODO:  Page Wrapper?-->
+    <!-- Main Contents -->
+    <main>
+      <h1 class=hidden>Kitchen Lab Simulation</h1>
+      <!-- Entire Game (Interface and status section) -->
+      <section id="game">
+        <!-- Interface -->
+        <div id="field">
+          <img class="field-bg" src="images/contest-kitchen.png" alt="restaurant counter">
+          <div class="btn-play">START</div>
+          <div class="btn-howto">How to play?</div>
+          <div id="rules">
+              <h2>How to play?</h2>
+              <ol>
+                <li class="rule1">Press "START" to play a game.</li>
+                <li class="rule2">Catch as many fallen items as you can in 60 seconds.</li>
+                <li class="rule3">There are some non-food items. Try to avoid them!</li>
+                <li class="rule4">If you miss catching foods or catch non-food items, you will lose a life. </li>
+                <li class="rule5">You are given 3 lives. You will lose the game if you lost 3 lives within 60 seconds.</li>
+              </ol>
+          </div>
+        </div>
+        <!-- Status Section -->
+        <div id="status">
+          <div id="timer">
+          </div>
+          <div id="life">
+          </div>
+          <div id="score">
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- TODO: Footer -->
   </body>
+  <script type="text/javascript" src="JavaScript/contest.js">
+
+  </script>
 </html>
