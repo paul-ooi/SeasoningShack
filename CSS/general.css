@@ -4,14 +4,14 @@ TABLE OF CONTENTS
 **************************************************
  1. GENERAL ELEMENTS SELECTOR
  2. MAIN CONTENTS SELECTOR
- 3. General CLASS SELECTOR
+ 3. GENERAL CLASS SELECTOR
 
 * Please use general.html as a template
 *************************************************/
 /* 1. GENERAL ELEMENTS */
 html {
   box-sizing: border-box;
-  font-size: 10px; /* this is to establish REM units */
+  font-size: 10px; /* this is to establish REM units. 1.6rem = 16px. 5rem = 50px*/
 }
 *, *::before, *::after {
   box-sizing: inherit;
@@ -68,7 +68,7 @@ main ol>li{
   line-height: 2rem;
 }
 
-/* 3. General CLASS SELECTOR */
+/* 3. GENERAL CLASS SELECTOR */
 .hidden {
   position: absolute;
   left: -100%;
