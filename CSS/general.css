@@ -59,6 +59,12 @@ main a:hover, main a:focus{
 main ul>li{
   list-style: none;
   margin-left: -2.2rem;
+  /* remove margin-left to make indent */
+  line-height: 2rem;
+}
+main ol>li{
+  margin-left: -2.2rem;
+  /* remove margin-left to make indent */
   line-height: 2rem;
 }
 
