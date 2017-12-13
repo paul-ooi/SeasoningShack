@@ -7,6 +7,7 @@ TABLE OF CONTENTS
  3. GENERAL CLASS SELECTOR
 
 * Please use general.html as a template
+* LAST UPDATE DEC 12, 11:45pm
 *************************************************/
 /* 1. GENERAL ELEMENTS */
 html {
@@ -71,7 +72,7 @@ main ol>li{
 /* 3. GENERAL CLASS SELECTOR */
 .hidden {
   position: absolute;
-  left: -100%;
+  left: -10000px; /* Changed DEC 12, from -100% to -10000px because hidden element was shown when minimize the browser*/
 }
 .flex-container{
   display: flex;
@@ -83,6 +84,7 @@ main ol>li{
 }
 .centre{
   margin: 0 auto;
+  text-align: center; /* ADDED DEC 12, Remove if it affects on your style*/
 }
 /*Remove if you don't need a button on your page.*/
 .link-button{
