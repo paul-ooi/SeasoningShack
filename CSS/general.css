@@ -20,6 +20,7 @@ html {
 body {
   position: relative;
   margin: 0 auto;
+  max-width: 1024px;
   font-family: 'Lato', Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
   color: #404040; /*gray*/
@@ -103,7 +104,7 @@ main ol>li{
 }
 .link-button:hover, .link-button:focus{
   width: 25rem;
-  background-color: #ae372185;
+  background-color: #404040;
   letter-spacing: 0.2rem;
   font-weight: normal;
 }
