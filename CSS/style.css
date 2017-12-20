@@ -57,17 +57,28 @@ position: relative;
 }
 
 footer {
-padding: 2.4rem 0.8rem;
-background-color: rgba(165, 79, 80, 0.85);
-background-image: url("../images/pexels-photo-672046.jpg");
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center center;
-color: rgb(255, 222, 192);
-display: flex;
-flex-flow: row wrap;
-text-align: left;
-justify-content: space-between;
+  position: relative;
+  padding: 2.4rem 0.8rem;
+  background-color: rgba(165, 79, 80, 0.85);
+  /*background-image: url("../images/pexels-photo-672046.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;*/
+  color: rgb(255, 222, 192);
+  display: flex;
+  flex-flow: row wrap;
+  text-align: left;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  max-width: 100%;
+  height: auto;
+  z-index: -10;
+  align-self: center;
+  left: 0;
 }
 
 #feature-slides {
