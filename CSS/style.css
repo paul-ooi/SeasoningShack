@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Kalam|Lato');
 /*************************************************
-TABLE OF CONTENTS
+TABLE OF CONTENTS - Header and Footer Styling (by Paul Ooi)
 **************************************************
 1) GENERAL STYLING (AS LAID OUT TOP TO BOTTOM)
 2) HEADINGS & LINKS
 3) NAVIGATION (CONTAINS HEADERS AND FOOTER STYLES)
 4) COPYRIGHT
+5) MEDIA QUERIES
 *************************************************/
 
 /*1) GENERAL STYLING*/
@@ -46,8 +47,8 @@ top: 0px;
 z-index: 20;/*This keeps the Header and Navigavtion visible above the rest of the page*/
 width: 100%;
 height: 10rem;
-background-color: #a54f5085;
-color: #ffdec0;
+background-color: rgba(165, 79, 80, 0.85);
+color: rgb(255, 222, 192);
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -61,8 +62,12 @@ position: relative;
 
 footer {
 padding: 1.5rem 0.5rem;
-background-color: #a54f5085;
-color: #ffdec0;
+background-color: rgba(165, 79, 80, 0.85);
+background-image: url("images/pexels-photo-672046.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center center;
+color: rgb(255, 222, 192);
 display: flex;
 flex-flow: row wrap;
 text-align: left;
@@ -104,8 +109,13 @@ flex: 0 1 20%;
 height: 50px;
 width: 50px;
 display: inline-block;
-margin: 1rem 0.5rem;
-background-color: #404040;
+margin: 1rem 0.75rem;
+background-color: transparent;
+}
+
+.social img {
+width: 100%;
+height: auto;
 }
 
 /*2) HEADINGS*/
@@ -130,10 +140,10 @@ font-family: 'Kalam', Helvetica, Arial, sans-serif;
 text-align: center;
 text-transform: capitalize;
 font-weight:700;
-color: #ffdec0;
+color: rgb(255, 222, 192);
 }
 
-h1 {
+/* h1 {
 font-size: 2rem;
 font-weight: 900;
 text-transform: capitalize;
@@ -145,21 +155,23 @@ font-size: 1.4rem;
 font-weight: 900;
 text-transform: capitalize;
 color: #9ab997;
-}
+} */
 
 nav a, #copyright-privacy a {
 text-decoration: none;
-color: #ffdec0;
+color: rgb(255, 222, 192);
 }
 
 nav a:hover {
-border-bottom: 2px solid #ffdec0;
+border-bottom: 2px solid rgb(255, 222, 192);
 }
 
-#food a {
+/* #food a {
 text-decoration: none;
 color: inherit;
-}
+} */
+
+
 /*3) NAVIGATION*/
 nav ul, #copyright-privacy ul {
 padding: 0;
@@ -215,4 +227,37 @@ margin-right: 4rem;
 #copyright-privacy {
 margin-top: 1rem;
 flex: 0 0 100%;
+}
+
+/* 5) MEDIA QUERIES */
+
+@media all and (max-width:955px) {
+footer nav li {
+flex: 1 1 48%;
+}
+
+}
+
+@media all and (max-width:915px) {
+
+
+}
+
+@media all and (max-width:700px) {
+footer nav {
+order:0;
+flex:1 1 100%;
+}
+
+footer nav li {
+flex: 1 1 33%;
+font-size: 1em;
+text-align: center;
+}
+
+#social-media {
+justify-content: center;
+flex: 1 1 100%;
+margin-bottom: 1.5rem;
+}
 }
