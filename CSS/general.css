@@ -2,76 +2,93 @@
 /*************************************************
 TABLE OF CONTENTS
 **************************************************
-1) ELEMENTS SELECTOR
-/*2) CLASS SELECTOR
+ 1. GENERAL ELEMENTS SELECTOR
+ 2. MAIN CONTENTS SELECTOR
+ 3. GENERAL CLASS SELECTOR
+
+* Please use general.html as a template
+* LAST UPDATE DEC 12, 11:45pm
 *************************************************/
-/*1) ELEMENTS SELECTOR*/
+/* 1. GENERAL ELEMENTS */
 html {
   box-sizing: border-box;
-  font-size: 10px; /* this is to establish REM units */
+  font-size: 10px; /* this is to establish REM units. 1.6rem = 16px. 5rem = 50px*/
 }
-  *, *::before, *::after {
+*, *::before, *::after {
   box-sizing: inherit;
 }
 body {
   position: relative;
   margin: 0 auto;
+  max-width: 1024px;
   font-family: 'Lato', Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
   color: #404040; /*gray*/
 }
 h1, h2, h3, h4, h5, h6{
-  margin: 0rem 2rem 0rem 2rem;
+  margin: 0.8rem 1.6rem 0.8rem 1.6rem;
   font-weight: 900;
   text-transform: capitalize;
 }
 h1 {
-font-size: 5rem;
-color: #9ab997;
+  font-size: 5rem;
+  color: #9ab997;
 }
 h2 {
-font-size: 3.6rem;
-color: #9ab997;
+  font-size: 3.6rem;
 }
 h3 {
   font-size: 2.4rem;
 }
+
+/* 2. MAIN CONTENTS SELECTOR */
+/* In order not to affect on upcomming style for header and footer. */
 main {
-  /*display: none;*/
   position: relative;
-  padding: 2rem 0 2rem 0;
+  padding: 3.2rem 0 3.2rem 0;
 }
-p {
-  margin: 0rem 2rem 0rem 2rem;
+main p{
+  margin: 0rem 1.6rem 0.8rem 1.6rem;
   line-height: 2rem;
-  letter-spacing: 0.1rem;
 }
-a {
+main a{
   text-decoration: none;
   color: #404040;
 }
-a:hover, a:focus {
+main a:hover, main a:focus{
   font-weight: 600;
 }
-ul > li {
+main ul>li{
   list-style: none;
+  margin-left: -2.2rem;
+  /* remove margin-left to make indent */
+  line-height: 2rem;
+}
+main ol>li{
+  margin-left: -2.2rem;
+  /* remove margin-left to make indent */
+  line-height: 2rem;
 }
 
-/*2) CLASS SELECTOR*/
+/* 3. GENERAL CLASS SELECTOR */
 .hidden {
   position: absolute;
-  left: -100%;
+  left: -10000px; /* Changed DEC 12, from -100% to -10000px because hidden element was shown when minimize the browser*/
 }
 .flex-container {
   display: flex;
 }
 .wrapper {
-  /*This should be wrapped around the items below the header to ensure it starts below the fixed navbar*/
   position: relative;
   top: 16rem;
   width: 100%;
 }
-.link-button {
+.centre{
+  margin: 0 auto;
+  text-align: center; /* ADDED DEC 12, Remove if it affects on your style*/
+}
+/*Remove if you don't need a button on your page.*/
+.link-button{
   display: block;
   width: 20rem;
   height: 4rem;
@@ -87,15 +104,12 @@ ul > li {
 }
 .link-button:hover, .link-button:focus {
   width: 25rem;
-  background-color: #ae372185;
+  background-color: #404040;
   letter-spacing: 0.2rem;
   font-weight: normal;
 }
-.centre {
-  margin: 0 auto;
-}
 
-/*=============*/
+/*=== Remove those once you have header and footer ===*/
 header {
   position: fixed;
   top: 0px;
@@ -111,13 +125,16 @@ footer {
   background-color: #ae372185;
   color: #ffdec0;
 }
-/* Purpose for the styling. Please remove them once it's not needed. */
-  /*Place holder for header and footer*/
-  .placeholder {
-    width: 100%;
-    height: 15rem;
-    font-size: 2rem;
-  }
+
+/*Place holder for header and footer*/
+.placeholder{
+  width: 100%;
+  height: 16rem;
+  font-size: 4rem;
+  text-align: center;
+}
+
+/*=== Remove those once you don't need anymore ===*/
   /* add class="border" and you can see the border of the elements */
   .border {
     border: 1px solid red;
