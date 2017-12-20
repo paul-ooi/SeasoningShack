@@ -56,7 +56,7 @@ align-items: center;
 }
 
 main {
-/*display: none;*/
+display: none;
 position: relative;
 }
 
@@ -91,7 +91,7 @@ display: flex;
 flex-flow: nowrap;
 justify-content: space-between;
 width: 100%;
-height: 40rem;
+height: 28rem;
 }
 
 #services div {
@@ -103,6 +103,7 @@ text-align: center;
 display: flex;
 justify-content: flex-end;
 flex: 0 1 20%;
+margin-bottom: 0.75rem;
 }
 
 .social {
@@ -169,8 +170,13 @@ border-bottom: 2px solid rgb(255, 222, 192);
 /* #food a {
 text-decoration: none;
 color: inherit;
-} */
+background-color: #404040;
+padding: 0.5rem 0 0.5rem 0.25rem;
+}
 
+#food h2{
+margin: 2rem 0;
+}
 
 /*3) NAVIGATION*/
 nav ul, #copyright-privacy ul {
@@ -188,32 +194,41 @@ font-size: 1.25rem;
 font-weight: normal;
 }
 
+#main-nav li:nth-child(3){
+margin-right: 15%;
+}
+#main-nav li:nth-child(4){
+margin-left: 15%;
+}
+
+
 #main-nav {
 position: absolute;
 width: 100%;
 max-width: 1024px;
 }
 
-#main-nav > ul{
+#main-nav ul{
 display: flex;
 flex-flow: row nowrap;
 justify-content: space-between;
 }
 
-
 footer nav {
 order:-1;
-flex:0.25 1 40%;
+flex:0.25 2 30%;
 }
 
 footer nav ul{
 display: flex;
-/*flex-direction: column;*/
 flex-wrap: wrap;
 justify-content: flex-start;
+height: 80%;
 }
 
 footer nav li{
+font-size: 0.75rem;
+padding: 0.25rem 0;
 flex: 1 1 33%;
 }
 
@@ -221,15 +236,67 @@ flex: 1 1 33%;
 /*4) COPYRIGHT*/
 #copyright-privacy li {
 display: inline-block;
-margin-right: 4rem;
+margin: 0 4rem 1rem 0;
 }
 
 #copyright-privacy {
+font-size: 0.6rem;
 margin-top: 1rem;
 flex: 0 0 100%;
 }
 
 /* 5) MEDIA QUERIES */
+@media all and (max-width:960px){
+
+    #main-nav ul{
+    flex-flow: column wrap;
+    height: 2rem;
+    }
+
+    nav li {
+    /*display: block;*/
+    text-align: center;
+    margin: 0.5rem 0;
+    }
+
+    #main-nav {
+    width: 70%;
+    }
+
+    footer {
+    flex-flow: column nowrap;
+    }
+
+    #social-media {
+    justify-content: center;
+    }
+
+    footer nav {
+    order:0;
+    flex: 1 3 80%;
+    margin: 0 auto;
+    }
+
+    footer nav ul{
+    display: block;
+    text-align: center;
+    }
+
+    footer nav li{
+    display: inline;
+    margin: 0 0.35rem;
+    padding: 0;
+    }
+
+    #copyright-privacy {
+    text-align: center;
+    }
+
+    #copyright-privacy li {
+    display: inline-block;
+    margin: 0 1.5rem 0.5rem;
+    }
+}
 
 @media all and (max-width:955px) {
 footer nav li {
@@ -240,6 +307,26 @@ flex: 1 1 48%;
 
 @media all and (max-width:915px) {
 
+
+}
+
+
+@media all and (max-width:760px){
+header {
+justify-content: flex-start;
+}
+#company-branding {
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+margin: auto;
+position: relative;
+z-index: 10;
+}
+
+#main-nav {
+order: 2;
+}
 
 }
 
@@ -260,4 +347,5 @@ justify-content: center;
 flex: 1 1 100%;
 margin-bottom: 1.5rem;
 }
+
 }
