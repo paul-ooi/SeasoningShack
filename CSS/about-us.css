@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Kalam|Lato');
+
+/* GENERAL STYLING */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+.hidden {
+  position: absolute;
+  left: -100000px;
+}
+body {
+  margin:0;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+}
+.page-wrapper {
+  position:relative;
+  max-width:1024px;
+  margin: 0 auto;
+}
+
+
+/* HEADER */
+#header {
+  position: fixed;
+  top: 0px;
+  z-index: 20;/*This keeps the Header and Navigavtion visible above the rest of the page*/
+  width: 100%;
+  height: 12rem;
+  background-color: #993a29;
+  color: #ffdec0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#site-logo-and-name {
+  padding-top:70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#logo {
+  height: 90px;
+  z-index: 10;
+}
+
+/* NAVIGATION */
+#main-nav ul, #footer-nav ul {
+  list-style:none;
+}
+
+#main-nav > ul{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+/* BODY */
+#main {
+  padding-top:12rem;	
+}
+
+
+
+
+
+/* FOOTER */
+
+#footer {
+padding: 1.5rem 0.5rem;
+background-color: #a54f5085;
+color: #ffdec0;
+/* display: flex; */
+/* flex-flow: row wrap; */
+/* text-align: left; */
+/* justify-content: space-between; */
+}
+#footer-nav li {
+  display:inline-block;
+}
+#social-media {
+
+  display: flex;
+  justify-content: flex-end;
+  flex: 0 1 20%;
+}
+.socmedia {
+	
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  margin: 1rem 0.5rem;
+  background-color: #404040;
+}
+#footer-nav {
+  order:-1;
+  flex:0.25 1 40%;
+}
+footer nav ul{
+  display: flex;
+  /*flex-direction: column;*/
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+#footer-nav li{
+  flex: 1 1 33%;
+}
+#copyright {
+  margin-top: 1rem;
+  flex: 0 0 100%;
+}
+#copyright ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#copyright li {
+  display: inline-block;
+  margin-right: 4rem;
+}
+
+
+
+
+
+
+
+
