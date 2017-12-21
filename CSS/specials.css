@@ -1,0 +1,68 @@
+
+ul {
+	padding:0;
+}
+ul li {
+	list-style:none;
+	margin-bottom:3em;
+}
+h3 {
+	font-size:1.5em;
+}
+.section-title {
+	text-align:center;
+	font-size:2.25em;
+	color:#9ab997;
+	padding:0.2em;
+	background-color:#404040;
+	border-radius:0.4em;
+	text-align:center;
+	flex:100%;
+}
+.column-2 { 
+	flex:0.5 0 0;
+}
+.event-name {
+	text-align:center;
+	font-size:1.5em;
+	margin-bottom:0.5em;
+	color:#ae3721;
+}
+.event-description {
+	text-align:center;
+}
+.dish-name {
+	font-weight:bold;
+	font-size:1.2em;
+	position:relative;
+	border-bottom:1.5px dotted black;
+}
+.dish-price {
+	font-weight:normal;
+	font-size:0.9em;
+	float:right;
+}
+
+.dish-description {
+	width:70%;
+	clear:both;
+	font-size:0.9em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

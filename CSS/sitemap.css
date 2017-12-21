@@ -1,0 +1,36 @@
+/*temporary page border*/
+html {
+	box-sizing:border-box;
+}
+*, *::before, *::after {
+	box-sizing:inherit;
+}
+.page-wrapper {
+	max-width:1024px;
+	margin:0 auto;
+	font-family: 'Lato', sans-serif;
+}
+.flex-container {
+	display:flex;
+	flex-flow:row wrap;
+}
+
+ul {
+	padding:0;
+}
+ul li {
+	list-style:none;
+	line-height:2em;
+	margin:0.5em;
+	flex:1 auto;
+	text-align:center;
+	border:1.5px solid #404040;
+	border-radius:5px;
+}
+a {
+	color:black;
+	text-decoration:none;
+}
+a:hover {
+	color:#ae3721;
+}
