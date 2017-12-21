@@ -3,16 +3,15 @@
 TABLE OF CONTENTS - Header and Footer Styling (by Paul Ooi)
 **************************************************
 1) GENERAL STYLING (AS LAID OUT TOP TO BOTTOM)
-2) HEADINGS & LINKS
-3) NAVIGATION (CONTAINS HEADERS AND FOOTER STYLES)
-4) COPYRIGHT
+2) HEADER
+3) NAVIGATION
+4) COPYRIGHT & FOOTER
 5) MEDIA QUERIES
 *************************************************/
 
 /*1) GENERAL STYLING*/
 html {
 box-sizing: border-box;
-/*font-size: 16px; /* this is to establish REM units, but can be deleted later*/
 font-size:10px;
 }
 
@@ -20,18 +19,12 @@ font-size:10px;
 box-sizing: inherit;
 }
 
-.border {
-border: 1px solid red;
-} /*This is to help find the spacing on the page, delete this as a final step before submitting*/
-
 .hidden {
 position: absolute;
 left: -100%;
 }
 
 body {
-position: relative;
-margin: 0 auto;
 font-family: 'Lato', Helvetica, Arial, sans-serif;
 }
 
@@ -49,84 +42,11 @@ width: 100%;
 background-color: rgba(165, 79, 80, 0.85);
 color: rgb(255, 222, 192);
 display: flex;
+transition: all 500ms linear;
 }
 
-main {
-/* display: none; */
-position: relative;
-}
 
-footer {
-  position: relative;
-  padding: 2.4rem 0.8rem;
-  background-color: rgba(165, 79, 80, 0.85);
-  /*background-image: url("../images/pexels-photo-672046.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;*/
-  color: rgb(255, 222, 192);
-  display: flex;
-  flex-flow: row wrap;
-  text-align: left;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-.background {
-  position: absolute;
-  max-width: 100%;
-  height: auto;
-  z-index: -10;
-  align-self: center;
-  left: 0;
-}
-
-#feature-slides {
-position: relative;
-width: 100%;
-height: 40rem;
-}
-
-#locations, #food {
-width: 100%;
-height: 44.2rem;
-}
-
-#services {
-position: relative;
-display: flex;
-flex-flow: nowrap;
-justify-content: space-between;
-width: 100%;
-height: 28rem;
-}
-
-#services div {
-flex: 1;
-text-align: center;
-}
-
-#social-media {
-display: flex;
-justify-content: flex-end;
-flex: 0 1 20%;
-margin-bottom: 0.75rem;
-}
-
-.social {
-height: 5rem;
-width: 5rem;
-display: inline-block;
-margin: 1.6rem 1.2rem;
-background-color: transparent;
-}
-
-.social img {
-width: 100%;
-height: auto;
-}
-
-/*2) HEADINGS*/
+/*2) HEADER*/
 header.large {
 height: 16rem;
 flex-direction: column;
@@ -159,91 +79,23 @@ header.small #logo {
 height: 5rem;
 }
 
-#logo {
-height: 9rem;
-z-index: 10;
-}
-
-#company-branding {
-display: flex;
-flex-direction: column;
-margin: auto;
-position: relative;
-z-index: 10;
-}
-
-#company-branding h2 {
-margin: 0.4rem auto;
-font-size: 2.4rem;
-font-family: 'Kalam', Helvetica, Arial, sans-serif;
-text-align: center;
-text-transform: capitalize;
-font-weight:700;
-color: rgb(255, 222, 192);
-}
-
-/* h1 {
-font-size: 2rem;
-font-weight: 900;
-text-transform: capitalize;
-color: #9ab997;
-}
-
-h2 {
-font-size: 1.4rem;
-font-weight: 900;
-text-transform: capitalize;
-color: #9ab997;
-} */
-
-nav a, #copyright-privacy a {
-text-decoration: none;
-color: rgb(255, 222, 192);
-}
-
-nav a:hover {
-border-bottom: 2px solid rgb(255, 222, 192);
-}
-
-/* #food a {
-text-decoration: none;
-color: inherit;
-background-color: #404040;
-padding: 0.5rem 0 0.5rem 0.25rem;
-}
-
-#food h2{
-margin: 2rem 0;
-}*/
-
-/*3) NAVIGATION*/
-nav ul, #copyright-privacy ul {
-padding: 0;
-margin: 0;
-list-style: none;
-}
-
-nav li {
-display: inline-block;
-padding: 0 0.8rem;
-text-transform: capitalize;
-font-family: 'Lato', Helvetica, Arial, sans-serif;
-font-size: 1.8rem;
-font-weight: normal;
-}
-
-#main-nav li:nth-child(3){
-margin-right: 15%;
-}
-#main-nav li:nth-child(4){
-margin-left: 15%;
-}
-
 header.small #main-nav {
 flex: 0 1 60%;
 width: 60%;
 position: relative;
 margin-left: 5%;
+}
+
+header.small #main-nav ul {
+line-height: 2rem;
+height: 5rem;
+align-content: space-around;
+flex-flow: row wrap;
+}
+
+header.small #main-nav li {
+flex: 0 1 33%;
+font-size: 1.6rem;
 }
 
 header.small #main-nav li:nth-child(4){
@@ -254,11 +106,78 @@ header.small #main-nav li:nth-child(3){
 margin-right: unset;
 }
 
+header.small a:hover {
+border-bottom: 3px solid rgb(255, 222, 192);
+padding-bottom: 3px;
+}
+
+#logo {
+height: 9rem;
+z-index: 10;
+transition: all 200ms linear;
+}
+
+#company-branding {
+display: flex;
+flex-direction: column;
+margin: auto;
+position: relative;
+z-index: 10;
+transition: all 300ms linear;
+}
+
+#company-branding h2 {
+margin: 0.4rem auto;
+font-size: 2.4rem;
+font-family: 'Kalam', Helvetica, Arial, sans-serif;
+text-align: center;
+text-transform: capitalize;
+font-weight:700;
+color: rgb(255, 222, 192);
+transition: all 300ms linear;
+}
+
+
+
+/*3) NAVIGATION*/
+nav ul, #copyright-privacy ul {
+padding: 0;
+margin: 0;
+list-style: none;
+}
+
+nav a, #copyright-privacy a {
+text-decoration: none;
+color: rgb(255, 222, 192);
+}
+
+nav li {
+display: inline-block;
+padding: 0 0.8rem;
+text-transform: capitalize;
+font-family: 'Lato', Helvetica, Arial, sans-serif;
+font-size: 1.8rem;
+font-weight: normal;
+transition: all 200ms linear;
+}
+
+#main-nav li:nth-child(3){
+margin-right: 15%;
+}
+
+#main-nav li:nth-child(4){
+margin-left: 15%;
+}
 
 #main-nav {
 position: absolute;
-width: 100%;
+width: 90%;
 max-width: 1024px;
+}
+
+#main-nav a:hover {
+border-bottom: 6px solid rgb(255, 222, 192);
+padding-bottom: 5px;
 }
 
 #main-nav ul{
@@ -267,6 +186,7 @@ flex-flow: row nowrap;
 justify-content: space-between;
 }
 
+/*4) COPYRIGHT & FOOTER*/
 footer nav {
 order: -1;
 flex:0.25 1 40%;
@@ -284,8 +204,6 @@ padding: 0.4rem 0;
 flex: 1 1 33%;
 }
 
-
-/*4) COPYRIGHT*/
 #copyright-privacy li {
 display: inline-block;
 margin: 0 1.6rem 1.6rem 0;
@@ -295,6 +213,48 @@ margin: 0 1.6rem 1.6rem 0;
 font-size: 1rem;
 margin-top: 1.6rem;
 flex: 0 0 100%;
+}
+
+footer {
+  position: relative;
+  padding: 2.4rem 0.8rem;
+  background-color: rgba(165, 79, 80, 0.85);
+  color: rgb(255, 222, 192);
+  display: flex;
+  flex-flow: row wrap;
+  text-align: left;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  max-width: 100%;
+  height: auto;
+  z-index: -10;
+  align-self: center;
+  left: 0;
+  object-fit: cover;
+}
+
+#social-media {
+display: flex;
+justify-content: flex-end;
+flex: 0 1 20%;
+margin-bottom: 0.75rem;
+}
+
+.social {
+height: 5rem;
+width: 5rem;
+display: inline-block;
+margin: 1.6rem 1.2rem;
+background-color: transparent;
+}
+
+.social img {
+width: 100%;
+height: auto;
 }
 
 /* 5) MEDIA QUERIES */
@@ -359,17 +319,32 @@ flex: 0 0 100%;
     justify-content: flex-start;
     }
 
+    #logo {
+    margin-right: 1.5em;
+    }
+
     #company-branding {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin: auto;
+    margin-left:5%;
     position: relative;
     z-index: 10;
+    flex: 1 1 45%;
+    align-items: center;
+    }
+
+    #company-branding h2 {
+    margin: unset;
     }
 
     #main-nav {
     order: 2;
+    flex: 0 1 33%;
+    }
+
+    #main-nav ul {
+    line-height: 2.25rem;
     }
 
 }
@@ -382,7 +357,7 @@ flex: 0 0 100%;
 
     footer nav li {
     flex: 1 1 33%;
-    font-size: 1.2em;
+    font-size: 0.85em;
     text-align: center;
     }
 
@@ -392,6 +367,14 @@ flex: 0 0 100%;
     margin-bottom: 2.4rem;
     }
 
+    .background {
+    max-width: 125%;
+    height: 100%;
+    }
+}
+
+@media all and (max-width:670px) {
+/* Need to put the Hidden Menu and hamburger */
 }
 
 @media all and (max-width:400px) {

@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Kalam|Lato');
+/*************************************************
+TABLE OF CONTENTS - Index-HomePage Styling (by Paul Ooi)
+**************************************************
+1) GENERAL STYLING (AS LAID OUT TOP TO BOTTOM)
+2) HEADINGS & LINKS
+3) MEDIA QUERIES
+*************************************************/
+
+/*1) GENERAL STYLING*/
+html {
+box-sizing: border-box;
+font-size:10px;
+}
+
+*, *::before, *::after {
+box-sizing: inherit;
+}
+
+.border {
+border: 1px solid red;
+} /*This is to help find the spacing on the page, delete this as a final step before submitting*/
+
+.hidden {
+position: absolute;
+left: -100%;
+}
+
+body {
+position: relative;
+margin: 0 auto;
+font-family: 'Lato', Helvetica, Arial, sans-serif;
+}
+
+.wrapper {
+/*This should be wrapped around the items below the header to ensure it starts below the fixed navbar*/
+position: relative;
+top: 40rem;
+}
+
+main {
+/* display: none; */
+position: relative;
+}
+
+#feature-slides {
+position: relative;
+width: 100%;
+height: 40rem;
+}
+
+#locations, #food {
+width: 100%;
+height: 44.2rem;
+}
+
+#services {
+position: relative;
+display: flex;
+flex-flow: nowrap;
+justify-content: space-between;
+width: 100%;
+height: 28rem;
+}
+
+#services div {
+flex: 1;
+text-align: center;
+}
+
+h1 {
+font-size: 2rem;
+font-weight: 900;
+text-transform: capitalize;
+color: #9ab997;
+}
+
+h2 {
+font-size: 1.4rem;
+font-weight: 900;
+text-transform: capitalize;
+color: #9ab997;
+}
+
+#food a {
+text-decoration: none;
+color: inherit;
+background-color: #404040;
+padding: 0.5rem 0 0.5rem 0.25rem;
+}
+
+#food h2{
+margin: 2rem 0;
+}
+
+
+/* 3) MEDIA QUERIES */
