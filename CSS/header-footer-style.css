@@ -39,7 +39,7 @@ position: fixed;
 top: 0px;
 z-index: 20;/*This keeps the Header and Navigavtion visible above the rest of the page*/
 width: 100%;
-background-color: rgba(165, 79, 80, 0.85);
+background-color: rgba(165, 79, 80, 0.9);
 color: rgb(255, 222, 192);
 display: flex;
 transition: all 500ms linear;
@@ -123,6 +123,7 @@ flex-direction: column;
 margin: auto;
 position: relative;
 z-index: 10;
+align-items: center;
 transition: all 300ms linear;
 }
 
@@ -146,7 +147,7 @@ margin: 0;
 list-style: none;
 }
 
-nav a, #copyright-privacy a {
+a, nav a, #copyright-privacy a {
 text-decoration: none;
 color: rgb(255, 222, 192);
 }
@@ -218,7 +219,7 @@ flex: 0 0 100%;
 footer {
   position: relative;
   padding: 2.4rem 0.8rem;
-  background-color: rgba(165, 79, 80, 0.85);
+  background-color: rgba(165, 79, 80, 0.9);
   color: rgb(255, 222, 192);
   display: flex;
   flex-flow: row wrap;

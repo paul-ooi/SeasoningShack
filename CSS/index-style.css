@@ -38,13 +38,30 @@ position: relative;
 top: 40rem;
 }
 
+.flex-container {
+position: relative;
+display: flex;
+}
+
 main {
 /* display: none; */
 position: relative;
 }
 
+.promo-detail {
+display: none;
+}
+
+.promo-detail:nth-of-type(1) {
+display: block;
+}
+
+.promo-detail img {
+position: absolute;
+flex: 1 0 auto;
+}
+
 #feature-slides {
-position: relative;
 width: 100%;
 height: 40rem;
 }
@@ -52,6 +69,22 @@ height: 40rem;
 #locations, #food {
 width: 100%;
 height: 44.2rem;
+}
+
+.details {
+text-align: center;
+}
+
+.store-front {
+width: 22.2rem;
+height: 22.2rem;
+border-radius: 100%;
+overflow: hidden;
+}
+
+.store-front img {
+height: 100%;
+width: auto;
 }
 
 #services {
