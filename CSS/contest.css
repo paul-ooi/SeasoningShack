@@ -1,56 +1,68 @@
-/* General */
-body{
-  letter-spacing: 0.1rem;
-  line-height: 1.3rem;
+body, html {
+  margin: 0 auto;
 }
-div[class^="btn"]{
-  width: 180px;
-  height: 2.5rem;
+
+/* Style */
+#game {
+  width: 750px;
+  margin: 2rem auto;
+}
+.field-bg {
+  height: 500px;
+  width: 400px;
+}
+div[class^="btn"] {
+  width: 20rem;
+  height: 4rem;
   position: absolute;
   left: 110px;
-  background-color: #ffdec0;
-  color: #a54f50;
+  background-color: #ae3721;
+  color: #fff;
   border-radius: 5px;
-  line-height: 2.5rem;
+  line-height: 4rem;
+  letter-spacing: 0.1rem;
   text-align: center;
-  font-weight: bold;
   cursor: pointer;
 }
-
-/* Entire Game Field */
-#game{
-  width: 750px;
-  display: flex;
-  margin: 0 auto;
-  border: 1px coral dotted;
-}
-
-/* Interface */
-#field{
-  height: 500px;
-  min-width: 400px;
-  position: relative;
-}
-.field-bg{
-  height: 500px;
-  min-width: 400px;
-}
-.btn-howto{
+.btn-howto {
   top: 360px;
 }
-.btn-play{
+.btn-play {
   top: 300px;
 }
+
 /* Status Section */
-#status{
-  border: 1px coral dotted;
-  min-width: 300px;
-  height: 250px;
+#status {
+  width: 300px;
+  height: 24rem;
+  margin: 10rem auto;
+  font-size: 2rem;
+  /* line-height: 8rem; */
 }
-/* Rules(Display when user click "How to play?") */
-#rules{
+#status>div {
+  height: 8rem;
+  width: 100%;
+}
+#timer-outline {
+  width: 242px;
+  height: 3rem;
+  border: 1px solid #404040;
+}
+#timer {
+  width: 240px;
+  height: 2.8rem;
+  background-color: #9ab997;
+  padding-left: 0.5rem;
+}
+#life>img {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Rules and Gameover*/
+#rules, #gameover {
   height: 0;
-  min-width: 400px;
+  width: 400px;
   background-color: #333;
   color: white;
   opacity: 0.8;
@@ -60,6 +72,40 @@ div[class^="btn"]{
   cursor: pointer;
   overflow: hidden;
 }
+#rules h2 {
+ color: #9ab997;
+}
 #rules li {
-  margin-top: 0.8rem;
+  margin: 1rem;
+}
+.gameover-msg {
+  margin-top: 200px;
+  font-size: 3rem;
+}
+.btn-replay {
+  top: 300px;
+}
+
+/* Gaming */
+#area {
+  width: 400px;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+  cursor: none;
+  overflow: hidden;
+}
+#catcher {
+  position: absolute;
+  top: 470px;
+  left: 160px;
+}
+.fallingItem {
+  position: absolute;
+  width: auto;
+  height: auto;
+}
+
+.img_load {
+  display: none;
 }
