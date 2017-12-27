@@ -1,0 +1,115 @@
+/*GENERAL*/
+.contact h3{
+  margin-bottom: 0rem;
+}
+/*LAYOUT*/
+.flex-container{
+  margin-top: 4.8rem;
+  flex-wrap: wrap-reverse;
+}
+.location{
+  width: 35%;
+}
+.contact-form{
+  width: 65%;
+  min-width: 480px;
+}
+
+/*Locations*/
+.location-detail{
+  margin-bottom: 3.8rem;
+}
+.location-detail img{
+  width: 40%;
+}
+.location-detail ul{
+  margin-top: 0.8rem;
+}
+.location-detail>ul li:first-child{
+  font-style: italic;
+}
+
+/*CONTACT FORM*/
+.contact-form{
+  text-align: left;
+  padding-left: 5%;
+}
+form div{
+  margin-bottom: 2.4rem;
+}
+label{
+  font-weight: 600;
+  letter-spacing: 0.16rem;
+}
+input, select, option, textarea{
+  margin-top: 0.8rem;
+  width: 70%;
+  color: #404040;
+  height: 3.2rem;
+  font-size: 1.6rem;
+  border: none;
+  border-bottom: 2px solid #9ab997;
+  padding-left: 0.8rem;
+  transition: 0.5s;
+}
+input:focus, select:focus, option:focus, textarea:focus{
+  outline: 0;
+  background-color: #ffdec080;
+  width: 80%;
+}
+#promotion{
+  height: auto;
+  width: auto;
+  margin-right: 5%;
+}
+input#promotion:focus{
+  transition: 0s;
+  outline: 3px solid #657763;
+}
+#submit{
+  width: 20rem;
+  height: 4rem;
+  background-color: #ae3721;
+  color: #fff;
+  font-size: 2rem;
+  text-transform: uppercase;
+  line-height: 4rem;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  transition: 0.5s;
+  border-bottom: none;
+  cursor: pointer;
+}
+#submit:hover, #submit:focus{
+  width: 25rem;
+  background-color: #404040;
+  letter-spacing: 0.2rem;
+  font-weight: normal;
+}
+textarea{
+  height: 18rem;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  color: #404040;
+}
+span[id$="err"]{
+  color: #ae3721;
+  font-weight: bold;
+}
+#subject-suggestion{
+  margin-top: 3px;
+  font-weight: bold;
+}
+#subject-suggestion a{
+  text-decoration: underline;
+}
+#confirmation{
+  display: none;
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+#confirmation > div:first-child{
+  color: #9ab997;
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+  margin-bottom: 5rem;
+}

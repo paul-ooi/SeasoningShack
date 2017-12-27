@@ -25,15 +25,16 @@ var remainingTime = 60;
 var health = 3;
 var score = 0;
 var countDownTimer;
-var remainingTimeIndicator = 240;
-
-// field.js
-var itemId = 0;
-var updateScene;
+var remainingTimeIndicator = 244;
 var htmlLife = _gid("life");
 var htmlScore = _gid("score");
 var htmlTimer = _gid("timer-outline");
 var htmlTimeIndicator = _gid("timer");
+
+// field.js
+var itemId = 0;
+var updateScene;
+
 
 // catcher.js
 var animateCatcher;

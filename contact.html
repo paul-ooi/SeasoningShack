@@ -2,9 +2,164 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Contact Us -Seasoning Shack</title>
+    <link rel="stylesheet" href="CSS/header-footer-style.css">
+    <link rel="stylesheet" href="CSS/general.css">
+    <link rel="stylesheet" href="CSS/contact.css">
   </head>
   <body>
+    <header class="large">
+        <nav id="main-nav">
+          <ul>
+              <li><a href="menu.html">menu</a></li>
+              <li><a href="specials.html">specials</a></li>
+              <li><a href="locations.html">locations</a></li>
+              <li><a href="event-bookings.html">event booking</a></li>
+              <li><a href="about-us.html">about</a></li>
+              <li><a href="contact.html">contact</a></li>
+          </ul>
+        </nav>
+        <div id="company-branding"><a href="index.html"><img  src="Logo/Final Logo.svg" id="logo"/></a><h2><a href="index.html">seasoning shack</a></h2></div>
+    </header>
+    <div class="wrapper">
+    <!-- MAIN CONTENTS START FROM HERE -->
+    <main class="centre contact">
+        <h1 class="centre">Contact Us</h1>
+        <div class="flex-container">
+          <!-- LOCATION ANNEX -->
+          <section class="location cenre">
+            <h2 class=hidden>Gereral Contact Information</h2>
+            <div class="location-detail">
+              <img src="images/contact-front-annex.png" alt="image of the entrance">
+              <h3>Annex</h3>
+              <ul>
+                <li id="annex-hours"></li>
+                <li>Address:123 test test</li><!-- TODO: Put address  -->
+                <li>Phone:1234567890</li><!-- TODO: Put phone# -->
+              </ul>
+            </div>
+            <div class="location-detail">
+              <img src="images/contact-front-kensington.png" alt="image of the entrance">
+              <h3>Kensinton</h3>
+              <ul>
+                <li id="kensington-hours"></li>
+                <li>Address</li><!-- TODO: Put address -->
+                <li>Phone:</li><!-- TODO: Put phone -->
+              </ul>
+            </div>
+          </section>
+          <!-- CONTACT FORM -->
+          <section class="contact-form">
+            <h2 class="hidden"> Contact form</h2>
+            <form id="contact-id" name="contact_nm" action="#" method="post">
+              <label for="fn">First Name</label>
+              <span id="fn-err"></span>
+              <div>
+                <input id="fn" type="text"  placeholder="Your first name...">
+              </div>
+                <label for="ln">Last Name</label>
+                <span id="ln-err"></span>
+                <div>
+                <input id="ln" type="text" placeholder="Your last name...">
+              </div>
+                <label for="phone">Phone Number</label>
+                <span id="phone-err"></span>
+                <div>
+                <input id="phone" type="text" placeholder="+1-123-456-7890">
+              </div>
+                <label for="email">Email Address</label>
+                <span id="email-err"></span>
+              <div>
+                <input id="email" type="text" placeholder="Your email address...">
+              </div>
+              <label for="subject">How can we help you?</label>
+              <span id="subject-err"></span>
+              <div>
+                <select id="subject">
+                  <option value="default">-- Select an option --</option>
+                  <option value="location">Location and hours</option>
+                  <option value="booking">Event booking</option>
+                  <option value="services">Our foods and services</option>
+                  <option value="careers">Careers</option>
+                  <option value="others">Others</option>
+                </select>
+                <div id="subject-suggestion"></div>
+              </div>
+                <label for="promotion">Would you like to receive special promotions from us?
+              <div>
+                <input type="checkbox" id="promotion">Yes, I would like to receive promotional emails.
+              </div>
+              </label>
+                <label for="msg">Message</label>
+                <span id="msg-err"></span>
+              <div>
+                <textarea id="msg" placeholder="Enter your message..."></textarea>
+              </div>
+              <div>
+                <input type="submit" id="submit" value="SUBMIT">
+                <div>
+                  <span id="submit-err"></span>
+                </div>
+              </div>
+            </form>
+            <div id="confirmation">
+              <div>Thank you. Your message has been submitted.</div>
+              <div>
+                Name: <span id="conf-nm"></span>
+              </div>
+              <div>
+                Phone: <span id="conf-phone"></span>
+              </div>
+              <div>
+                Email address: <span id="conf-email"></span>
+              </div>
+              <div>
+                Subject: <span id="conf-subject"></span>
+              </div>
+              <div>
+                Promotional email: <span id="conf-promotion"></span>
+              </div>
+              <div>
+                Message: <div id="conf-msg"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
 
+
+      <!-- MAIN CONTENTS TILL HERE -->
+      <footer>
+        <section id="social-media">
+          <div class="social" id="fbook"><a><img src="images/social-icons/facebook.png" alt"Like and Follow us on Social Media"/></a></div>
+          <div class="social" id="twitter"><a><img src="images/social-icons/twitter.png" alt"Like and Follow us on Social Media"/></a></div>
+          <div class="social" id="instagram"><a><img src="images/social-icons/instagram.png" alt"Like and Follow us on Social Media"/></a></div>
+          <div class="social" id="google-plus"><a><img src="images/social-icons/google-plus.png" alt"Like and Follow us on Social Media"/></a></div>
+        </section>
+        <nav>
+          <ul>
+            <li><a href="menu.html">menu</a></li>
+            <li><a href="specials.html">specials</a></li>
+            <li><a href="locations.html">locations</a></li>
+            <li><a href="event-bookings.html">event booking</a></li>
+            <li><a href="about-us.html">about</a></li>
+            <li><a href="contest.html">contest</a></li>
+            <li><a href="careers.html">careers</a></li>
+            <li><a href="gift-cards.html">gift cards</a></li>
+            <li><a href="contact.html">contact</a></li>
+          </ul>
+        </nav>
+        <div id="copyright-privacy">
+            <ul>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+            </ul>
+                &copy; Seasoning Shack <span id="copyright-year">2017</span>
+        </div>
+        <img class="background" src="images/pexels-photo-672046.jpg" alt="spices on worksurface"/>
+      </footer>
+    </div>
+    <script src="JavaScript/header-footer.js" type="text/javascript"></script>
+    <script src="JavaScript/contact.js" type="text/javascript"></script>
   </body>
 </html>
