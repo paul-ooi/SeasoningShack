@@ -1,32 +1,33 @@
 window.onload = pageReady;
+
 function pageReady() {
 
-  // Variables
-  var rulesHtml = document.getElementById('rules');
-  var howtoBtn = document.getElementsByClassName('btn-howto');
-  var gameStartBtn = document.getElementsByClassName('btn-play');
-
   // Display and Hide Rules
-  howtoBtn[0].onclick = displayRules;
-  rulesHtml.onclick = hideRules;
+  htmlHowto[0].onclick = displayRules;
+  htmlRules.onclick = hideRules;
   function displayRules() {
-      rulesHtml.style.height = "100%";
-      rulesHtml.style.transition = "0.3s";
+      htmlRules.style.height = "100%";
+      htmlRules.style.transition = "0.3s";
   }
   function hideRules() {
-    rulesHtml.style.height = "0";
-    rulesHtml.style.transition = "0.3s";
+    htmlRules.style.height = "0";
+    htmlRules.style.transition = "0.3s";
   }
 
-  // Start the game
-  gameStartBtn[0].onclick = startGame;
+  //==== START THE GAME ====
+  var game = new Game();
+  htmlStart.onclick = startGame;
+  htmlReplay[0].onclick = reloadPage;
+
+
   function startGame() {
-    alert("game start!");
-    // start the timer
-    // start to count health
-    // count score
-    // start the game
-    // start the chef animation
+    $("#start").remove();
+    $(".btn-howto").remove();
+    game.start();
   }
 
+  function reloadPage() {
+    location.reload();
+  }
+  // ============End of pageReady===============
 }

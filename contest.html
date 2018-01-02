@@ -1,50 +1,129 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Seasoning Shack -Kitchen Lab Simulation</title>
-  </head>
-  <link rel="stylesheet" href="CSS/style.css">
+
+<head>
+  <!-- Header and Footer created by Paul Ooi -->
+  <title>Kitchen Lab Simulation -Seasoning Shack</title>
+  <link rel="stylesheet" href="CSS/header-footer-style.css">
+  <link rel="stylesheet" href="CSS/general.css">
   <link rel="stylesheet" href="CSS/contest.css">
-  <body>
-    <!-- TODO: Header -->
+</head>
 
-    <!-- TODO:  Page Wrapper?-->
-    <!-- Main Contents -->
-    <main>
+<body>
+  <header class="large">
+    <nav id="main-nav">
+      <ul>
+        <li><a href="menu.html">menu</a></li>
+        <li><a href="specials.html">specials</a></li>
+        <li><a href="locations.html">locations</a></li>
+        <li><a href="event-bookings.html">event booking</a></li>
+        <li><a href="about-us.html">about</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+    </nav>
+    <div id="company-branding"><a href="index.html"><img  src="Logo/Final Logo.svg" id="logo"/></a>
+      <h2><a href="index.html">seasoning shack</a></h2></div>
+  </header>
+
+  <div class="wrapper">
+    <!-- MAIN CONTENTS: CONTEST by Terumi Kusaka -->
+    <main id="game">
       <h1 class=hidden>Kitchen Lab Simulation</h1>
-      <!-- Entire Game (Interface and status section) -->
-      <section id="game">
-        <!-- Interface -->
-        <div id="field">
-          <img class="field-bg" src="images/contest-kitchen.png" alt="restaurant counter">
-          <div class="btn-play">START</div>
+      <div class="flex-container">
+        <div id="area">
+          <img class="area-bg" src="images/contest-kitchen.png" alt="restaurant counter">
+          <div id="start" class="btn-play">START</div>
           <div class="btn-howto">How to play?</div>
+          <img id="catcher" src="images/contest-catcher.png" alt="an image of a dish">
+          <!-- RULES: Display when "How to play?" is clicked -->
           <div id="rules">
-              <h2>How to play?</h2>
-              <ol>
-                <li class="rule1">Press "START" to play a game.</li>
-                <li class="rule2">Catch as many fallen items as you can in 60 seconds.</li>
-                <li class="rule3">There are some non-food items. Try to avoid them!</li>
-                <li class="rule4">If you miss catching foods or catch non-food items, you will lose a life. </li>
-                <li class="rule5">You are given 3 lives. You will lose the game if you lost 3 lives within 60 seconds.</li>
-              </ol>
+            <h2>How to play?</h2>
+            <ol>
+              <li class="rule1">Press "START" to play a game.</li>
+              <li class="rule2">Catch as many fallen items as you can in 60 seconds.</li>
+              <li class="rule3">There are some non-food items. Try to avoid them!</li>
+              <li class="rule4">If you miss catching foods or catch non-food items, you will lose a life. </li>
+              <li class="rule5">You are given 3 lives. You will lose the game if you lost 3 lives within 60 seconds.</li>
+            </ol>
+          </div>
+          <!-- Game Over: Display when geme is over -->
+          <div id="gameover" class="centre">
+            <div class="gameover-msg">GAME OVER</div>
+            <div class="btn-replay">Replay?</div>
           </div>
         </div>
-        <!-- Status Section -->
+        <!-- GAME STATUS -->
         <div id="status">
-          <div id="timer">
+          <div>
+            <span>TIME LEFT</span>
+            <div id="timer-outline">
+              <div id="timer">60</div>
+            </div>
           </div>
-          <div id="life">
+          <div>
+            <span>LIFE</span>
+            <div id="life">
+              <img id="life1" src="images/contest-life.svg" alt="an image of heart">
+              <img id="life2" src="images/contest-life.svg" alt="an image of heart">
+              <img id="life3" src="images/contest-life.svg" alt="an image of heart">
+            </div>
           </div>
-          <div id="score">
+          <div>
+            <span>SCORE</span>
+            <div id="score">0</div>
           </div>
         </div>
-      </section>
+        <div class="img_load">
+          <!-- In order to pre-load all images to get width and height -->
+          <img src="images/contest-apple_core.svg" alt="an image of a apple core"><img src="images/contest-banana.svg" alt="an image of a banana">
+          <img src="images/contest-banana_peel.svg" alt="an image of a banana peel"><img src="images/contest-fishbone.svg" alt="an image of a fish bone">
+          <img src="images/contest-egg.svg" alt="an image of a flied egg"><img src="images/contest-pancake.svg" alt="an image of a pancake">
+          <img src="images/contest-burger.svg" alt="an image of a humburger">
+        </div>
+      </div>
+      <!-- THE END OF MAIN CONTENTS: CONTEST -->
     </main>
-    <!-- TODO: Footer -->
-  </body>
-  <script type="text/javascript" src="JavaScript/contest.js">
 
-  </script>
+    <footer>
+      <section id="social-media">
+        <div class="social" id="fbook"><a><img src="images/social-icons/facebook.png" alt"Like and Follow us on Social Media"/></a></div>
+        <div class="social" id="twitter"><a><img src="images/social-icons/twitter.png" alt"Like and Follow us on Social Media"/></a></div>
+        <div class="social" id="instagram"><a><img src="images/social-icons/instagram.png" alt"Like and Follow us on Social Media"/></a></div>
+        <div class="social" id="google-plus"><a><img src="images/social-icons/google-plus.png" alt"Like and Follow us on Social Media"/></a></div>
+      </section>
+      <nav>
+        <ul>
+          <li><a href="menu.html">menu</a></li>
+          <li><a href="specials.html">specials</a></li>
+          <li><a href="locations.html">locations</a></li>
+          <li><a href="event-bookings.html">event booking</a></li>
+          <li><a href="about-us.html">about</a></li>
+          <li><a href="contest.html">contest</a></li>
+          <li><a href="careers.html">careers</a></li>
+          <li><a href="gift-cards.html">gift cards</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
+      <div id="copyright-privacy">
+        <ul>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+        &copy; Seasoning Shack <span id="copyright-year">2017</span>
+      </div>
+      <img class="background" src="images/pexels-photo-672046.jpg" alt="spices on worksurface" />
+    </footer>
+  </div>
+
+  <!-- JavaScripts -->
+  <script type="text/javascript" src="JavaScript/header-footer.js"></script>
+  <script type="text/javascript" src="JavaScript/lib/jquery-3.2.1.slim.min.js"></script>
+  <script type="text/javascript" src="JavaScript/contest/global.js"></script>
+  <script type="text/javascript" src="JavaScript/contest/catcher.js"></script>
+  <script type="text/javascript" src="JavaScript/contest/fallingItem.js"></script>
+  <script type="text/javascript" src="JavaScript/contest/field.js"></script>
+  <script type="text/javascript" src="JavaScript/contest/game.js"></script>
+  <script type="text/javascript" src="JavaScript/contest.js"></script>
+</body>
+
 </html>
