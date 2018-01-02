@@ -1,0 +1,108 @@
+.gallery {
+height: 300px;
+width: 100%;
+overflow: hidden;
+}
+
+.gallery img {
+height: 100%;
+display: inline-block;
+overflow-x: hidden;
+/* height: 100%; */
+}
+
+.gallery img.hero {
+width: 422px;
+/* object-fit: cover; */
+}
+
+.details {
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+flex-wrap: wrap;
+height: 16em;
+max-width: 1024px;
+overflow: hidden;
+}
+
+h1 {
+color: #404040;
+margin: 1.5em auto;
+text-align: center;
+font-size: 2rem;
+}
+
+.details h3 {
+padding: 0.5em 1em 0.5em 0.75em;
+margin: 0 0 1em 0;
+background-color: #404040;
+color: rgb(154, 185, 151);
+/* max-width: 422px; */
+}
+
+.details p {
+/* max-width: 422px; */
+}
+
+.options {
+width: 50%;
+flex: 1 0 100%;
+order: -1;
+text-align: center;
+}
+
+.options > div {
+height: 30%;
+text-align: center;
+padding: 3%;
+}
+
+.details table {
+width: 50%;
+flex: 0 1 auto;
+margin-top: 1em;
+}
+
+.details th {
+text-align: right;
+vertical-align: top;
+padding-right: 2em;
+}
+
+.details td {
+text-align: left;
+vertical-align: top;
+}
+
+.details table ul {
+padding: 0;
+margin: 0;
+}
+
+.details table li {
+margin: 0;
+display: inline-block;
+}
+
+.details table li::after {
+/* :not(table li:last-child) */
+content: ", ";
+}
+
+.button {
+padding: 0.5em 1em;
+border-radius: 0.5em;
+min-width: 6em;
+max-width: 10em;
+max-height: 2em;
+margin: 2rem auto;
+background-color: #ae3721;
+color: #fff;
+display: block;
+
+}
+
+.button:hover {
+font-weight: normal;
+}
