@@ -1,0 +1,103 @@
+main {
+padding: 0;
+margin: 0;
+}
+
+h1 {
+color: #404040;
+margin: 1.5em auto;
+text-align: center;
+font-size: 2rem;
+}
+
+.restaurant {
+position: relative;
+}
+
+.restaurant h2 {
+position: absolute;
+right: 0;
+bottom: 0;
+width: 30%;
+background-color: #404040;
+color: rgb(154, 185, 151);
+padding: 0.25em;
+margin: 0;
+}
+
+.restaurant > div:first-of-type {
+position: relative;
+height: 30rem;
+overflow: hidden;
+}
+
+img.map {
+object-fit: cover;
+}
+
+img.storefront {
+width: 300px;
+/* object-fit:scale-down; */
+}
+
+.details {
+display: flex;
+flex-flow: row nowrap;
+padding: 3rem 0 5rem;
+/* height: 40em; */
+}
+
+.details > * {
+display: inline-block;
+/* flex: 1 0 30%; */
+}
+
+.details div:first-of-type {
+width: 30%;
+position: relative;
+}
+
+.button {
+position: absolute;
+width: 50%;
+/* height: 3.5rem; */
+background-color: #ae3721;
+color: rgb(255, 222, 192);
+border-radius: 0.75rem;
+padding: 0.75rem 1.5rem;
+margin: 0 30%;
+font-weight: 700;
+font-size: 1.75rem;
+text-align: center;
+vertical-align: middle;
+}
+
+.contact {
+width:40%;
+text-align: right;
+}
+
+.contact p {
+margin-right: 30%;
+padding: 1.5rem 0;
+}
+
+.contact span::after {
+/* Fix line break */
+content: "\A";
+}
+
+.contact p:first-of-type {
+padding-top: 0;
+}
+
+.details table {
+/* Place table on the right */
+line-height: 1.75em;
+width: 30%;
+}
+
+.details th {
+text-align: left;
+padding-right: 2em;
+}
