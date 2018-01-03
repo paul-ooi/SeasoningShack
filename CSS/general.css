@@ -11,7 +11,7 @@ TABLE OF CONTENTS
 * LAST UPDATE Jan 03, 12:00pm
 *************************************************/
 /* 1. GENERAL ELEMENTS */
-html
+
 html{
   box-sizing: border-box;
   font-size: 10px; /* this is to establish REM units. 1.6rem = 16px. 5rem = 50px*/
@@ -34,7 +34,6 @@ h1, h2, h3, h4, h5, h6{
 }
 h1{
   font-size: 5rem;
-  color: #9ab997; /*Green #9ab997*/
 }
 h2{
   font-size: 3.6rem;

@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta charset="utf-8"/>
-<link href="CSS/index-style.css" type="text/css" rel="stylesheet"/>
 <link href="CSS/header-footer-style.css" type="text/css" rel="stylesheet"/>
 <link href="CSS/general.css" type="text/css" rel="stylesheet"/>
+<link href="CSS/index-style.css" type="text/css" rel="stylesheet"/>
 <script src="JavaScript/header-footer.js" type="text/javascript"></script>
 </head>
 <body>
@@ -19,73 +19,87 @@
           <li><a href="contact.html">contact</a></li>
         </ul>
       </nav>
-      <div id="company-branding"><img  class="border" src="Logo/Final Logo.svg" id="logo"/><h2>seasoning shack</h2></div>
+      <div id="company-branding"><img  class="border" src="Logo/Final Logo.svg" id="logo"/><h1>seasoning shack</h1></div>
   </header>
   <div class="wrapper">
     <main class="border">
+<!-- <h1 class="hidden">Seasoning Shack Restaurant</h1> -->
       <section class="border flex-container" id="feature-slides">
-        <div class="promo-detail flex-container">
-            <h1>Weekly Specials</h1>
-            <h2>See Other Weekly Deals</h2>
-            <img src="images/Burger.jpg" alt="" />
-        </div>
-        <div class="promo-detail">
-            <h1>Monthly Specials</h1>
-            <h2>SUB heading</h2>
-            <img src="images/Burger.jpg" alt="" />
-        </div>
-        <div class="promo-detail">
-            <h1>Event Bookings</h1>
-            <h2>Let us host your next corporate event</h2>
-            <img src="images/Burger.jpg" alt="" />
-        </div>
-        <div class="promo-detail">
-            <h1>Gift of Food</h1>
-            <h2>Buy a gift card</h2>
-            <img src="images/Burger.jpg" alt="" />
-        </div>
+        <h2 class="hidden">Feature Deals</h2>
+        <ul>
+          <li class="promo-detail">
+              <div><h2>Weekly Specials</h2>
+              <h3>See Other Weekly Deals</h3></div>
+              <a href="specials.html/#">
+              <img src="images/Burger.jpg" alt="" /></a>
+          </li>
+          <!-- <li class="promo-detail">
+              <div><h2>Monthly Specials</h2>
+              <h3>SUB heading</h3></div>
+              <a href="specials.html/#">
+              <img src="images/Burger.jpg" alt="" /></a>
+          </li>
+          <li class="promo-detail">
+              <div><h2>Event Bookings</h2>
+              <h3>Let us host your next corporate event</h3></div>
+              <a href="specials.html/#">
+              <img src="images/Burger.jpg" alt="" /></a>
+          </li>
+          <li class="promo-detail">
+              <div><h2>Gift of Food</h2>
+              <h3>Buy a gift card</h3></div>
+              <a href="specials.html/#">
+              <img src="images/Burger.jpg" alt="" /></a>
+          </li> -->
+        </ul>
+        <div class="border" id="feature-index"><ul></ul></div>
       </section>
-      <section class="border" id="locations">
+      <section class="border flex-container" id="locations">
           <h2>Dine In</h2>
-          <div>
-              <div class="details">
+          <div class="details flex-container">
+              <div>
                   <h3>Annex</h3>
                   <h4>Open until 10pm</h4>
-                  <p>See more hours</p>
+                  <p><a href="locations.html#location-1">See more hours</a></p>
                   <p>Book a reservation</p>
               </div>
-              <div class="store-front"><img src="images/Location1_StoreFront.jpg" alt="Store front of our Annex location with a red canopy"/></div>
+              <div class="store-front"><a href="locations.html#location-1"><img src="images/Location1_StoreFront.jpg" alt="Store front of our Annex location with a red canopy"/></a></div>
           </div>
-          <div>
-              <div class="details">
+          <div class="details flex-container">
+              <div>
                   <h3>Kensington</h3>
                   <h4>Open until 10pm</h4>
-                  <p>See more hours</p>
+                  <p><a href="locations.html#location-2">See more hours</a></p>
                   <p>Book a reservation</p>
               </div>
-              <div class="store-front"><img src="images/Location2_StoreFront.jpg" alt="Store front entrance with chalk board showcasing daily menu"/></div>
+              <div class="store-front"><a href="locations.html#location-2"><img src="images/Location2_StoreFront.jpg" alt="Store front entrance with chalk board showcasing daily menu"/></a></div>
           </div>
       </section>
-      <section class="border" id="food">
-          <h2><a href="/menu.html">Our menu</a></h2>
-          <h2><a href="/specials.html">Our specials</a></h2>
+      <section class="border flex-container" id="food">
+<h2 class="hidden">Take a look at our Menu</h2>
+          <div>
+            <h3><a href="/menu.html">Our menu</a></h3>
+            <h3><a href="/specials.html">Our specials</a></h3>
+          </div>
           <img src="images/customer-plate.jpg" alt="" />
       </section>
-      <section class="border" id="services">
+      <section class="border flex-container" id="services">
         <h2 class="hidden">Additional Services</h2>
-        <div class="border" id="contest">
+        <div class="border flex-container" id="contest">
             <h3>Kitchen Lab Simulation</h3>
             <span>Play a game</span>
             <img src="images/spices-on-board.jpg" alt=""/>
         </div>
-        <div class="border" id="gift-cards">
+        <div class="border flex-container" id="gift-cards">
             <h3>Treat a Friend</h3>
             <span>gift-cards</span>
             <img src="" alt="" />
         </div>
-        <div class="border" id="bookings">
-            <h3>Book an event</h3>
-            <span>Corporate &amp; Catering</span>
+        <div class="border flex-container" id="bookings">
+            <div>
+              <h3>Book an event</h3>
+              <span>Corporate &amp; Catering</span>
+            </div>
             <img src="images/pexels-photo-169190.jpg" alt="" />
         </div>
       </section>
@@ -108,6 +122,7 @@
           <li><a href="careers.html">careers</a></li>
           <li><a href="gift-cards.html">gift cards</a></li>
           <li><a href="contact.html">contact</a></li>
+          <li><a href="sitemap.html">sitemap</a></li>
         </ul>
       </nav>
       <div id="copyright-privacy">

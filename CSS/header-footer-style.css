@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Kalam|Lato');
+@import url('https://fonts.googleapis.com/css?family=Kalam:700|Lato:400,400i,700,900');
 /*************************************************
 TABLE OF CONTENTS - Header and Footer Styling (by Paul Ooi)
 **************************************************
@@ -10,28 +10,14 @@ TABLE OF CONTENTS - Header and Footer Styling (by Paul Ooi)
 *************************************************/
 
 /*1) GENERAL STYLING*/
-html {
-box-sizing: border-box;
-font-size:10px;
-}
-
-*, *::before, *::after {
-box-sizing: inherit;
-}
-
 .hidden {
 position: absolute;
-left: -100%;
-}
-
-body {
-font-family: 'Lato', Helvetica, Arial, sans-serif;
 }
 
 .wrapper {
 /*This should be wrapped around the items below the header to ensure it starts below the fixed navbar*/
 position: relative;
-top: 40rem;
+/* top: 40rem; */
 }
 
 header {
@@ -39,7 +25,8 @@ position: fixed;
 top: 0px;
 z-index: 20;/*This keeps the Header and Navigavtion visible above the rest of the page*/
 width: 100%;
-background-color: rgba(165, 79, 80, 0.9);
+max-width: 1024px;
+background-color: rgba(165, 79, 80, 0.95);
 color: rgb(255, 222, 192);
 display: flex;
 transition: all 500ms linear;
@@ -219,7 +206,7 @@ flex: 0 0 100%;
 footer {
   position: relative;
   padding: 2.4rem 0.8rem;
-  background-color: rgba(165, 79, 80, 0.9);
+  background-color: rgba(165, 79, 80, 0.95);
   color: rgb(255, 222, 192);
   display: flex;
   flex-flow: row wrap;
