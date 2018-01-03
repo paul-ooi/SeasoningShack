@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Kalam|Lato');
+@import url('https://fonts.googleapis.com/css?family=Kalam:700%7CLato:400,400i,700,900');
+
 /*************************************************
 TABLE OF CONTENTS
 **************************************************
@@ -7,43 +8,44 @@ TABLE OF CONTENTS
  3. GENERAL CLASS SELECTOR
 
 * Please use general.html as a template
-* LAST UPDATE DEC 19, 11:45pm (added RGB colours)
+* LAST UPDATE Jan 03, 12:00pm
 *************************************************/
 /* 1. GENERAL ELEMENTS */
-html {
+html
+html{
   box-sizing: border-box;
   font-size: 10px; /* this is to establish REM units. 1.6rem = 16px. 5rem = 50px*/
 }
-*, *::before, *::after {
+*, *::before, *::after{
   box-sizing: inherit;
 }
-body {
+body{
   max-width: 1024px;
   position: relative;
   margin: 0 auto;
   font-family: 'Lato', Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
-  color: rgb(43,54,58); /*gray #404040*/
+  color: #404040; /*gray*/
 }
 h1, h2, h3, h4, h5, h6{
   margin: 0.8rem 1.6rem 0.8rem 1.6rem;
   font-weight: 900;
   text-transform: capitalize;
 }
-h1 {
+h1{
   font-size: 5rem;
-  color: rgb(154, 185, 151) ; /*Green #9ab997*/
+  color: #9ab997; /*Green #9ab997*/
 }
-h2 {
+h2{
   font-size: 3.6rem;
 }
-h3 {
+h3{
   font-size: 2.4rem;
 }
 
 /* 2. MAIN CONTENTS SELECTOR */
 /* In order not to affect on upcomming style for header and footer. */
-main {
+main{
   position: relative;
   padding: 3.2rem 0 3.2rem 0;
 }
@@ -53,39 +55,40 @@ main p{
 }
 main a{
   text-decoration: none;
-  color: rgb(43,54,58);
+  color: #2b363a;
 }
 main a:hover, main a:focus{
   font-weight: 600;
 }
 main ul>li{
   list-style: none;
-  margin-left: -2.2rem;
+  /* padding: -2.2rem; */
   /* remove margin-left to make indent */
   line-height: 2rem;
 }
 main ol>li{
-  margin-left: -2.2rem;
+  /* margin-left: -2.2rem; */
   /* remove margin-left to make indent */
   line-height: 2rem;
 }
 
+
 /* 3. GENERAL CLASS SELECTOR */
-.hidden {
+.hidden{
   position: absolute;
   left: -10000px; /* Changed DEC 12, from -100% to -10000px because hidden element was shown when minimize the browser*/
 }
-.flex-container {
+.flex-container{
   display: flex;
 }
-.wrapper {
+.wrapper{
   position: relative;
   top: 16rem;
   width: 100%;
 }
 .centre{
   margin: 0 auto;
-  text-align: center; /* ADDED DEC 12, Remove if it affects on your style*/
+  text-align: center;
 }
 /*Remove if you don't need a button on your page.*/
 .link-button{
@@ -102,55 +105,55 @@ main ol>li{
   transition: 0.5s;
   cursor: pointer;
 }
-.link-button:hover, .link-button:focus {
+.link-button:hover, .link-button:focus{
   width: 25rem;
-  background-color: rgb(43,54,58);
+  background-color: #2b363a;
   letter-spacing: 0.2rem;
   font-weight: normal;
 }
 
 /*=== Remove those once you have header and footer ===*/
-header {
+/* header {
   position: fixed;
   max-width: 1024px;
   top: 0px;
   z-index: 20;/*This keeps the Header and Navigavtion visible above the rest of the page*/
-  width: 100%;
+  /* width: 100%;
   height: 16rem;
   background-color: rgba(165, 79, 80, 0.85);
   color:  rgb(255, 222, 192);
-}
+} */
 
-footer {
+/* footer {
   padding: 2.4rem 0.8rem;
   background-color:  rgba(165, 79, 80, 0.85);
   color: rgb(255, 222, 192);
-}
+} */
 
 /*Place holder for header and footer*/
-.placeholder{
+/* .placeholder{
   width: 100%;
   height: 16rem;
   font-size: 4rem;
   text-align: center;
-}
+} */
 
 /*=== Remove those once you don't need anymore ===*/
   /* add class="border" and you can see the border of the elements */
-  .border {
+  /* .border {
     border: 1px solid red;
-  }
+  } */
   /* set width for button container */
-  .div-container{
+  /* .div-container{
     width: 500px;
     border: tomato 1px dotted;
-  }
+  } */
   /* Color boxes*/
-  .box{
+  /* .box{
     width: 100px;
     height: 100px;
   }
   .gray{background-color: rgb(43,54,58); color: white;}
   .red{background-color: #ae3721; color: white}
   .green{background-color:   rgb(154, 185, 151) ;}
-  .peach{background-color: rgb(255, 222, 192);}
+  .peach{background-color: rgb(255, 222, 192);} */
