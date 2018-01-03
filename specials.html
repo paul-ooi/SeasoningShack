@@ -4,19 +4,36 @@
   <meta charset="utf-8" />
   <title>Specials-SeasoningShack</title>
   <link rel="stylesheet" href="CSS/specials.css" />
-  <link rel="stylesheet" href="CSS/style.css" />
+  <link rel="stylesheet" href="CSS/header-footer-style.css" />
   <link rel="stylesheet" href="CSS/general.css" />
 </head>
 <body>
-  <header>
-	<div class="placeholder">
-      <p>Navigation Bar Will Be Placed Here</p>
-    </div>
+  <div id="top"></div>
+  <header class="large">
+    <nav id="main-nav">
+      <ul>
+        <li><a href="menu.html">menu</a></li>
+        <li><a href="specials.html">specials</a></li>
+        <li><a href="locations.html">locations</a></li>
+        <li><a href="event-bookings.html">event booking</a></li>
+        <li><a href="about-us.html">about</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+    </nav>
+    <div id="company-branding"><img  src="Logo/Final Logo.svg" id="logo"/><h2>seasoning shack</h2></div>
   </header>
   <div class="wrapper">
     <main>
       <h1 class="hidden">Specials</h1>
-	    <section>
+	    <nav  class="sub-nav">
+		  <h2 class="hidden">Specials List</h2>
+		  <ul>
+		    <li><a href="#daily">Daily Specials</a></li>
+			<li><a href="#weekly">Weekly Specials</a></li>
+			<li><a href="#monthly">Monthly Specials</a></li>
+		  </ul>
+		</nav>
+	    <section id="daily">
       	  <h2 class="section-title">Daily Specials</h2>
 	        <ul>
 		      <li>
@@ -28,12 +45,12 @@
 			    <div class="event-description">50% Price Appetizers, Order 2 appetizers with the purchase of a beverage, and get the second appetizer 50% off.</div>
 	    	  </li>
 		      <li>
-		        <div class="event-name">Day3</div>
+		        <div class="event-name">Day 3</div>
 			    <div class="event-description">50% Price Soft Drinks, Order one dessert and one soft drink, coffee or tea, and get the beverage 50% off.</div>
 		      </li>
 		    </ul>
 		</section>
-		<section>
+		<section id="weekly">
 	      <h2 class="section-title">Weekly Specials</h2>
 		    <ul>
 			  <li class="event-name">Monday</li>
@@ -88,12 +105,12 @@
 				</ul>
 			</ul>
 		</section>
-		<section>
+		<section id="monthly">
 	      <h2 class="section-title">Monthly Specials</h2> 
 			  <ul>
 		        <li>
 				  <div class="event-name">January</div>
-			      <div class="event-description">New Year Party Deal –Book a party of 10+ guests and get first drink and one appetizer free!</div>
+			      <div class="event-description">New Year Party Deal – Book a party of 10+ guests and get first drink and one appetizer free!</div>
 				  <li>
 				  <div class="event-name">February</div>
 			      <div class="event-description">Valentine’s Day Special --Book a table for two and order of 2 main dishes and get free a heart shaped brownie or a mini fruit platter!</div>
@@ -140,14 +157,38 @@
 			    </li>
 			  </ul>
 		</section>
-		<div>Jump to Top</div>
+		<a class="jump-to-top" href="#top">Jump to Top</p>
     </main>
 	<footer>
-      <div class="placeholder">
-        <p>Footer Will Be Placed Here</p>
+      <section id="social-media">
+        <div class="social" id="fbook"><a><img src="images/social-icons/facebook.png" alt"Like and Follow us on Social Media"/></a></div>
+        <div class="social" id="twitter"><a><img src="images/social-icons/twitter.png" alt"Like and Follow us on Social Media"/></a></div>
+        <div class="social" id="instagram"><a><img src="images/social-icons/instagram.png" alt"Like and Follow us on Social Media"/></a></div>
+        <div class="social" id="google-plus"><a><img src="images/social-icons/google-plus.png" alt"Like and Follow us on Social Media"/></a></div>
+      </section>
+      <nav>
+        <ul>
+          <li><a href="/menu.html">menu</a></li>
+          <li><a href="/specials.html">specials</a></li>
+          <li><a href="/locations.html">locations</a></li>
+          <li><a href="event-bookings.html">event booking</a></li>
+          <li><a href="about-us.html">about</a></li>
+          <li><a href="contest.html">contest</a></li>
+          <li><a href="careers.html">careers</a></li>
+          <li><a href="gift-cards.html">gift cards</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
+      <div id="copyright-privacy">
+          <ul>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms of Use</a></li>
+          </ul>
+              &copy; Seasoning Shack <span id="copyright-year">2017</span>
       </div>
+      <img class="background" src="images/pexels-photo-672046.jpg" alt="spices on worksurface"/>
     </footer>
-  </div>
-  <script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="javascript/header-footer.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>

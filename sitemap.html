@@ -3,50 +3,82 @@
 <head>
   <meta charset="utf-8" />
   <title>SiteMap-SeasoningShack</title>
-  <link rel="stylesheet" href="CSS/style.css" />
+  <link rel="stylesheet" href="CSS/header-footer-style.css" />
   <link rel="stylesheet" href="CSS/general.css" />
   <link rel="stylesheet" href="CSS/sitemap.css" />
 </head>
 <body>
-  <header>
-	<div class="placeholder">
-      <p>Navigation Bar Will Be Placed Here</p>
-    </div>
+  <header class="large">
+    <nav id="main-nav">
+      <ul>
+        <li><a href="menu.html">menu</a></li>
+        <li><a href="specials.html">specials</a></li>
+        <li><a href="locations.html">locations</a></li>
+        <li><a href="event-bookings.html">event booking</a></li>
+        <li><a href="about-us.html">about</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+    </nav>
+    <div id="company-branding"><img  src="Logo/Final Logo.svg" id="logo"/><h2>seasoning shack</h2></div>
   </header>
   <div class="wrapper">
     <main>
       <h1>Site Map</h1>
-	    <ul class="flex-container">
-		  <li><a class="link-button" href="menu.html" title="Our menu">Menu</a>
-		    <!--<ul>
-			  <li><a href="#">Appetizers</a></li>
-			  <li><a href="#">Soups &amp; Salads</a></li>
-			  <li><a href="#">Main Dishes</a></li>
-			  <li><a href="#">Drinks</a></li>
-			  <li><a href="#">Desserts</a></li>
-			</ul>-->
-		  </li>
-		  <li><a class="link-button" href="specials.html" title="Our special menu">Specials</a>
-		    <!--<ul>
-			  <li><a href="#">Daily Specials</a></li>
-			  <li><a href="#">Weekly Specials</a></li>
-			  <li><a href="#">Monthly Specials</a></li>
-			</ul>-->
-		  </li>
-		  <li><a  class="link-button" href="locations.html" title="Our locations">Locations</a></li>
-		  <li><a class="link-button" href="#" title="A place for your event">Event Booking</a></li>
-		  <li><a class="link-button" href="#" title="Buy gift card">Gift Card</a></li>
-		  <li><a class="link-button" href="contest.html" title="Win a prize from us">Contest</a></li>
-		  <li><a class="link-button" href="about.html" title="About us">About</a></li>
-		  <li><a class="link-button" href="contact.html" title="Contact us here">Contact</a></li>
+	    <div>
+	    <ul class="link-list">
+		    <li><a href="menu.html" title="Our Menu">Menu</a></li>
+			  <ul>
+			    <li><a href="#">Appetizers</a></li>
+			    <li><a href="#">Soups &amp; Salads</a></li>
+			    <li><a href="#">Main Dishes</a></li>
+			    <li><a href="#">Drinks</a></li>
+			    <li><a href="#">Desserts</a></li>
+			  </ul>
+		    <li><a href="specials.html" title="Our Special Menu">Specials</a></li>
+			  <ul>
+			    <li><a href="#">Daily Specials</a></li>
+			    <li><a href="#">Weekly Specials</a></li>
+			    <li><a href="#">Monthly Specials</a></li>
+			  </ul>
+		    <li><a href="locations.html" title="Our Locations">Locations</a></li>
+		    <li><a href="event-booking" title="A Place for your Event">Event Booking</a></li>
+		    <li><a href="giftcard.html" title="Buy Gift Card">Gift Card</a></li>
+		    <li><a href="contest.html" title="Win a Prize from us">Contest</a></li>
+		    <li><a href="about-us.html" title="About us">About</a></li>
+		   <li><a href="contact.html" title="Contact Us here">Contact</a></li>
 		</ul>
+		</div>
     </main>
     <footer>
-      <div class="placeholder">
-        <p>Footer Will Be Placed Here</p>
+      <section id="social-media">
+        <div class="social" id="fbook"><a><img src="images/social-icons/facebook.png" alt"Like and Follow us on Social Media"/></a></div>
+        <div class="social" id="twitter"><a><img src="images/social-icons/twitter.png" alt"Like and Follow us on Social Media"/></a></div>
+        <div class="social" id="instagram"><a><img src="images/social-icons/instagram.png" alt"Like and Follow us on Social Media"/></a></div>
+        <div class="social" id="google-plus"><a><img src="images/social-icons/google-plus.png" alt"Like and Follow us on Social Media"/></a></div>
+      </section>
+      <nav>
+        <ul>
+          <li><a href="/menu.html">menu</a></li>
+          <li><a href="/specials.html">specials</a></li>
+          <li><a href="/locations.html">locations</a></li>
+          <li><a href="event-bookings.html">event booking</a></li>
+          <li><a href="about-us.html">about</a></li>
+          <li><a href="contest.html">contest</a></li>
+          <li><a href="careers.html">careers</a></li>
+          <li><a href="gift-cards.html">gift cards</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
+      <div id="copyright-privacy">
+          <ul>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms of Use</a></li>
+          </ul>
+              &copy; Seasoning Shack <span id="copyright-year">2017</span>
       </div>
+      <img class="background" src="images/pexels-photo-672046.jpg" alt="spices on worksurface"/>
     </footer>
   </div>
-  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="javascript/header-footer.js"></script>
 </body>
 </html>
