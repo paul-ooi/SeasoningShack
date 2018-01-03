@@ -8,13 +8,13 @@ function pageReady() {
 
 
   function resizeHeader(){
-      if (window.pageYOffset < 400){
-        console.log('first fired');
+      if (window.pageYOffset < 125){
+        // console.log('first fired');
       header.classList.remove('small');
       header.classList.add('large');
       }
-      if (window.pageYOffset > 400){
-        console.log('2nd fired');
+      if (window.pageYOffset > 125){
+        // console.log('2nd fired');
       header.classList.remove('large');
       header.classList.add('small');
       }
