@@ -3,15 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <title>Menu-SeasoningShack</title>
-  <link rel="stylesheet" href="CSS/style.css" />
+  <link rel="stylesheet" href="CSS/header-footer-style.css" />
   <link rel="stylesheet" href="CSS/general.css" />
   <link rel="stylesheet" href="CSS/menu.css" />
 </head>
 <body>
-  <header>
-	<div class="placeholder">
-      <p>Navigation Bar Will Be Placed Here</p>
-    </div>
+  <div id="top"></div>
+  <header class="large">
+    <nav id="main-nav">
+      <ul>
+        <li><a href="menu.html">menu</a></li>
+        <li><a href="specials.html">specials</a></li>
+        <li><a href="locations.html">locations</a></li>
+        <li><a href="event-bookings.html">event booking</a></li>
+        <li><a href="about-us.html">about</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+    </nav>
+    <div id="company-branding"><img  src="Logo/Final Logo.svg" id="logo"/><h2>seasoning shack</h2></div>
   </header>
   <div class="wrapper">
     <main>
@@ -41,10 +50,12 @@
 		      </li>
 		    </ul>
 		</section>
-		<section class="flex-container">
+		<section>
 	      <h2 class="section-title">Soups and Salads</h2>
-		  <div class="column-2">
+		  <div class="flex-container">
+		  <section class="column-2">
 		    <h3>Soup</h3>
+			  <img  src="images/soup.png" alt="soup" />
 		      <ul>
 		        <li>
 				  <div class="dish-name">Broccoli Cheddar Soup<span class="dish-price">$6.99</span></div>
@@ -79,9 +90,10 @@
 			      <div class="dish-description">Unbelievably thick and creamy clams cooked with sliced carrots, diced potatoes, onions, and celery. Garnished with minced cilantro.</div>
 			    </li>
 			  </ul>
-		  </div>
-		  <div class="column-2">
+		  </section>
+		  <section class="column-2">
 			<h3>Salad</h3>
+			  <img  src="images/salad.png" alt="soup" />
 			  <ul>
 		        <li>
 				  <div class="dish-name">Garden Salad<span class="dish-price">$4.39</span></div>
@@ -104,11 +116,13 @@
 			      <div class="dish-description">A light salad filled with garbanzo beans, sliced cucumbers, cherry tomatoes, onions, black olives, garlic, and crumbled feta cheese drizzled in lemon juice and ground black pepper.</div>
 			    </li>
 			  </ul>
+		  </section>
 		  </div>
 		</section>
 		<section>
 	      <h2 class="section-title">Main Dishes</h2>
-	      <div class="column-2">  
+		  <div class="flex-container">
+	      <section class="column-2">  
 			<h3>Noodles &amp; Rice</h3>
 			  <ul>
 		        <li>
@@ -127,9 +141,10 @@
 			      <div class="dish-description">Lightly seasoned basa fillets served in a large bowl with traditionally slow cooked rice porridge.</div>
 			    </li>
 			  </ul>
-			</div>
-			<div class="column-2">
+			</section>
+			<section class="column-2">
 		    <h3>Seafood</h3>
+			  <img src="images/seafood.png" alt="sandwich wrap" />
 			  <ul>
 		        <li>
 				  <div class="dish-name">Salmon Steak<span class="dish-price">$16.49</span></div>
@@ -148,9 +163,10 @@
 			      <div class="dish-description">France's Blue D' Avergne whipped with cream and melted over baked oysters.</div>
 			    </li>
 			  </ul>
-			</div>
-			<div class="column-2">
+			</section>
+			<section class="column-2">
 		    <h3>Sandwiches &amp; Wraps</h3>
+			  <img src="images/wrap.png" alt="sandwich wrap" />
 			  <ul>
 		        <li>
 				  <div class="dish-name">Big combo<span class="dish-price">$8.49</span></div>
@@ -177,6 +193,7 @@
 			      <div class="dish-description">Avocado, balsamic red onions, cucumbers, herb mayo, spinach, tomatoes.</div>
 			    </li>
 			  </ul>
+			</section>
 			</div>
 		</section>
 		<section>
@@ -214,9 +231,11 @@
 			  </ul>
 		</section>
 		<section>
-		<div class="column-2">
 	      <h2 class="section-title">Drinks</h2>
+		  <div class="flex-container">
+		  <section class="column-2">
 		    <h3>Alcoholic</h3>
+		    <!-- <div class="flex-container"> -->
 			  <h4>Beer</h4>
 			  <ul>
 		        <li>
@@ -231,9 +250,7 @@
 				  <div class="dish-name">Local brewer feature<span class="dish-price">$7</span></div>
 			      <div class="dish-description">Ask your server.</div>
 			    </li>
-			  </ul>
-		</div>
-		<div class="column-2">
+			  </ul>	
 			  <h4>Wine</h4>
 			    <ul>
 				  <li>
@@ -253,6 +270,28 @@
 			      </li>
 				</ul>
 			  <h4>Cocktails</h4>
+			    <ul>
+		        <li>
+				  <div class="dish-name">Mint Mango Daiquiri<span class="dish-price">$7</span></div>
+			      <div class="dish-description">Frozen mangos, lime and mint blended with your choice rum.</div>
+			    </li>
+				<li>
+				  <div class="dish-name">Pear and Cardamom sidecar<span class="dish-price">$9</span></div>
+			      <div class="dish-description">Cap the evening with an aromatic blend spice and sweet notes with your choice of whiskey or cognac.</div>
+				<li>
+				  <div class="dish-name">Jalapeno Margarita<span class="dish-price">$8</span></div>
+			      <div class="dish-description">The night is young, kick it up a notch.</div>
+			    </li>
+				<li>
+				  <div class="dish-name">Apple cinnamon Martini<span class="dish-price">$8</span></div>
+			      <div class="dish-description">#Adult - Mom’s homemade apple crumble, but spiked.</div>
+			    </li>
+				<li>
+				  <div class="dish-name">Ginger punch tequila<span class="dish-price">$8</span></div>
+			      <div class="dish-description">Swirl in ginger syrup, topped with candied ginger.</div>
+			    </li>
+			    </li>
+			    </ul>
 			  <h4>Liquors</h4>
 			    <ul>
 				  <li>
@@ -268,9 +307,10 @@
 				  <div class="dish-name">Cognac<span class="dish-price">$4</span></div>
 			      </li>
 				</ul>
-		</div>
-		<div class="column-2">
+		  </section>
+		  <section class="column-2">
 			<h3>Soft Drinks</h3>
+			  <img src="images/drink.png" alt="drink" />
 			  <ul>
 		        <li>
 				  <div class="dish-name">Smoothies<span class="dish-price">$4</span></div>
@@ -282,6 +322,7 @@
 			    </li>
 			  </ul>
 			<h3>Coffee &amp; Tea</h3>
+			  <img src="images/coffee.png" alt="coffee" />
 			  <ul>
 		        <li>
 				  <div class="dish-name">Iced Coffee<span class="dish-price">$3</span></div>
@@ -304,18 +345,44 @@
 			      <div class="dish-description">Your choice of Cardamom, cinnamon, star anise or cloves.</div>
 			    </li>
 			  </ul>
-		</div>
+		  </section>
+		  </div>
 		</section>
-    
-          <p>Want more? Check our Special Menu!</p>
-		  <div>Jump to Top</div>
+		<div class="link">
+          <a id="link-to-special"href="specials.html" title="Our Specials Menu">Want more? Check our Special Menu!</a>
+		  <a class="jump-to-top" href="#top">Jump to Top</p>
+		</div>
     </main>
     <footer>
-      <div class="placeholder">
-        <p>Footer Will Be Placed Here</p>
+      <section id="social-media">
+        <div class="social" id="fbook"><a><img src="images/social-icons/facebook.png" alt"Like and Follow us on Social Media"/></a></div>
+        <div class="social" id="twitter"><a><img src="images/social-icons/twitter.png" alt"Like and Follow us on Social Media"/></a></div>
+        <div class="social" id="instagram"><a><img src="images/social-icons/instagram.png" alt"Like and Follow us on Social Media"/></a></div>
+        <div class="social" id="google-plus"><a><img src="images/social-icons/google-plus.png" alt"Like and Follow us on Social Media"/></a></div>
+      </section>
+      <nav>
+        <ul>
+          <li><a href="/menu.html">menu</a></li>
+          <li><a href="/specials.html">specials</a></li>
+          <li><a href="/locations.html">locations</a></li>
+          <li><a href="event-bookings.html">event booking</a></li>
+          <li><a href="about-us.html">about</a></li>
+          <li><a href="contest.html">contest</a></li>
+          <li><a href="careers.html">careers</a></li>
+          <li><a href="gift-cards.html">gift cards</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
+      <div id="copyright-privacy">
+          <ul>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms of Use</a></li>
+          </ul>
+              &copy; Seasoning Shack <span id="copyright-year">2017</span>
       </div>
+      <img class="background" src="images/pexels-photo-672046.jpg" alt="spices on worksurface"/>
     </footer>
   </div>
-  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="javascript/header-footer.js"></script>
 </body>
 </html>
