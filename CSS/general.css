@@ -57,7 +57,7 @@ main a{
   color: #2b363a;
 }
 main a:hover, main a:focus{
-  font-weight: 600;
+  font-weight: 700;
 }
 main ul>li{
   list-style: none;
