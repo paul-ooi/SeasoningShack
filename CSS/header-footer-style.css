@@ -94,9 +94,9 @@ header.small #main-nav li:nth-child(3){
 margin-right: unset;
 }
 
-header.small a:hover {
-border-bottom: 3px solid rgb(255, 222, 192);
-padding-bottom: 3px;
+header.small #main-nav a:hover {
+border-bottom: 2px solid rgb(255, 222, 192);
+padding-bottom: 2px;
 }
 
 #logo {
@@ -126,8 +126,6 @@ color: rgb(255, 222, 192);
 transition: all 300ms linear;
 }
 
-
-
 /*3) NAVIGATION*/
 nav ul, #copyright-privacy ul {
 padding: 0;
@@ -148,6 +146,7 @@ font-family: 'Lato', Helvetica, Arial, sans-serif;
 font-size: 1.8rem;
 font-weight: normal;
 transition: all 200ms linear;
+margin: 0;
 }
 
 #main-nav li:nth-child(3){
