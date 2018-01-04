@@ -32,7 +32,7 @@ padding: 0;
 }
 
 #company-branding h1 {
-margin: 0.4rem auto;
+margin: 0.4rem 1rem;
 font-size: 2.4rem;
 font-family: 'Kalam', Helvetica, Arial, sans-serif;
 text-align: center;
@@ -79,8 +79,14 @@ padding: 0.3em;
 line-height: 2.25em;
 }
 
+.promo-detail h2 {
+font-size: 4.5rem;
+}
+
 .promo-detail h3 {
 font-size: 2.4rem;
+font-weight: 400;
+font-style: italic;
 }
 
 .promo-detail img {
@@ -218,13 +224,3 @@ background-color: rgba(43, 54, 58, 0.8);
 color: rgb(154, 185, 151);
 padding: 1em;
 }
-
-.promo-detail h2 {
-font-size: 2rem;
-font-weight: 900;
-text-transform: capitalize;
-color: #9ab997;
-}
-
-
-/* 3) MEDIA QUERIES */
