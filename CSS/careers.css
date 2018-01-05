@@ -1,0 +1,97 @@
+/* LOCATION */
+
+h1 {
+  text-align:center;
+  padding-bottom:3rem;
+}
+.location {
+  position:relative;
+  text-align:center;
+  width:30%;
+  float:left;
+}
+.location-detail{
+  margin-bottom: 3.8rem;
+
+}
+.location-detail img{
+  width: 45%;
+  border-radius:100%;
+  transition: all .35s;
+}
+.location-detail img:hover {
+  transform:scale(1.2);
+  opacity:0.8;
+  cursor:pointer;
+}
+.location-detail div{
+  width:45%;
+  margin:auto;
+}
+
+/* JOB POSTING */
+#job-container {
+  display:none;
+}
+.job-content {
+  /* display:none; */
+  position:relative;
+  width:68%;
+  float:right;
+  padding-bottom:4rem;
+}
+.job-content a {
+  font-weight:bold;
+}
+.job-content a:hover {
+  text-decoration:underline;
+}
+.job-content ul {
+  padding-left:7rem;
+}
+.job-content ul>li {
+  list-style:disc;
+}
+.title-accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 5px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+.active, .title-accordion:hover {
+  background-color: #ccc;
+}
+.title-accordion:after {
+  content: "+";
+  font-size:2rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 3em;
+  height: 3em;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+
+.active:after {
+  transform: rotate(315deg); /* Unicode character for "minus" sign (-) */
+}
+.job-panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+footer {
+  clear:both;
+}
