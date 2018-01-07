@@ -1,29 +1,29 @@
-.gallery {
-height: 300px;
-width: 100%;
-overflow: hidden;
+
+/* GENERAL STYLING */
+main {
+padding: 0;
 }
 
-.gallery img {
-height: 100%;
-display: inline-block;
-overflow-x: hidden;
-/* height: 100%; */
+button {
+font-size: 1.6rem;
 }
 
-.gallery img.hero {
-width: 422px;
-/* object-fit: cover; */
+.button {
+display: block;
+background-color: rgb(165, 79, 80);
+color: #fff;
+padding: 0.5em 1em;
+border: 0;
+border-radius: 0.5em;
+min-width: 10em;
+width: 30%;
+height: 2.5em;
+margin: 2rem auto;
 }
 
-.details {
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-flex-wrap: wrap;
-height: 16em;
-max-width: 1024px;
-overflow: hidden;
+.button:hover {
+font-weight: normal;
+cursor: pointer;
 }
 
 h1 {
@@ -33,35 +33,30 @@ text-align: center;
 font-size: 2rem;
 }
 
+.details {
+position: relative;
+display: flex;
+justify-content: flex-end;
+align-items: flex-start;
+flex-wrap: wrap;
+margin-bottom: 3em;
+}
+
 .details h3 {
+flex: 0 0 50%;
 padding: 0.5em 1em 0.5em 0.75em;
 margin: 0 0 1em 0;
 background-color: #404040;
 color: rgb(154, 185, 151);
-/* max-width: 422px; */
 }
 
-.details p {
-/* max-width: 422px; */
+.restaurant_description {
+flex: 0 0 45%;
 }
 
 .options {
-width: 50%;
-flex: 1 0 100%;
-order: -1;
+flex: 1 1 55%;
 text-align: center;
-}
-
-.options > div {
-height: 30%;
-text-align: center;
-padding: 3%;
-}
-
-.details table {
-width: 50%;
-flex: 0 1 auto;
-margin-top: 1em;
 }
 
 .details th {
@@ -85,24 +80,188 @@ margin: 0;
 display: inline-block;
 }
 
-.details table li::after {
-/* :not(table li:last-child) */
+.details table li:not(:last-child)::after {
 content: ", ";
 }
 
-.button {
-padding: 0.5em 1em;
-border-radius: 0.5em;
-min-width: 6em;
-max-width: 10em;
-max-height: 2em;
-margin: 2rem auto;
-background-color: #ae3721;
-color: #fff;
-display: block;
-
+/* LOCATION GALLERY */
+.gallery {
+height: 300px;
+width: 100%;
+overflow: hidden;
 }
 
-.button:hover {
+.gallery figure {
+flex: 1 1 auto;
+margin: 0;
+padding: 0;
+overflow: hidden;
+}
+
+.gallery figure.hero {
+flex: 1 0 auto;
+}
+
+.gallery figure:not(.hero):hover img {
+opacity: 0.7;
+}
+
+/* FORM STYLING */
+#quote {
+position: fixed;
+top: 5%;
+left: -10000px;
+background-color: rgba(165, 79, 80, 0.95);
+padding: 2em;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: flex-end;
+max-width: 50%;
+box-shadow: 0.2em 0.2em 4em #404040;
+z-index: 30;
+}
+
+#quote > *:not(fieldset) {
+flex: 1 1 100%;
+}
+
+#quote > fieldset {
+flex: 1 0 40%;
+}
+
+#quote h2, #quote h3, #event_info label:not(.feedback_msg) {
+color: rgb(255, 222, 192);
+margin: 0 0 2rem;
+text-transform: unset;
+}
+
+#cust_info div, #event_info div {
+margin: 1.25rem auto;
+}
+
+#cust_info input {
+border-radius: 0.5rem;
+border: 0;
+width: 90%;
+padding: 1rem;
+}
+
+#event_info select {
+margin: 0 1em;
+padding: 0.5rem;
+border: 0;
+border-radius: 0.5rem;
+}
+
+#cust_info label:not(.feedback_msg) {
+position: absolute;
+padding-left: 1.5rem;
+margin: 0.5em auto;
+color: #404040;
+}
+
+#quote input:focus, #quote select:focus {
+background-color: rgb(255, 222, 192);
+color: #404040;
+}
+
+#cust_info label.small {
+right: 15%;
+text-align: right;
+transform-origin: right top;
+font-size: 1rem;
+}
+
+fieldset {
+position: relative;
+border: 0;
+padding: 0 0 0 1.5rem;
+margin: 0 0 1rem;
+}
+
+legend {
+margin-bottom: 1.5rem;
+font-weight: 700;
+font-size: 2rem;
+line-height: 2rem;
+position: relative;
+left: -1.5rem;
+color: #FFF;
+}
+
+#event_date {
+padding: 0;
+margin: 0;
+}
+
+#event_date legend {
+color: rgb(255, 222, 192);
 font-weight: normal;
+font-size: unset;
+left: unset;
+margin: 0;
+padding: 0;
+}
+
+.feedback_msg {
+display: none;
+background-color: rgb(43,54,58);
+color: rgb(154, 185, 151);
+padding: 0.25em;
+vertical-align: middle;
+border-radius: 0.5rem;
+margin-bottom: 3rem;
+margin-top: 0.25em;
+max-width: 90%;
+}
+
+#quote button {
+font-size: 1.3rem;
+cursor: pointer;
+margin: unset;
+width: unset;
+margin-top: 2rem;
+max-width: 25em;
+border: 2px solid rgb(255, 222, 192);
+text-transform: uppercase;
+font-kerning: auto;
+flex: 1 0 100%;
+}
+
+#quote button:hover {
+background-color: rgba(255, 222, 192, 0.45);
+font-weight: 900;
+color: #404040;
+}
+
+#close {
+position: absolute;
+transform-origin: right top;
+top: 1em;
+right: 1em;
+width: 3em;
+height: 3em;
+}
+
+#close div {
+position: relative;
+}
+
+#line1, #line2 {
+position: absolute;
+top: 2rem;
+width: 3em;
+height: 0.5rem;
+background-color: rgb(255, 222, 192);
+border: 0;
+border-radius: 0.25rem;
+}
+
+#line1 {
+transform: rotate(45deg);
+}
+
+#line2 {
+transform: rotate(-45deg);
 }

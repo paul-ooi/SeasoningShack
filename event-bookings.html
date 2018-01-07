@@ -6,42 +6,69 @@
 <link href="CSS/general.css" type="text/css" rel="stylesheet"/>
 <link href="CSS/event-booking-style.css" type="text/css" rel="stylesheet"/>
 <script src="JavaScript/header-footer.js" type="text/javascript"></script>
+<!-- <script src="JavaScript/event-booking.js" type="text/javascript"></script> -->
 </head>
 <body>
-  <header class="large">
-      <nav id="main-nav">
-        <ul>
-                <li><a href="menu.html">menu</a></li>
-                <li><a href="specials.html">specials</a></li>
-                <li><a href="locations.html">locations</a></li>
-                <li><a href="event-bookings.html">event booking</a></li>
-                <li><a href="about-us.html">about</a></li>
-                <li><a href="contact.html">contact</a></li>
-        </ul>
-      </nav>
-      <div id="company-branding"><img  src="Logo/Final Logo.svg" id="logo"/><h2>seasoning shack</h2></div>
-  </header>
+    <header class="large">
+        <nav id="main-nav">
+          <ul>
+              <li><a href="menu.html">menu</a></li>
+              <li><a href="specials.html">specials</a></li>
+              <li><a href="locations.html">locations</a></li>
+              <li><a href="event-bookings.html">event booking</a></li>
+              <li><a href="about-us.html">about</a></li>
+              <li><a href="contact.html">contact</a></li>
+          </ul>
+        </nav>
+        <div id="company-branding"><a href="index.html"><img  src="Logo/Final Logo.svg" id="logo"/></a><h2><a href="index.html">seasoning shack</a></h2></div>
+    </header>
   <div class="wrapper">
     <main>
       <h1>Book your next event!</h1>
-      <section class="location">
-        <div class="gallery border">
-          <img src="images/location1-events1.jpg" alt="" />
-          <img src="images/location1-events2.jpg" alt="" />
-          <img src="images/location1-events3.jpg" alt="" />
-          <img src="images/location1-events4.jpg" alt="" />
-          <img src="images/location1-events5.jpg" alt="" />
-          <img src="images/location1-events6.jpg" alt="" />
-          <img src="images/location1-events7.jpg" alt="" />
-          <img class="hero" src="images/location1-events8.jpg" alt="" />
+      <section class="location" id="location1">
+        <div class="gallery flex-container border">
+          <h3 class="hidden">Gallery of images from Annex location</h3>
+          <figure>
+            <img src="images/location1-events1.jpg" alt="" />
+          </figure>
+          <figure class="hero">
+            <img src="images/location1-events2.jpg" alt="" />
+          </figure>
+          <figure>
+            <img src="images/location1-events3.jpg" alt="" />
+          </figure>
+          <figure>
+            <img src="images/location1-events4.jpg" alt="" />
+          </figure>
+          <figure>
+            <img src="images/location1-events5.jpg" alt="" />
+          </figure>
+          <figure>
+            <img src="images/location1-events6.jpg" alt="" />
+          </figure>
+          <figure>
+            <img src="images/location1-events7.jpg" alt="" />
+          </figure>
+          <figure>
+            <img src="images/location1-events8.jpg" alt="" />
+          </figure>
         </div>
         <div class="details">
-          <h3>Kensington</h3>
-          <div>
-            <p>1234 street Name, Toronto, Ontario, X1X 1X1</p>
-            <p>Restaurant description</p>
+          <h3>Annex</h3>
+          <div class="options">
+
+              <button class="button border quote" title="Get a Quote">Get Quote</button>
+
+              <!-- <button class="button border" href="#" title="See possible seating charts for our location">See Floor Plan</button> -->
+
+              <a class="button border" href="https://www.google.ca/maps/place/15+Bedford+Rd,+Toronto,+ON+M5R+2J7/@43.6691166,-79.3997942,17z/data=!3m1!4b1!4m5!3m4!1s0x882b34bca8d3d411:0x8e7ac674187c14f2!8m2!3d43.6691127!4d-79.3976055" target="_blank" title="Get directions to our Annex location">Get Directions</a>
+
           </div>
-          <table>
+          <div class="restaurant_description">
+            <p>15 Bedford Road, Toronto, Ontario, M5R 2J7</p>
+            <p>Come to host your next event in our open concept space accessible by transit and reserve parking for you and your guests.</p>
+          </div>
+          <table class="specifics">
             <tbody>
               <tr>
                 <th>Seating Capacity</th>
@@ -67,49 +94,194 @@
               </tr>
             </tbody>
           </table>
-          <div class="options">
-            <!-- <div class="border"> -->
-              <a class="button border" href="#" title="Get a Quote">Get Quote</a>
-            <!-- </div>
-            <div class="border"> -->
-              <a class="button border" href="#" title="See possible seating charts for our location">See Floor Plan</a>
-            <!-- </div>
-            <div class="border"> -->
-              <a class="button border" href="#" title="Get directions to our Annex location">Get Directions</a>
-            <!-- </div> -->
-          </div>
         </div>
       </section>
-    </main>
-    <footer>
-      <section id="social-media">
-        <div class="social" id="fbook"><a><img src="images/social-icons/facebook.png" alt"Like and Follow us on Social Media"/></a></div>
-        <div class="social" id="twitter"><a><img src="images/social-icons/twitter.png" alt"Like and Follow us on Social Media"/></a></div>
-        <div class="social" id="instagram"><a><img src="images/social-icons/instagram.png" alt"Like and Follow us on Social Media"/></a></div>
-        <div class="social" id="google-plus"><a><img src="images/social-icons/google-plus.png" alt"Like and Follow us on Social Media"/></a></div>
+<hr>
+      <section class="location" id="location2">
+        <div class="gallery flex-container border">
+          <h3 class="hidden">Gallery of images from Annex location</h3>
+          <figure>
+            <img src="images/location2-events1.jpg" alt="" />
+          </figure>
+          <figure class="hero">
+            <img src="images/location2-events2.jpg" alt="" />
+          </figure>
+          <figure>
+            <img src="images/location2-events3.jpg" alt="" />
+          </figure>
+          <figure>
+            <img src="images/location2-events4.jpg" alt="" />
+          </figure>
+          <figure>
+            <img src="images/location2-events5.jpg" alt="" />
+          </figure>
+          <figure>
+            <img src="images/location2-events6.jpg" alt="" />
+          </figure>
+          <figure>
+            <img src="images/location2-events7.jpg" alt="" />
+          </figure>
+          <figure>
+            <img src="images/location2-events8.jpg" alt="" />
+          </figure>
+        </div>
+        <div class="details">
+          <h3>Kensington</h3>
+          <div class="options">
+
+              <button class="button border quote" title="Get a Quote">Get Quote</button>
+
+              <!-- <button class="button border" href="#" title="See possible seating charts for our location">See Floor Plan</button> -->
+
+              <a class="button border" href="https://www.google.ca/maps/place/199+Augusta+Ave,+Toronto,+ON+M5T+2L4/@43.6898032,-79.509591,13z/data=!4m20!1m14!4m13!1m4!2m2!1d-79.5575659!2d43.7192436!4e1!1m6!1m2!1s0x882b34c26786a487:0xa511a940db73223b!2s199+Augusta+Ave,+Toronto,+ON+M5T+2L4!2m2!1d-79.4014765!2d43.6538059!3e3!3m4!1s0x882b34c26786a487:0xa511a940db73223b!8m2!3d43.6538059!4d-79.4014765" target="_blank" title="Get directions to our Annex location">Get Directions</a>
+
+          </div>
+          <div class="restaurant_description">
+            <p>199 Augusta Avenue, Toronto, Ontario, M5T 2L4</p>
+            <p>Our quaint rustic themed space is located near Kensington market, accessible by TTC transit, contact us to book your next event.</p>
+          </div>
+          <table class="specifics">
+            <tbody>
+              <tr>
+                <th>Seating Capacity</th>
+                <td>50-100</td>
+              </tr>
+              <tr>
+                <th>Catering Service</th>
+                <td>Off-site</td>
+              </tr>
+              <tr>
+                <th>Outside vendors</th>
+                <td>Not permitted</td>
+              </tr>
+              <tr>
+                <th>Nearby Amenities</th>
+                <td>
+                  <ul>
+                    <li>ATM</li>
+                    <li>Subway Station</li>
+                    <li>Not fully accessible</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
-      <nav>
-        <ul>
-          <li><a href="menu.html">menu</a></li>
-          <li><a href="specials.html">specials</a></li>
-          <li><a href="locations.html">locations</a></li>
-          <li><a href="event-bookings.html">event booking</a></li>
-          <li><a href="about-us.html">about</a></li>
-          <li><a href="contest.html">contest</a></li>
-          <li><a href="careers.html">careers</a></li>
-          <li><a href="gift-cards.html">gift cards</a></li>
-          <li><a href="contact.html">contact</a></li>
-        </ul>
-      </nav>
-      <div id="copyright-privacy">
+      <form action="#" method="post" name="quote" id="quote">
+        <h2>Quote Request Form</h2>
+        <h3>Submit a complete form for a quote</h3>
+
+        <fieldset id="cust_info">
+          <legend>Customer Information</legend>
+          <div>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="cust_name" required/>
+            <label for="name" class="feedback_msg">Must not be empty</label>
+          </div>
+          <div>
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="cust_email" required/>
+            <label for="email" class="feedback_msg"></label>
+          </div>
+          <div>
+            <label for="phone">Your Phone Number</label>
+            <input type="text" id="phone" name="cust_phone"/>
+            <label for="phone" class="feedback_msg"></label
+          </div>
+        </fieldset>
+
+        <fieldset id="event_info">
+          <legend>Event Information</legend>
+          <div>
+            <label for="location">Preferred Location</label>
+            <select name="location" id="location">
+              <option value="" selected>--Select Location--</option>
+              <option value="AX">Annex</option>
+              <option value="KN">Kensinton</option>
+            </select>
+            <label for="location" class="feedback_msg"></label>
+          </div>
+
+          <div>
+            <label for="group_size">Party Size</label>
+            <select id="group_size" name="party_size">
+              <option value="" selected># of people</option>
+              <option value="small">20-50</option>
+              <option value="medium">50-100</option>
+              <option value="large">100+</option>
+            </select>
+          </div>
+
+        <fieldset id="event_date">
+          <legend>Event date: </legend>
+          <label for="event_year">Year</label>
+          <select id="event_year" name="event_year">
+            <option value="" selected>--</option>
+          </select>
+
+          <label for="event_month">Month</label>
+          <select id="event_month" name="event_month">
+            <option value="" selected>--</option>
+            <option value="1" >January</option>
+            <option value="2" >February</option>
+            <option value="3" >March</option>
+            <option value="4" >April</option>
+            <option value="5" >May</option>
+            <option value="6" >June</option>
+            <option value="7" >July</option>
+            <option value="8" >August</option>
+            <option value="9" >September</option>
+            <option value="10" >October</option>
+            <option value="11" >November</option>
+            <option value="12" >December</option>
+          </select>
+
+          <label for="event_day">Day</label>
+          <select id="event_day" name="event_day">
+            <option value="" selected>--</option>
+          </select>
+        </fieldset>
+
+        </fieldset>
+        <button class="button" type="submit" form="quote" formmethod="post" title="Submit request for quote">Submit for Quote</button>
+        <div id="close">
+          <h3 class="hidden">Close</h3>
+          <div><span id="line1"></span>
+          <span id="line2"></span></div>
+        </div>
+      </form>
+    </main>
+      <footer>
+        <section id="social-media">
+          <div class="social" id="fbook"><a href="http://www.facebook.com"><img src="images/social-icons/facebook.png" alt="Like and Follow us on Facebook" title="Like and Follow us on Facebook"/></a></div>
+          <div class="social" id="twitter"><a href="http://www.twitter.com"><img src="images/social-icons/twitter.png" alt="Follow us on Twitter" title="Follow us on Twitter"/></a></div>
+          <div class="social" id="instagram"><a href="http://www.instagram.com"><img src="images/social-icons/instagram.png" alt="Follow us on Instagram" title="Follow us on Instagram"/></a></div>
+          <div class="social" id="google-plus"><a href="http://plus.google.com"><img src="images/social-icons/google-plus.png" alt="Follow us on Google+" title="Follow us on Google+"/></a></div>
+        </section>
+        <nav>
           <ul>
-              <li><a href="#">Privacy</a></li>
-              <li><a href="#">Terms of Use</a></li>
+            <li><a href="menu.html">menu</a></li>
+            <li><a href="specials.html">specials</a></li>
+            <li><a href="locations.html">locations</a></li>
+            <li><a href="event-bookings.html">event booking</a></li>
+            <li><a href="about-us.html">about</a></li>
+            <li><a href="contest.html">contest</a></li>
+            <li><a href="careers.html">careers</a></li>
+            <li><a href="gift-cards.html">gift cards</a></li>
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="sitemap.html">sitemap</a></li>
           </ul>
-              &copy; Seasoning Shack <span id="copyright-year">2017</span>
-      </div>
-      <img class="background" src="images/pexels-photo-672046.jpg" alt="spices on worksurface"/>
-    </footer>
+        </nav>
+        <div id="copyright-privacy">
+            <ul>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+            </ul>
+                &copy; Seasoning Shack <span id="copyright-year">2017</span>
+        </div>
+        <img class="background" src="images/pexels-photo-672046.jpg" alt="spices on worksurface"/>
+      </footer>
   </div>
 </body>
 
