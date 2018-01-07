@@ -16,6 +16,7 @@ function pageReady() {
     jobListAll.style.display = "block";
     annexJob.style.display = "block";
     kenJob.style.display = "none";
+    appliForm.style.display = "none";
   }
   
   kenBtn.onclick = showKen;
@@ -24,6 +25,7 @@ function pageReady() {
     jobListAll.style.display = "block";
     kenJob.style.display = "block";
     annexJob.style.display = "none";
+    appliForm.style.display = "none";
     
   }
   
@@ -83,7 +85,8 @@ function pageReady() {
     "Must be eligible to work in Canada", 
     "Can work a flexible schedule including opening, closing, weekends, and holidays"]
   };
-
+  
+  // JOB TITLE ARRAY
   var jobVacancy = {
     name:[jobPost1, jobPost2]
   };
@@ -94,10 +97,9 @@ function pageReady() {
   var jobName = document.getElementsByClassName("job-name");
   var jobList = jobVacancy.name;
 
-  
-  for (i = 0; i < jobList.length; i++) {
-    jobName[i].innerHTML += jobList[i].name;
-  }
+    for (i = 0; i < jobList.length; i++) {
+      jobName[i].innerHTML += jobList[i].name;
+    }
 
     for (i = 0; i < jobList.length; i++) {
       for (d = 0; d < jobList[i].duties.length; d++) {
@@ -107,5 +109,29 @@ function pageReady() {
         classDuties2[i].innerHTML += "<li>" + jobVacancy.name[i].skills[s] + "</li>";
       }
     }
+    
+    var applyBtn = document.getElementById("apply-btn");
+    var appliForm = document.getElementById("form-container");
+    var jobNameForm = document.getElementsByClassName("job-name-form");
+    
+    
+    applyBtn.onclick = showAppliForm;
+    
+    function showAppliForm() {
+      appliForm.style.display = "block";
+      jobListAll.style.display = "none";
+      for (var j = 0; j < jobList.length; j++) {
+      jobNameForm[j].innerHTML = "Apply as " + jobList[j].name;
+      }
+    }
+    
+   
+    
+    
+    
+    
+    
+    
+    
 
 } //end of ONLOAD function

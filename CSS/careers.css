@@ -95,9 +95,10 @@ h1 {
 }
 .btn-container {
   position:relative;
-  text-align:center;
+  /* text-align:center; */
 }
 .sub-btn{
+  margin-right:2rem;
   border:0;
   width:20rem;
   height:4rem;
@@ -124,16 +125,23 @@ form div {
   margin-bottom: 2.4rem;
 }
 #form-container {
+  display:none;
   width:68%;
   float:right;
   position:relative;
+}
+#form-container h3 {
+  padding-bottom:3rem;
+}
+#job-form {
+  margin-left:5rem;
 }
 label{
   font-weight:bold;
 }
 input {
   margin-top: 0.8rem;
-  width: 70%;
+  width: 80%;
   color: #404040;
   height: 3.2rem;
   font-size: 1.6rem;
@@ -148,11 +156,14 @@ input {
 input:focus {
   outline:0;
   background-color:#ffdec080;
-  width:80%;
+  width:90%;
 }
 #resume:focus {
   background-color:#ffdec000;
 }
+/* input[type="file"] { */
+    /* display: none; */
+/* } */
 footer {
   clear:both;
 }

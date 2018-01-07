@@ -62,13 +62,13 @@
                 <ul class="list2-container">
                 </ul>
               <!-- <div>Send resume to <a href="mailto:kensington@seasoningshack.com?Subject=Resume:%20Server" target="_top">kensington@seasoningshack.com</a></div> -->
-              <div class="btn-container"><input type="submit" id="submit-btn" value="Apply now"/></div>
+              <div class="btn-container"><input type="submit" id="apply-btn" class="sub-btn" value="Apply now"/></div>
             </div>
           </div>
         </div>
         <div id="form-container">
+        <h3 class="job-name-form"></h3>
           <section id="job-form">
-            <h3 class="job-name-form"></h3>
             <form id="job-form-id" name="job-form_name" action="#" method="post">
               <label for="first-name">First Name</label>
               <span id="first-name-err" class="error"></span>
@@ -90,7 +90,8 @@
                 <input id="resume" type="file" name="resume" accept=".docx"/>
               </div>
               <div>
-                <div class="btn-container"><input type="submit" id="submit-btn" class="sub-btn" value="Submit"/></div>
+                <div class="btn-container"><input type="submit" id="submit-btn" class="sub-btn" value="Submit"/>
+                <input type="reset" id="reset-btn" class="sub-btn" value="Reset"/></div>
                 <div>
                   <span id="submit-err" class="error"></span>
                 </div>
