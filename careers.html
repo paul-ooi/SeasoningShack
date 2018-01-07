@@ -49,8 +49,8 @@
                 <h4>Skills and Requirements:</h4>
                 <ul class="list2-container">
                 </ul>
-              
-              <div>Send resume to <a href="mailto:annex@seasoningshack.com?Subject=Resume:%20Host" target="_top">annex@seasoningshack.com</a></div>
+              <!-- <div>Send resume to <a href="mailto:annex@seasoningshack.com?Subject=Resume:%20Host" target="_top">annex@seasoningshack.com</a></div> -->
+              <div class="btn-container"><input type="submit" id="apply-btn" class="sub-btn" value="Apply now"/></div>
             </div>
           </div>
           <div id = "kensington-job" class="job-content">
@@ -61,11 +61,42 @@
                 <h4>Skills and Requirements:</h4>
                 <ul class="list2-container">
                 </ul>
-              
-              <div>Send resume to <a href="mailto:kensington@seasoningshack.com?Subject=Resume:%20Server" target="_top">kensington@seasoningshack.com</a></div>
+              <!-- <div>Send resume to <a href="mailto:kensington@seasoningshack.com?Subject=Resume:%20Server" target="_top">kensington@seasoningshack.com</a></div> -->
+              <div class="btn-container"><input type="submit" id="submit-btn" value="Apply now"/></div>
             </div>
           </div>
-          <!-- PUT APPLY NOW BUTTON AND FORM HERE -->
+        </div>
+        <div id="form-container">
+          <section id="job-form">
+            <h3 class="job-name-form"></h3>
+            <form id="job-form-id" name="job-form_name" action="#" method="post">
+              <label for="first-name">First Name</label>
+              <span id="first-name-err" class="error"></span>
+              <div>
+                <input id="first-name" type="text"  placeholder="Enter your first name"/>
+              </div>
+              <label for="last-name">Last Name</label>
+              <span id="last-name-err" class="error"></span>
+              <div>
+                <input id="last-name" type="text"  placeholder="Enter your last name"/>
+              </div>
+              <label for="email">Email Address</label>
+              <span id="email-err" class="error"></span>
+              <div>
+                <input id="email" type="email"  placeholder="Enter your first name"/>
+              </div>
+              <label for="resume">Resume</label>
+              <div>
+                <input id="resume" type="file" name="resume" accept=".docx"/>
+              </div>
+              <div>
+                <div class="btn-container"><input type="submit" id="submit-btn" class="sub-btn" value="Submit"/></div>
+                <div>
+                  <span id="submit-err" class="error"></span>
+                </div>
+              </div>
+            </form>
+          </section>
         </div>
     </main>
 
