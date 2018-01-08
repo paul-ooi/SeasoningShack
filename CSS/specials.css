@@ -6,9 +6,6 @@ section ul {
 	clear:both;
 	padding:0 5%;
 }
-section ul ul {
-	padding:0;
-}
 section li {
 	padding:1em 0;
 	transition:all 0.2s ease-in;
@@ -16,9 +13,20 @@ section li {
 section li:hover {
 	background-color:rgba(64, 64, 64, 0.05);
 }
+/*removes inherited styling from parents*/
+section ul ul {
+	padding:0;
+}
+section li li {
+	margin-bottom:0;
+}
+section li li:last-child {
+	padding:0;
+}
 section li li:hover {
 	background-color:transparent;
 }
+
 h3 {
 	font-size:1.5em;
 }
@@ -33,12 +41,13 @@ section h4 {
 	transition:all 0.5s;
 }
 .sub-nav a {
-	font-size:1.5em;
+	font-size:1.4em;
+	line-height:1.45em;
 	border:2px solid #404040;
 	max-width:5.5em;
 	height:5.5em;
 	border-radius:50%;
-	padding:1.8em 0;
+	padding:1.3em 0;
 	display:block;
 }
 .sub-nav li:hover {
