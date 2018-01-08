@@ -186,8 +186,8 @@
           </div>
           <div>
             <label for="phone">Your Phone Number</label>
-            <input type="text" id="phone" name="cust_phone"/>
-            <label for="phone" class="feedback_msg"></label
+            <input type="tel" id="phone" name="cust_phone" title="416-123-4567"/>
+            <label for="phone" class="feedback_msg"></label>
           </div>
         </fieldset>
 
@@ -213,7 +213,12 @@
             </select>
           </div>
 
-        <fieldset id="event_date">
+          <div>
+            <label for="event_date">Event Date</label>
+            <input type="date" id="event_year" name="event_year">
+            <label for="event_date" class="feedback_msg"></label>
+          </div>
+        <!-- <fieldset id="event_date">
           <legend>Event date: </legend>
           <label for="event_year">Year</label>
           <select id="event_year" name="event_year">
@@ -241,7 +246,7 @@
           <select id="event_day" name="event_day">
             <option value="" selected>--</option>
           </select>
-        </fieldset>
+        </fieldset> -->
 
         </fieldset>
         <button class="button" type="submit" form="quote" formmethod="post" title="Submit request for quote">Submit for Quote</button>
