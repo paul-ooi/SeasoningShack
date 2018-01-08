@@ -8,10 +8,12 @@ function pageReady() {
   var jobListAll = document.getElementById("job-container");
   var annexJob = document.getElementById("annex-job");
   var kenJob = document.getElementById("kensington-job");
+  var crewMem = document.getElementById("restaurant-banner");
 
   annexBtn.onclick = showAnnex;
 
   function showAnnex() {
+    crewMem.style.display = "none";
     jobListAll.style.display = "block";
     annexJob.style.display = "block";
     kenJob.style.display = "none";
@@ -21,6 +23,7 @@ function pageReady() {
   kenBtn.onclick = showKen;
   
   function showKen() {
+    crewMem.style.display = "none";
     jobListAll.style.display = "block";
     kenJob.style.display = "block";
     annexJob.style.display = "none";
@@ -66,7 +69,6 @@ function pageReady() {
     "Smart serve certification is an asset, but not required", 
     "Must be eligible to work in Canada"]
   };
-  
   var jobPost2 = {
     name: "Foods and Beverage Server",
     duties: [
@@ -90,7 +92,6 @@ function pageReady() {
   var jobVacancy = {
     name:[jobPost1, jobPost2]
   };
-  
 
   var classDuties = document.getElementsByClassName("list-container");
   var classDuties2 = document.getElementsByClassName("list2-container");
@@ -113,7 +114,7 @@ function pageReady() {
   var applyBtn = document.getElementById("apply-btn");
   var applyBtn2 = document.getElementById("apply2-btn");
   var appliForm = document.getElementById("form-container");
-  var jobNameForm = document.getElementsByClassName("job-name-form");
+  
 
   function showAppliForm() {
     appliForm.style.display = "block";
@@ -122,13 +123,17 @@ function pageReady() {
   applyBtn.onclick = showAppliForm;
   applyBtn2.onclick = showAppliForm;
     
-   
-    
-    
-    
-    
-    
-    
-    
+  var subForm = document.forms.job_fm_name;
+  var formSubmit = document.getElementById("confirmation");
+
+  subForm.onsubmit = function () {
+    scrollTo(document.body, 0);
+    setTimeout(function(){window.location.href='index.html'},5000);
+    formSubmit.style.display = "block";
+    crewMem.style.display = "none";
+    appliForm.style.display = "none";
+    jobListAll.style.display = "none";
+    return false;
+  }
 
 } //end of ONLOAD function
