@@ -22,7 +22,7 @@ section li {
 	transition:all 0.2s ease-in;
 }
 section li:hover {
-	background-color:rgba(255, 222, 192, 0.2)
+	background-color:rgba(64, 64, 64, 0.05)
 }
 section h3 {
 	text-align:center;
@@ -74,7 +74,7 @@ section h3 {
 }
 .content {
 	position:absolute;
-	left:-10000px;
+	left:10000px;
 	transition: all 0.2s;
 }
 #first-section {
