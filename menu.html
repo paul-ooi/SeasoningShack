@@ -20,13 +20,15 @@
         <li><a href="contact.html">contact</a></li>
       </ul>
     </nav>
-    <div id="company-branding"><img  src="Logo/Final Logo.svg" id="logo"/><h2>seasoning shack</h2></div>
+    <div id="company-branding"><a href="index.html"><img  src="Logo/Final Logo.svg" id="logo"/></a><h2><a href="index.html">seasoning shack</a></h2></div>
   </header>
   <div class="wrapper">
     <main>
       <h1 class="hidden">Menu</h1>
 	    <section>
       	  <h2 class="section-title">Appetizers</h2>
+		  <div class="content" id="first-section">
+			<img  src="images/appetizer.png" alt="soup small" />
 	        <ul>
 		      <li>
 		        <div class="dish-name">Oyster shooter<span class="dish-price">$8.99</span></div>
@@ -49,9 +51,11 @@
 			    <div class="dish-description">Freshly cut fries deep fried to the perfect crisp served with your choice of dip.</div>
 		      </li>
 		    </ul>
+			</div>
 		</section>
 		<section>
 	      <h2 class="section-title">Soups and Salads</h2>
+		  <div class="content">
 		  <div class="flex-container">
 		  <section class="column-2">
 		    <h3>Soup</h3>
@@ -93,7 +97,7 @@
 		  </section>
 		  <section class="column-2">
 			<h3>Salad</h3>
-			  <img  src="images/salad.png" alt="soup" />
+			  <img  src="images/salad.png" alt="salad" />
 			  <ul>
 		        <li>
 				  <div class="dish-name">Garden Salad<span class="dish-price">$4.39</span></div>
@@ -118,12 +122,15 @@
 			  </ul>
 		  </section>
 		  </div>
+		  </div>
 		</section>
 		<section>
 	      <h2 class="section-title">Main Dishes</h2>
+		  <div class="content">
 		  <div class="flex-container">
 	      <section class="column-2">  
 			<h3>Noodles &amp; Rice</h3>
+			<img src="images/rice.png" alt="fried rice" />
 			  <ul>
 		        <li>
 				  <div class="dish-name">Seafood Pasta<span class="dish-price">$15.99</span></div>
@@ -144,7 +151,7 @@
 			</section>
 			<section class="column-2">
 		    <h3>Seafood</h3>
-			  <img src="images/seafood.png" alt="sandwich wrap" />
+			  <img src="images/seafood.png" alt="lobster" />
 			  <ul>
 		        <li>
 				  <div class="dish-name">Salmon Steak<span class="dish-price">$16.49</span></div>
@@ -195,9 +202,12 @@
 			  </ul>
 			</section>
 			</div>
+			</div>
 		</section>
 		<section>
-	      <h2 class="section-title">Desert</h2>
+	      <h2 class="section-title">Dessert</h2>
+		  <div class="content">
+			<img src="images/desert.png" alt="cheesecake" />
 		    <ul>
 		        <li>
 				  <div class="dish-name">Classic New York Cheesecake<span class="dish-price">$5.99</span></div>
@@ -228,14 +238,15 @@
 				  <div class="dish-name">Seasonal Fruits Platter<span class="dish-price">$4.99</span></div>
 			      <div class="dish-description">Freshly-harvested organic fruits served with clotted cream.</div>
 			    </li>
-			  </ul>
+			</ul>
+		  </div>
 		</section>
 		<section>
 	      <h2 class="section-title">Drinks</h2>
+		  <div class="content">
 		  <div class="flex-container">
 		  <section class="column-2">
 		    <h3>Alcoholic</h3>
-		    <!-- <div class="flex-container"> -->
 			  <h4>Beer</h4>
 			  <ul>
 		        <li>
@@ -322,7 +333,6 @@
 			    </li>
 			  </ul>
 			<h3>Coffee &amp; Tea</h3>
-			  <img src="images/coffee.png" alt="coffee" />
 			  <ul>
 		        <li>
 				  <div class="dish-name">Iced Coffee<span class="dish-price">$3</span></div>
@@ -345,7 +355,9 @@
 			      <div class="dish-description">Your choice of Cardamom, cinnamon, star anise or cloves.</div>
 			    </li>
 			  </ul>
+			  <img src="images/coffee.png" alt="coffee" />
 		  </section>
+		  </div>
 		  </div>
 		</section>
 		<div class="link">
@@ -353,24 +365,26 @@
 		  <a class="jump-to-top" href="#top">Jump to Top</p>
 		</div>
     </main>
+  </div>
     <footer>
       <section id="social-media">
-        <div class="social" id="fbook"><a><img src="images/social-icons/facebook.png" alt"Like and Follow us on Social Media"/></a></div>
-        <div class="social" id="twitter"><a><img src="images/social-icons/twitter.png" alt"Like and Follow us on Social Media"/></a></div>
-        <div class="social" id="instagram"><a><img src="images/social-icons/instagram.png" alt"Like and Follow us on Social Media"/></a></div>
-        <div class="social" id="google-plus"><a><img src="images/social-icons/google-plus.png" alt"Like and Follow us on Social Media"/></a></div>
+        <div class="social" id="fbook"><a href="http://www.facebook.com"><img src="images/social-icons/facebook.png" alt="Like and Follow us on Facebook" title="Like and Follow us on Facebook"/></a></div>
+        <div class="social" id="twitter"><a href="http://www.twitter.com"><img src="images/social-icons/twitter.png" alt="Follow us on Twitter" title="Follow us on Twitter"/></a></div>
+        <div class="social" id="instagram"><a href="http://www.instagram.com"><img src="images/social-icons/instagram.png" alt="Follow us on Instagram" title="Follow us on Instagram"/></a></div>
+        <div class="social" id="google-plus"><a href="http://plus.google.com"><img src="images/social-icons/google-plus.png" alt="Follow us on Google+" title="Follow us on Google+"/></a></div>
       </section>
       <nav>
         <ul>
-          <li><a href="/menu.html">menu</a></li>
-          <li><a href="/specials.html">specials</a></li>
-          <li><a href="/locations.html">locations</a></li>
+          <li><a href="menu.html">menu</a></li>
+          <li><a href="specials.html">specials</a></li>
+          <li><a href="locations.html">locations</a></li>
           <li><a href="event-bookings.html">event booking</a></li>
           <li><a href="about-us.html">about</a></li>
           <li><a href="contest.html">contest</a></li>
           <li><a href="careers.html">careers</a></li>
           <li><a href="gift-cards.html">gift cards</a></li>
           <li><a href="contact.html">contact</a></li>
+          <li><a href="sitemap.html">sitemap</a></li>
         </ul>
       </nav>
       <div id="copyright-privacy">
@@ -384,5 +398,6 @@
     </footer>
   </div>
   <script type="text/javascript" src="javascript/header-footer.js"></script>
+  <script type="text/javascript" src="javascript/menu.js"></script>
 </body>
 </html>

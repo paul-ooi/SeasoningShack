@@ -1,11 +1,4 @@
 
-ul {
-	/* padding-left:0; */
-}
-ul li {
-	list-style:none;
-	margin-bottom:3em;
-}
 h3 {
 	color:#ae3721;
 }
@@ -18,16 +11,31 @@ section img {
 	float:right;
 	max-width:30%;
 	height:auto;
+	padding-right:5%;
 }
 section ul {
 	clear:both;
+	padding:0 5%;
+}
+section li {
+	padding:1em 0;
+	transition:all 0.2s ease-in;
+}
+section li:hover {
+	background-color:rgba(255, 222, 192, 0.2)
+}
+section h3 {
+	text-align:center;
 }
 .section-title {
-	margin:0;
+	margin:1em 1%;
 	text-align:center;
 	line-height:1.5em;
 	border-left:2px solid #ae3721;
 	border-top:2px solid #ae3721;
+}
+.section-title:hover {
+	cursor:pointer; /*make title look like a link*/
 }
 .column-2 { 
 	flex:1 50%;
@@ -64,7 +72,15 @@ section ul {
 .jump-to-top:hover {
 	transform:scale(1.1);
 }
-
+.content {
+	position:absolute;
+	left:-10000px;
+	transition: all 0.2s;
+}
+#first-section {
+	position:relative;
+	left:0;
+}
 @media all and (max-width:768px) {
 	.column-2 {
 		flex:1 100%;
