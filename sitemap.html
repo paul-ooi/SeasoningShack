@@ -19,54 +19,60 @@
         <li><a href="contact.html">contact</a></li>
       </ul>
     </nav>
-    <div id="company-branding"><img  src="Logo/Final Logo.svg" id="logo"/><h2>seasoning shack</h2></div>
+    <div id="company-branding"><a href="index.html"><img src="Logo/logo.svg" id="logo" alt="seasoning shack logo"/></a><h1><a href="index.html">seasoning shack</a></h1></div>
   </header>
   <div class="wrapper">
     <main>
       <h1>Site Map</h1>
 	    <div>
 	    <ul class="link-list">
-		    <li><a href="menu.html" title="Our Menu">Menu</a></li>
+		    <li id="menu-link"><a href="menu.html" title="Our Menu">Menu</a>
 			  <ul>
-			    <li><a href="#">Appetizers</a></li>
-			    <li><a href="#">Soups &amp; Salads</a></li>
-			    <li><a href="#">Main Dishes</a></li>
-			    <li><a href="#">Drinks</a></li>
-			    <li><a href="#">Desserts</a></li>
+			    <li class="hidden-links"><a href="#">Appetizers</a></li>
+			    <li class="hidden-links"><a href="#">Soups &amp; Salads</a></li>
+			    <li class="hidden-links"><a href="#">Main Dishes</a></li>
+			    <li class="hidden-links"><a href="#">Drinks</a></li>
+			    <li class="hidden-links"><a href="#">Desserts</a></li>
 			  </ul>
-		    <li><a href="specials.html" title="Our Special Menu">Specials</a></li>
+			</li>
+		    <li id="specials-link"><a href="specials.html" title="Our Special Menu">Specials</a>
 			  <ul>
-			    <li><a href="#">Daily Specials</a></li>
-			    <li><a href="#">Weekly Specials</a></li>
-			    <li><a href="#">Monthly Specials</a></li>
+			    <li class="hidden-links"><a href="#">Daily Specials</a></li>
+			    <li class="hidden-links"><a href="#">Weekly Specials</a></li>
+			    <li class="hidden-links"><a href="#">Monthly Specials</a></li>
 			  </ul>
+			</li>
 		    <li><a href="locations.html" title="Our Locations">Locations</a></li>
 		    <li><a href="event-booking" title="A Place for your Event">Event Booking</a></li>
 		    <li><a href="giftcard.html" title="Buy Gift Card">Gift Card</a></li>
 		    <li><a href="contest.html" title="Win a Prize from us">Contest</a></li>
 		    <li><a href="about-us.html" title="About us">About</a></li>
-		   <li><a href="contact.html" title="Contact Us here">Contact</a></li>
+		    <li><a href="contact.html" title="Contact Us here">Contact</a></li>
 		</ul>
 		</div>
     </main>
+  </div>
+  <div class="wrapper">
     <footer>
       <section id="social-media">
-        <div class="social" id="fbook"><a><img src="images/social-icons/facebook.png" alt"Like and Follow us on Social Media"/></a></div>
-        <div class="social" id="twitter"><a><img src="images/social-icons/twitter.png" alt"Like and Follow us on Social Media"/></a></div>
-        <div class="social" id="instagram"><a><img src="images/social-icons/instagram.png" alt"Like and Follow us on Social Media"/></a></div>
-        <div class="social" id="google-plus"><a><img src="images/social-icons/google-plus.png" alt"Like and Follow us on Social Media"/></a></div>
+        <h2 class="hidden">Social Media Icons</h2>
+        <div class="social" id="fbook"><a href="http://www.facebook.com"><img src="images/social-icons/facebook.png" alt="Like and Follow us on Facebook" title="Like and Follow us on Facebook"/></a></div>
+        <div class="social" id="twitter"><a href="http://www.twitter.com"><img src="images/social-icons/twitter.png" alt="Follow us on Twitter" title="Follow us on Twitter"/></a></div>
+        <div class="social" id="instagram"><a href="http://www.instagram.com"><img src="images/social-icons/instagram.png" alt="Follow us on Instagram" title="Follow us on Instagram"/></a></div>
+        <div class="social" id="google-plus"><a href="http://plus.google.com"><img src="images/social-icons/google-plus.png" alt="Follow us on Google+" title="Follow us on Google+"/></a></div>
       </section>
       <nav>
         <ul>
-          <li><a href="/menu.html">menu</a></li>
-          <li><a href="/specials.html">specials</a></li>
-          <li><a href="/locations.html">locations</a></li>
+          <li><a href="menu.html">menu</a></li>
+          <li><a href="specials.html">specials</a></li>
+          <li><a href="locations.html">locations</a></li>
           <li><a href="event-bookings.html">event booking</a></li>
           <li><a href="about-us.html">about</a></li>
           <li><a href="contest.html">contest</a></li>
           <li><a href="careers.html">careers</a></li>
           <li><a href="gift-cards.html">gift cards</a></li>
           <li><a href="contact.html">contact</a></li>
+          <li><a href="sitemap.html">sitemap</a></li>
         </ul>
       </nav>
       <div id="copyright-privacy">
@@ -79,6 +85,7 @@
       <img class="background" src="images/pexels-photo-672046.jpg" alt="spices on worksurface"/>
     </footer>
   </div>
-  <script type="text/javascript" src="javascript/header-footer.js"></script>
+  <script src="javascript/header-footer.js"></script>
+  <script src="javascript/sitemap.js"></script>
 </body>
 </html>
