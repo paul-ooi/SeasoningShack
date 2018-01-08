@@ -57,19 +57,34 @@ height: 40rem;
 /* FEATURED SLIDES */
 #feature-slides ul {
 position: relative;
+height: 100%;
 list-style: none;
 padding: 0;
 margin: 0;
-/* overflow: hidden; */
+overflow: hidden;
 }
 
-.promo-detail {
-position: relative;
+li.promo-detail {
+position: absolute;
+display: inline-block;
 margin: 0;
 padding: 0;
+/* transition: all 250ms linear; */
 }
 
-.promo-detail > div {
+li.promo-detail:not(.active){
+transform: translateX(100%);
+top: 0;
+}
+
+.promo-detail a {
+position: absolute;
+display: block;
+width: 100%;
+height: 100%
+}
+
+.promo_caption {
 position: absolute;
 right: 0;
 bottom: 3em;
@@ -92,14 +107,33 @@ font-style: italic;
 .promo-detail img {
 object-fit: cover;
 z-index: -10;
-flex: 1 1 auto;
+/* flex: 1 1 auto; */
 }
 
 #feature-index {
 position: absolute;
 bottom: 0;
 right: 0;
-padding: 1em 2em;
+margin: 0.5em 2em;
+}
+
+#feature-index ol {
+padding: 0;
+margin: 0;
+}
+
+#feature-index li {
+display: inline-block;
+margin: 0 0.25em;
+width: 0.75em;
+height: 0.75em;
+border-radius: 100%;
+border: 1px solid rgb(255, 222, 192);
+}
+
+#feature-index li.current {
+background-color: rgb(255, 222, 192);
+border: 0;
 }
 
 /* LOCATION SECTION */
@@ -207,15 +241,28 @@ text-align: center;
 overflow: hidden;
 }
 
+#services > div:hover img {
+transform: scale(1.05);
+}
+
 #services span {
 text-transform: capitalize;
+}
+
+#services a {
+position: absolute;
+display: block;
+width: 100%;
+height: 100%;
+z-index: 20;
 }
 
 #services img {
 position: absolute;
 height: 100%;
-/* top: 0; */
 z-index: -10;
+transition: transform 200ms ease-in;
+/* top: 0; */
 /* object-fit: cover; */
 }
 
