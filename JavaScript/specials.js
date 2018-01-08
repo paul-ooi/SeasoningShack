@@ -11,16 +11,16 @@ var month = dateVar.getMonth();
 
 //pointer for daily
 switch (day) {
-	case 0:
-	case 3:
-		pointerDaily[0].style.display = "block";
-		break;
 	case 1:
 	case 4:
-		pointerDaily[1].style.display = "block";
+		pointerDaily[0].style.display = "block";
 		break;
 	case 2:
 	case 6:
+		pointerDaily[1].style.display = "block";
+		break;
+	case 0:
+	case 3:
 		pointerDaily[2].style.display = "block";
 		break;
 }
