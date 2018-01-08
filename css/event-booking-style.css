@@ -242,10 +242,16 @@ top: 1em;
 right: 1em;
 width: 3em;
 height: 3em;
+opacity: 0.5;
+transition: all 200ms ease-in-out;
 }
 
 #close div {
 position: relative;
+}
+
+#close:hover {
+opacity: 1;
 }
 
 #line1, #line2 {
