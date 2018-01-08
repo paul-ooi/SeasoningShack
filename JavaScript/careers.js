@@ -11,7 +11,6 @@ function pageReady() {
 
   annexBtn.onclick = showAnnex;
 
-
   function showAnnex() {
     jobListAll.style.display = "block";
     annexJob.style.display = "block";
@@ -26,10 +25,8 @@ function pageReady() {
     kenJob.style.display = "block";
     annexJob.style.display = "none";
     appliForm.style.display = "none";
-    
   }
-  
-  
+
   // SHOW PANEL CONTENT
   var acc = document.getElementsByClassName("title-accordion");
   var i;
@@ -42,12 +39,15 @@ function pageReady() {
       var panelAcc = this.nextElementSibling;
       if (panelAcc.style.maxHeight){
         panelAcc.style.maxHeight = null;
+        appliForm.style.display = "none";
       } else {
         panelAcc.style.maxHeight = panelAcc.scrollHeight + "px";
       } 
     });
   }
 
+  // JOB OBJECT
+  
   var jobPost1 = {
     name: "Host/Hostess",
     duties: [
@@ -97,33 +97,30 @@ function pageReady() {
   var jobName = document.getElementsByClassName("job-name");
   var jobList = jobVacancy.name;
 
-    for (i = 0; i < jobList.length; i++) {
-      jobName[i].innerHTML += jobList[i].name;
-    }
+  for (i = 0; i < jobList.length; i++) {
+    jobName[i].innerHTML = jobList[i].name;
+  }
 
-    for (i = 0; i < jobList.length; i++) {
-      for (d = 0; d < jobList[i].duties.length; d++) {
-        classDuties[i].innerHTML += "<li>" + jobVacancy.name[i].duties[d] + "</li>";
-      }
-      for (s = 0; s < jobList[i].skills.length; s++) {
-        classDuties2[i].innerHTML += "<li>" + jobVacancy.name[i].skills[s] + "</li>";
-      }
+  for (i = 0; i < jobList.length; i++) {
+    for (d = 0; d < jobList[i].duties.length; d++) {
+      classDuties[i].innerHTML += "<li>" + jobVacancy.name[i].duties[d] + "</li>";
     }
-    
-    var applyBtn = document.getElementById("apply-btn");
-    var appliForm = document.getElementById("form-container");
-    var jobNameForm = document.getElementsByClassName("job-name-form");
-    
-    
-    applyBtn.onclick = showAppliForm;
-    
-    function showAppliForm() {
-      appliForm.style.display = "block";
-      jobListAll.style.display = "none";
-      for (var j = 0; j < jobList.length; j++) {
-      jobNameForm[j].innerHTML = "Apply as " + jobList[j].name;
-      }
+    for (s = 0; s < jobList[i].skills.length; s++) {
+      classDuties2[i].innerHTML += "<li>" + jobVacancy.name[i].skills[s] + "</li>";
     }
+  }
+  
+  var applyBtn = document.getElementById("apply-btn");
+  var applyBtn2 = document.getElementById("apply2-btn");
+  var appliForm = document.getElementById("form-container");
+  var jobNameForm = document.getElementsByClassName("job-name-form");
+
+  function showAppliForm() {
+    appliForm.style.display = "block";
+  }
+    
+  applyBtn.onclick = showAppliForm;
+  applyBtn2.onclick = showAppliForm;
     
    
     

@@ -1,9 +1,12 @@
-/* LOCATION */
+/* GENERAL */
 
 h1 {
   text-align:center;
   padding-bottom:3rem;
 }
+
+/* LOCATION */
+
 .location {
   position:relative;
   text-align:center;
@@ -95,7 +98,13 @@ h1 {
 }
 .btn-container {
   position:relative;
-  /* text-align:center; */
+  text-align:center;
+}
+.btn-container a {
+  font-weight:normal;
+}
+.btn-container a:hover {
+  text-decoration:none;
 }
 .sub-btn{
   margin-right:2rem;
@@ -129,6 +138,7 @@ form div {
   width:68%;
   float:right;
   position:relative;
+  padding-left:2rem;  
 }
 #form-container h3 {
   padding-bottom:3rem;
@@ -141,7 +151,7 @@ label{
 }
 input {
   margin-top: 0.8rem;
-  width: 80%;
+  width: 90%;
   color: #404040;
   height: 3.2rem;
   font-size: 1.6rem;
@@ -156,14 +166,14 @@ input {
 input:focus {
   outline:0;
   background-color:#ffdec080;
-  width:90%;
+  width:100%;
 }
 #resume:focus {
   background-color:#ffdec000;
 }
-/* input[type="file"] { */
-    /* display: none; */
-/* } */
+
+/* FOOTER */
+
 footer {
   clear:both;
 }
