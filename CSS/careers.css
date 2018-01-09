@@ -113,9 +113,6 @@ p {
   position:relative;
   text-align:center;
 }
-.btn-container a {
-  font-weight:normal;
-}
 .btn-container a:hover {
   text-decoration:none;
 }

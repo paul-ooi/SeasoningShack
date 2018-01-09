@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gift Cards - Seasoning Shack</title>
+    <!-- Header and Footer created by Paul Ooi -->
+    <meta charset="utf-8"/>
+    <link href="CSS/header-footer-style.css" type="text/css" rel="stylesheet"/>
+    <link href="CSS/general.css" type="text/css" rel="stylesheet"/>
+    <link href="CSS/gift-cards.css" type="text/css" rel="stylesheet"/>
+  </head>
+  <body>
+  <header class="large">
+      <nav id="main-nav">
+        <ul>
+          <li><a href="menu.html">menu</a></li>
+          <li><a href="specials.html">specials</a></li>
+          <li><a href="locations.html">locations</a></li>
+          <li><a href="event-bookings.html">event booking</a></li>
+          <li><a href="about-us.html">about</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
+      <div id="company-branding"><a href="index.html"><img  src="Logo/logo.svg" id="logo" alt="seasoning shack logo"/></a><h2><a href="index.html">seasoning shack</a></h2></div>
+  </header>
+    <div class="wrapper">
+      <main>
+        <h1>Gift Cards</h1>
+        <div>Choose which gift card you would like to purchase.</div>
+        <div id="gift-card-content">
+          <form id="gift-card-form" name="gift_card_name" action="#" method="post">
+            <div id="gc-container">
+            <label class="gc-selector">
+              <input type="radio" id="gc-50" name="50-100-card" value="50" />
+              <img src="images/gift-card-50.svg" id="50gc" alt="Seasoning Shack $50 gift card"/>
+            </label>
+            <label class="gc-selector">
+              <input type="radio" id="gc-100" name="50-100-card" value="100" />
+              <img src="images/gift-card-100.svg" id="100gc" alt="Seasoning Shack $100 gift card"/>
+            </label>
+            </div>
+              <label for="buyer-name">Name</label>
+              <span id="buy-name-err" class="error"></span>
+              <div>
+                <input id="buyer-name" type="text"  placeholder="Enter your name"/>
+              </div>
+              <label for="email">Email Address</label>
+              <span id="email-err" class="error"></span>
+              <div>
+                <input id="email" type="email"  placeholder="Enter your email address"/>
+              </div>
+              <label for="recepient-name">Recepient's name</label>
+              <span id="recepient-name-err" class="error"></span>
+              <div>
+                <input id="recepient-name" type="text"  placeholder="Enter recepient's name"/>
+              </div>
+              <div>
+                <div class="btn-container"><input type="submit" id="submit-btn" class="sub-btn" value="Submit"/>
+                <input type="reset" id="reset-btn" class="sub-btn" value="Reset"/></div>
+                <div>
+                  <span id="submit-err" class="error"></span>
+                </div>
+              </div>
+          </form>
+        </div>
+      </main>
+    <footer>
+        <section id="social-media">
+          <h2 class="hidden">Social Media Icons</h2>
+          <div class="social" id="fbook"><a href="http://www.facebook.com"><img src="images/social-icons/facebook.png" alt="Like and Follow us on Facebook" title="Like and Follow us on Facebook"/></a></div>
+          <div class="social" id="twitter"><a href="http://www.twitter.com"><img src="images/social-icons/twitter.png" alt="Follow us on Twitter" title="Follow us on Twitter"/></a></div>
+          <div class="social" id="instagram"><a href="http://www.instagram.com"><img src="images/social-icons/instagram.png" alt="Follow us on Instagram" title="Follow us on Instagram"/></a></div>
+          <div class="social" id="google-plus"><a href="http://plus.google.com"><img src="images/social-icons/google-plus.png" alt="Follow us on Google+" title="Follow us on Google+"/></a></div>
+        </section>
+      <nav>
+        <ul>
+          <li><a href="menu.html">menu</a></li>
+          <li><a href="specials.html">specials</a></li>
+          <li><a href="locations.html">locations</a></li>
+          <li><a href="event-bookings.html">event booking</a></li>
+          <li><a href="about-us.html">about</a></li>
+          <li><a href="contest.html">contest</a></li>
+          <li><a href="careers.html">careers</a></li>
+          <li><a href="gift-cards.html">gift cards</a></li>
+          <li><a href="contact.html">contact</a></li>
+          <li><a href="sitemap.html">sitemap</a></li>
+        </ul>
+      </nav>
+      <div id="copyright-privacy">
+          <ul>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms of Use</a></li>
+          </ul>
+              &copy; Seasoning Shack <span id="copyright-year">2017</span>
+      </div>
+      <img class="background" src="images/pexels-photo-672046.jpg" alt="spices on worksurface"/>
+    </footer>
+    </div>
+    <script src="JavaScript/gift-cards.js"></script>
+    <script src="JavaScript/header-footer.js"></script>
+  </body>
+</html>

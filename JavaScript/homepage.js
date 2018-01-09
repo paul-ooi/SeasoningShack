@@ -1,71 +1,67 @@
 window.addEventListener('load', pageReady, false);
 
 function pageReady() {
-var promoSlides = document.getElementsByClassName('promo-detail');// HTML collection of Promo Slides
-var promoIndexContainer = document.getElementById('feature-index');//grab index container
-console.log(promoSlides);
-
-var promoIndex = promoIndexContainer.getElementsByTagName('li'); //gets HTML collection
-
-var promotions = document.querySelector('#feature-slides ul');
-console.log(promotions);
-console.log(promoSlides.parentElement);
-
-var promoGallery = document.getElementById("feature-slides");
-console.log(promoGallery);
+//Grab Slides and Slider Index
+var promoSlides = document.getElementsByClassName('promo-detail');
+// console.log(promoSlides);
+var promoIndexContainer = document.getElementById('feature-index');
+// console.log(promoIndexContainer);
+var promoIndex = promoIndexContainer.getElementsByTagName('li');
+// console.log(promoIndex);
+var currentSlide;
+var currentIndex;
 
 
+//Setup the Interval and counter variables
+var runInterval;
+var counter = 0;
+
+function changeSlide() {
+  counter++; //advance counter to be used to target the next sibling
+  //If the counter goes past the max number of slides, it goes back to the start
+  if (counter >= promoSlides.length) {
+  counter = 0;
+  }
+  deactivateCurrent();
+  activateNext();
+}
+
+//Function interupts the automated slides to go to selected index
+function changeNow(selected) {
+  clearInterval(runInterval);
+  deactivateCurrent();
+  counter = selected.value;
+  activateNext();
+  //reactivate automated slides
+  runInterval = setInterval(changeSlide,4000);
+}
+
+//Hide the current Slide
+function deactivateCurrent() {
+currentIndex = document.querySelector('.current');
+currentSlide = document.querySelector('.active');
+currentSlide.classList.remove('active');
+currentIndex.classList.remove('current');
+}
+
+//Show the next Slide
+function activateNext() {
+  promoSlides[counter].classList.add('active');
+  promoIndex[counter].classList.add('current');
+}
+
+//Helper function to add Listener to a List of elements
 function addListener (listVar, eventString, funcName) {
   for (var i=0; i < listVar.length; i++) {
-    console.log(listVar[i]);
-    listVar[i].addEventListener(eventString,funcName, false);
+    // console.log(listVar[i]);
+    //Pass the target object to the function called by the eventListener
+    listVar[i].addEventListener(eventString,function(){funcName(this)}, false);
   }//end of for loop
 }//end of addListener
 
-// TRY ARRAY TO CYCLE THROUGH
-// var slidesArray = [];
-// var indexArray = [];
-// function convertToArray (listName, arrayName) {
-//   for (var i=0; i < listName.length; i++){
-//   arrayName.push(listName[i]);
-//   }
-//   console.log(arrayName);
-// }
-//
-// convertToArray(promoSlides, slidesArray);
-// convertToArray(promoIndex, indexArray);
-
-function changeSlide() {
-  var currentIndex = this.parentElement.getElementsByClassName('current')[0];//Get the active index of slider
-
-  var currentSlide = document.getElementsByClassName('active')[0];//Get the active Slide on display
-
-  // console.log(this);
-  // console.log(this.value);
-  // console.log(this.classList.contains('current')); //Does this item have current class; boolean
-  // console.log(currentIndex);
-
-  //This updates the index circle to become the new Current
-    if (this.classList.contains('current') == false){
-      this.classList.add('current');
-      currentIndex.removeAttribute('class');
-    }
-
-  //show new slide
-  promoSlides[this.value].classList.add('active');//value is from the html attribute
-  currentSlide.classList.remove('active');
-}//End of changeSlide
+//Begin automated Slide progression
+runInterval = setInterval(changeSlide,4000);
 
 
-
-addListener (promoIndex, "click", changeSlide);
-
-//TIMER WIP
-var slideInterval = setInterval (
-function() {
-
-
-},
-changeSlide,1000);
-
+addListener (promoIndex, "click", changeNow);
 }//end of pageReady

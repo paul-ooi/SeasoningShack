@@ -1,0 +1,13 @@
+#gift-card-content img {
+  position:relative;
+  width:32%;
+}
+/* GIFT CARD */
+.gc-selector > input{ 
+  visibility: hidden; 
+  position: absolute; 
+}
+.gc-selector > input + img{ 
+  cursor:pointer;
+  border:2px solid transparent;
+}
