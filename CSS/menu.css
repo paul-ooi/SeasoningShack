@@ -1,11 +1,10 @@
-
 h3 {
 	color:#ae3721;
 }
 .flex-container {
 	flex-flow:row wrap;
 }
-section img {
+main section img {
 	top:-1em;
 	position:relative;
 	float:right;
@@ -13,18 +12,18 @@ section img {
 	height:auto;
 	padding-right:5%;
 }
-section ul {
+main section ul {
 	clear:both;
 	padding:0 5%;
 }
-section li {
+main section li {
 	padding:1em 0;
 	transition:all 0.2s ease-in;
 }
-section li:hover {
+main section li:hover {
 	background-color:rgba(64, 64, 64, 0.05)
 }
-section h3 {
+main section h3 {
 	text-align:center;
 }
 .section-title {
@@ -51,7 +50,6 @@ section h3 {
 	font-size:0.9em;
 	float:right;
 }
-
 .dish-description {
 	width:70%;
 	font-size:0.9em;
@@ -74,12 +72,12 @@ section h3 {
 }
 .content {
 	position:absolute;
-	left:10000px;
+	top:-10000px;
 	transition: all 0.2s;
 }
 #first-section {
 	position:relative;
-	left:0;
+	top:0;
 }
 @media all and (max-width:768px) {
 	.column-2 {
