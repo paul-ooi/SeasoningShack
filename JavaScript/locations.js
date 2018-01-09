@@ -6,6 +6,7 @@ var todayDate = new Date();
 var today = todayDate.getDay();
 var currentHH = todayDate.getHours();
 var openingHH;
+var closingHH;
 var todayDay;
 
 //Array of weekday values as displayed in HTML
@@ -27,8 +28,11 @@ function openToday(todayIndex, schedule) {
 
   //Set openingHH for specific Location
   openingHH = setOpenHH(todayIndex);
+  //Set closingHH for Specific locations
+  closingHH = setCloseHH(todayIndex);
+
   //If current Hour is > Opening time
-  if (currentHH >= openingHH) {
+  if (currentHH >= openingHH && currentHH <= closingHH) {
   // console.log("We're open!");
   //Change Opening time cell Data to Open
   console.log(todaySchedule.children)
@@ -47,6 +51,15 @@ function setOpenHH(indexOfToday) {
     return 11;
   } else {
     return 9;
+  }
+}
+
+function setCloseHH(indexOfToday) {
+  //Set openingHH for Location1
+  if (indexOfToday == 6 || indexOfToday == 0) {
+    return 22;
+  } else {
+    return 21;
   }
 }
 
