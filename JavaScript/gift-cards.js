@@ -7,19 +7,39 @@ function pageReady() {
   var gift50 = document.getElementById("50gc");
   var gift100 = document.getElementById("100gc");
   
+  var buyerForm = document.getElementById("buyer-details");
+  
   giftC100.onclick = card100;
   giftC50.onclick = card50;
   
+  function fadeIn(buyerForm) {
+    buyerForm.style.opacity = 0;
+
+    var clickCard = function() {
+    buyerForm.style.opacity = +buyerForm.style.opacity + 0.08;
+
+      if (+buyerForm.style.opacity < 1) {
+        (window.requestAnimationFrame && requestAnimationFrame(clickCard)) || setTimeout(clickCard, 10)
+      }
+    };
+    clickCard();
+    }
+
   function card100() {
     if (giftC100.onclick) {
-      gift50.style.opacity = "0.5";
-      gift100.style.opacity = null;
+      gift100.style.opacity = "1";
+      gift50.style.opacity = null;
+      fadeIn(buyerForm);
+      buyerForm.style.display = "block";
+
     }
   }
   function card50() {
     if (giftC50.onclick) {
-      gift100.style.opacity = "0.5";
-      gift50.style.opacity = null;
+      gift50.style.opacity = "1";
+      gift100.style.opacity = null;
+      fadeIn(buyerForm);
+      buyerForm.style.display = "block";
     }
   }
   
