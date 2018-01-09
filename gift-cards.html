@@ -25,18 +25,18 @@
     <div class="wrapper">
       <main>
         <h1>Gift Cards</h1>
-        <div>Choose which gift card you would like to purchase.</div>
         <div id="gift-card-content">
+        <div>Choose which gift card you would like to purchase.</div>
           <form id="gift-card-form" name="gift_card_name" action="#" method="post">
             <div id="gc-container">
-            <label class="gc-selector">
-              <input type="radio" id="gc-50" name="50-100-card" value="50" />
-              <img src="images/gift-card-50.svg" id="50gc" alt="Seasoning Shack $50 gift card"/>
-            </label>
-            <label class="gc-selector">
-              <input type="radio" id="gc-100" name="50-100-card" value="100" />
-              <img src="images/gift-card-100.svg" id="100gc" alt="Seasoning Shack $100 gift card"/>
-            </label>
+              <label class="gc-selector">
+                <input type="radio" id="gc-50" name="50-100-card" value="50" />
+                <img src="images/gift-card-50.svg" id="50gc" alt="Seasoning Shack $50 gift card"/>
+              </label>
+              <label class="gc-selector">
+                <input type="radio" id="gc-100" name="50-100-card" value="100" />
+                <img src="images/gift-card-100.svg" id="100gc" alt="Seasoning Shack $100 gift card"/>
+              </label>
             </div>
             <div id="buyer-details">
               <div class="lbl-label"><label for="buyer-name">Name</label></div>
@@ -67,6 +67,24 @@
               </div>
             </div>
           </form>
+        </div>
+        <div id="confirmation">
+          <p>Thank you for purchasing the gift card.</p>
+          <div>
+            Name: <span id="cost-name"></span>
+          </div>
+          <div>
+            Email address: <span id="cost-email"></span>
+          </div>
+          <div>
+            Recepient's name: <span id="cost-rec-name"></span>
+          </div>
+          <div>
+            Amount: <span id="cost-amount"></span>
+          </div>
+          <div>
+            Message: <div id="cost-msg"></div>
+          </div>
         </div>
       </main>
     <footer>
