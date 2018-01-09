@@ -1,17 +1,37 @@
 h1 {
-	/* text-align:center; */
+	text-align:center;
+	padding:0.5em;
+	font-size:2.5em;
+}
+/* add connector for title */
+h1::after {
+	content:'';
+	position:absolute;
+	top:1.8em;
+	left:50%;
+	border-left:1.5px solid #404040;
+	height:1em;
+	width:0;
 }
 main {
 	padding-top:0;
 }
-
+.flex-container {
+	align-items: center;
+    justify-content: center;
+}
 .link-list {
 	padding:0;
-	margin:2rem 0;
+	height:25em;
+	position:relative;
+	float:center;
 }
 .link-list ul {
 	padding-top:2em;
 	position:relative;
+}
+.list-child-container {
+	position:absolute;
 }
 .link-list li {
 	margin:0;
@@ -21,6 +41,7 @@ main {
 	padding:2em 0.5em 0 0.5em;
 	vertical-align:top;
 }
+/* add connectors using pseudo element */
 .link-list li::before, .link-list li::after {
 	content:'';
 	position:absolute; 
@@ -35,47 +56,54 @@ main {
 	left:50%;
 	border-left:1.5px solid #404040;
 }
-/*remove left-right connectors from elements without siblings*/
-.link-list li:only-child::before, .link-list li:only-child::after {
-	display:none;
-}
-/*remove space from the top of single children*/
-.link-list:only-child {
-	padding-top:0;
-}
 /*remove left connector from first child and right connector from last child*/
 .link-list li:first-child::before, .link-list li:last-child::after{
 	border-top:0 none;
 }
-/*add back verticle connector to last child*/
-.link-list:last-child::before {
-	border-right:1px solid #404040;
-	border-radius:0 5px 0 0;
-	-webkit-border-radius:0 5px 0 0;
-	-moz-border-radius:0 5px 0 0;
-}
-.link-list:first-child::after {
-	border-radius:5px 0 0 0;
-	-webkit-border-radius:5px 0 0 0;
-	-moz-border-radius:5px 0 0 0;
-}
+
 /*add downward connectors from parents*/
-.link-list ul ul::before {
+.sub-link-list::before {
 	content:'';
 	position:absolute;
 	top:0;
 	left:50%;
-	border-left:2px solid #404040;
-	width:0;
-	height:2em;
+	border-left:1.5px solid #404040;
+	width:100%;
+	height:1em;
 }
-
-.link-list li li {
+.sub-link-list {
 	display:none;
 	position:relative;
+	padding:0;
 }
+/* style children connectors */
+.sub-link-list li {
+	display:block;
+	padding-right:0;
+}
+.sub-link-list li::before {
+	top:-1em; 
+	left:0;
+	bottom:-1em;
+	border-left:1.5px solid #404040;
+	border-bottom:1.5px solid #404040;
+	border-top:0 none;
+	width:51%; 
+	height:4.2em;
+	z-index:-1;
+}
+/* add back first child connector */
+.sub-link-list li:first-child::before {
+	border-top:1.5px solid #404040;
+}
+/* removes parent styling */
+.sub-link-list li::after {
+	border:0 none;
+}
+
 .link-list a {
 	border:1.5px solid #404040;
+	background-color:white;
 	padding:5px 10px;
 	display:inline-block;
 	border-radius:5px;
@@ -86,7 +114,12 @@ main {
 	color:white;
 	font-weight:normal;
 }
-
+.link-list li:hover {
+	padding:2em 2.5em 0 2.5em;
+}
+#specials-link:hover, #menu-link:hover {
+	padding:2em 0.5em 0 0.5em;
+}
 
 
 
