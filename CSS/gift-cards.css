@@ -1,0 +1,105 @@
+main {
+  text-align:center;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#gc-container img {
+  position:relative;
+  opacity:0.5;
+  transition:0.5s;
+  width:32%;
+  margin:5rem 2.5rem;
+}
+#gc-container img:hover {
+  opacity:1;
+}
+#gc-container img:focus {
+  opacity:1;
+}
+
+/* GIFT CARD */
+.gc-selector > input{ 
+  visibility: hidden; 
+  position: absolute; 
+}
+.gc-selector > input + img{ 
+  cursor:pointer;
+  border:2px solid transparent;
+
+}
+#buyer-details {
+  display:none;
+  position:relative;
+  margin:auto;
+  width:700px;
+  transition:0.5s;
+}
+
+.lbl-label {
+  font-weight:bold;
+  text-align:left;
+  position:relative;
+}
+input, textarea {
+  margin-top: 0.8rem;
+  width: 100%;
+  color: #404040;
+  height: 3.2rem;
+  font-size: 1.6rem;
+  border: none;
+  border-bottom: 2px solid #9ab997;
+  padding-left: 0.8rem;
+  transition: 0.5s;
+  margin-bottom:2rem;
+}
+textarea {
+  max-width:100%;
+  min-width:100%;
+  max-height:200px;
+  min-height:1rem;
+  transition:0.5s;
+}
+input:focus, textarea:focus {
+  outline:0;
+  background-color:#ffdec080;
+  width:100%;
+}
+textarea:focus {
+  height:200px;
+}
+.btn-container {
+  position:relative;
+  text-align:center;
+}
+.btn-container a:hover {
+  text-decoration:none;
+}
+.sub-btn{
+  margin-right:2rem;
+  border:0;
+  width:20rem;
+  height:4rem;
+  background-color: #a54f50;
+  color: #fff;
+  font-weight:bold;
+  font-size: 1.75rem;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  border-radius: 0.75rem;
+  text-align: center;
+  border-bottom: none;
+  cursor: pointer;
+}
+.sub-btn:hover, .sub-btn:focus{
+  font-weight:bold;
+}
+
+#confirmation {
+  display:none;
+}
+
+footer {
+  clear:both;
+}

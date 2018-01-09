@@ -24,6 +24,7 @@
 }
 .location-detail ul{
   margin-top: 0.8rem;
+  padding-left: 0;
 }
 .location-detail>ul li:first-child{
   font-style: italic;
@@ -69,22 +70,18 @@ input#promotion:focus{
 #submit{
   width: 20rem;
   height: 4rem;
-  background-color: #ae3721;
+  background-color: #a54f50;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.75rem;
   text-transform: uppercase;
-  line-height: 4rem;
+  font-weight: 500;
+  border-radius: 0.75rem;
   text-align: center;
-  letter-spacing: 0.1rem;
-  transition: 0.5s;
   border-bottom: none;
   cursor: pointer;
 }
-#submit:hover, #submit:focus{
-  width: 25rem;
-  background-color: #404040;
-  letter-spacing: 0.2rem;
-  font-weight: normal;
+#submit:focus, #submit:hover{
+  font-weight: 700;
 }
 textarea{
   height: 18rem;
