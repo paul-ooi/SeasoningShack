@@ -28,16 +28,38 @@
         <div>Choose which gift card you would like to purchase.</div>
         <div id="gift-card-content">
           <form id="gift-card-form" name="gift_card_name" action="#" method="post">
-            <label>
-              <input type="radio" name="50-card" value="small" />
-              <img src="images/gift-card-50.svg" alt="Seasoning Shack $50 gift card"/>
+            <div id="gc-container">
+            <label class="gc-selector">
+              <input type="radio" id="gc-50" name="50-100-card" value="50" />
+              <img src="images/gift-card-50.svg" id="50gc" alt="Seasoning Shack $50 gift card"/>
             </label>
-            <label>
-              <input type="radio" name="100-card" value="small" />
-              <img src="images/gift-card-100.svg" alt="Seasoning Shack $100 gift card"/>
+            <label class="gc-selector">
+              <input type="radio" id="gc-100" name="50-100-card" value="100" />
+              <img src="images/gift-card-100.svg" id="100gc" alt="Seasoning Shack $100 gift card"/>
             </label>
-            <!-- <img src="images/gift-card-50.png" alt="Seasoning Shack $50 gift card"/> -->
-            <!-- <img src="images/gift-card-100.png" alt="Seasoning Shack $100 gift card"/> -->
+            </div>
+              <label for="buyer-name">Name</label>
+              <span id="buy-name-err" class="error"></span>
+              <div>
+                <input id="buyer-name" type="text"  placeholder="Enter your name"/>
+              </div>
+              <label for="email">Email Address</label>
+              <span id="email-err" class="error"></span>
+              <div>
+                <input id="email" type="email"  placeholder="Enter your email address"/>
+              </div>
+              <label for="recepient-name">Recepient's name</label>
+              <span id="recepient-name-err" class="error"></span>
+              <div>
+                <input id="recepient-name" type="text"  placeholder="Enter recepient's name"/>
+              </div>
+              <div>
+                <div class="btn-container"><input type="submit" id="submit-btn" class="sub-btn" value="Submit"/>
+                <input type="reset" id="reset-btn" class="sub-btn" value="Reset"/></div>
+                <div>
+                  <span id="submit-err" class="error"></span>
+                </div>
+              </div>
           </form>
         </div>
       </main>
