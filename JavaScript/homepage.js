@@ -33,7 +33,7 @@ function changeNow(selected) {
   counter = selected.value;
   activateNext();
   //reactivate automated slides
-  runInterval = setInterval(changeSlide,4000);
+  runInterval = setInterval(changeSlide,2500);
 }
 
 //Hide the current Slide
@@ -60,7 +60,7 @@ function addListener (listVar, eventString, funcName) {
 }//end of addListener
 
 //Begin automated Slide progression
-runInterval = setInterval(changeSlide,4000);
+runInterval = setInterval(changeSlide,2500);
 
 
 addListener (promoIndex, "click", changeNow);

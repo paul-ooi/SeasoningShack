@@ -101,6 +101,7 @@ font-size: 4.5rem;
 font-size: 2.4rem;
 font-weight: 400;
 font-style: italic;
+text-transform: unset;
 }
 
 .promo-detail img {
