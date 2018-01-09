@@ -3,6 +3,12 @@ body, html {
 }
 
 /* Style */
+.description{
+  margin: 0 auto;
+  padding: 2rem;  
+  text-align: center;
+  font-size: 2rem;
+}
 #game {
   width: 750px;
   margin: 2rem auto;
@@ -13,17 +19,22 @@ body, html {
 }
 div[class^="btn"] {
   width: 20rem;
-  height: 4rem;
   position: absolute;
   left: 110px;
-  background-color: #ae3721;
+  background-color: #a54f50;
+  font-size: 1.75rem;
+  font-weight: 700;
+  padding: 1rem 0;
+  line-height: 2rem;
   color: #fff;
-  border-radius: 5px;
-  line-height: 4rem;
+  border-radius: 0.75rem;
+  line-height: 2rem;
   letter-spacing: 0.1rem;
   text-align: center;
   cursor: pointer;
 }
+
+
 .btn-howto {
   top: 360px;
 }

@@ -1,5 +1,4 @@
 // NOTE:
-// html : phone numbers and addresses are missing.
 // JS: Hours based on day is missing
 
 
@@ -10,18 +9,17 @@ var _gid = function(p_id) {
 }
 
 // Location Section
-var dayArray = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var dayArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var annexHours = _gid("annex-hours");
 var kensingtonHours = _gid("kensington-hours");
 var today = new Date();
 var day = dayArray[today.getDay()];
 var hour = 0;
-// TODO: Day to hours. Array or if...else...
 if (day == 0|| day==6) {
-  hour = 3;
+  hour = 11;
 }
 else {
-  hour = 2;
+  hour = 10;
 }
 annexHours.innerHTML = "Open until " + hour + "pm on " + day;
 kensingtonHours.innerHTML = "Open until " + hour + "pm on " + day;
@@ -103,7 +101,7 @@ return name;
 // Phone# Validation
 function phoneValidation() {
   var htmlPhone = _gid("phone");
-  var validPhoneFormat = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+  var validPhoneFormat = /^[\+]?[1]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4}$/;
   var validation = validPhoneFormat.test(htmlPhone.value);
   var htmlPhoneError = _gid("phone-err");
   htmlPhoneError.innerHTML = "";
@@ -118,7 +116,7 @@ function phoneValidation() {
 // Email Validation
 function emailValidation() {
   var htmlEmail = _gid("email");
-  var validEmailFormat = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;;
+  var validEmailFormat =   /[^\s@]+@[^\s@]+\.[^\s@]+/;
   var validation = validEmailFormat.test(htmlEmail.value);
   var htmlEmailError = _gid("email-err");
   htmlEmailError.innerHTML = "";
