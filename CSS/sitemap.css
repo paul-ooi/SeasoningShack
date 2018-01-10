@@ -11,20 +11,19 @@ h1::after {
 	left:50%;
 	border-left:1.5px solid #404040;
 	height:1em;
-	width:0;
+	width:100%;
 }
 main {
 	padding-top:0;
 }
 .flex-container {
-	align-items: center;
-    justify-content: center;
+	align-items:center;
+    justify-content:center;
 }
 .link-list {
 	padding:0;
 	height:25em;
 	position:relative;
-	float:center;
 }
 .link-list ul {
 	padding-top:2em;
@@ -80,6 +79,7 @@ main {
 .sub-link-list li {
 	display:block;
 	padding-right:0;
+	padding:2em 0.5em 0 0.5em;
 }
 .sub-link-list li::before {
 	top:-1em; 
@@ -114,10 +114,10 @@ main {
 	color:white;
 	font-weight:normal;
 }
-.link-list li:hover {
+.link-list li:hover{
 	padding:2em 2.5em 0 2.5em;
 }
-#specials-link:hover, #menu-link:hover {
+#specials-link:hover, #menu-link:hover, .sub-link-list li:hover  {
 	padding:2em 0.5em 0 0.5em;
 }
 
