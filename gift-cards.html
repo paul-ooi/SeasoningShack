@@ -26,64 +26,68 @@
       <main>
         <h1>Gift Cards</h1>
         <div id="gift-card-content">
-        <div>Choose which gift card you would like to purchase.</div>
+        <h2 class="subhead">Choose which gift card you would like to purchase.</h2>
           <form id="gift-card-form" name="gift_card_name" action="#" method="post">
             <div id="gc-container">
               <label class="gc-selector">
-                <input type="radio" id="gc-50" name="50-100-card" value="50" />
+                <input type="radio" id="gc-50" name="50_100_card" value="50" />
                 <img src="images/gift-card-50.svg" id="50gc" alt="Seasoning Shack $50 gift card"/>
               </label>
               <label class="gc-selector">
-                <input type="radio" id="gc-100" name="50-100-card" value="100" />
+                <input type="radio" id="gc-100" name="50_100_card" value="100" />
                 <img src="images/gift-card-100.svg" id="100gc" alt="Seasoning Shack $100 gift card"/>
               </label>
             </div>
             <div id="buyer-details">
-              <div class="lbl-label"><label for="buyer-name">Name</label></div>
-              <span id="buy-name-err" class="error"></span>
+              <div class="lbl-label"><label for="buyer-name">Your Name</label><span id="buy-name-err" class="error"></span></div>
               <div>
-                <input id="buyer-name" type="text"  placeholder="Enter your name"/>
+                <input id="buyer-name" name="buy_Name" type="text"  placeholder="Enter your name"/>
               </div>
-              <div class="lbl-label"><label for="email">Email Address</label></div>
-              <span id="email-err" class="error"></span>
+              <div class="lbl-label"><label for="email">Your Email Address</label><span id="email-err" class="error"></span></div>
               <div>
-                <input id="email" type="email"  placeholder="Enter your email address"/>
+                <input id="email" name="buy_Email" type="email"  placeholder="Enter your email address"/>
               </div>
-              <div class="lbl-label"><label for="recepient-name">Recepient's name</label></div>
-              <span id="recepient-name-err" class="error"></span>
+              <div class="lbl-label"><label for="recepient-name">Recepient's Name</label><span id="recepient-name-err" class="error"></span></div>
               <div>
-                <input id="recepient-name" type="text"  placeholder="Enter recepient's name"/>
+                <input id="recepient-name" name="rec_Name" type="text"  placeholder="Enter recepient's name"/>
               </div>
-              <div class="lbl-label"><label for="message">Message:</label></div>
+              <div class="lbl-label"><label for="rec-email">Recepient's Email Address</label><span id="rec-email-err" class="error"></span></div>
+              <div>
+                <input id="rec-email" name="rec_Email" type="email"  placeholder="Enter recepient's email address"/>
+              </div>
+              <div class="lbl-label"><label for="message">Message: (Optional)</label><span id="msg-err" class="error"></span></div>
                <div>
-                <textarea id="message" name="message"></textarea>
+                <textarea id="message" name="buy_Msg"></textarea>
                </div>
+               
               <div>
                 <div class="btn-container"><input type="submit" id="submit-btn" class="sub-btn" value="Submit"/>
                 <input type="reset" id="reset-btn" class="sub-btn" value="Reset"/></div>
-              <div>
-                <span id="submit-err" class="error"></span>
-              </div>
               </div>
             </div>
           </form>
         </div>
         <div id="confirmation">
-          <p>Thank you for purchasing the gift card.</p>
-          <div>
-            Name: <span id="cost-name"></span>
-          </div>
-          <div>
-            Email address: <span id="cost-email"></span>
-          </div>
-          <div>
-            Recepient's name: <span id="cost-rec-name"></span>
-          </div>
-          <div>
-            Amount: <span id="cost-amount"></span>
-          </div>
-          <div>
-            Message: <div id="cost-msg"></div>
+          <h2 class="subhead">Thank you for purchasing the gift card.</h2>
+          <div id="conf-details">
+            <div>
+              <span class="lbl-conf">Your Name:</span> <span id="cust-name" class="confirmed"></span>
+            </div>
+            <div>
+              <span class="lbl-conf">Your Email Address:</span> <span id="cust-email" class="confirmed"></span>
+            </div>
+            <div>
+              <span class="lbl-conf">Recepient's Name:</span> <span id="cust-rec-name" class="confirmed"></span>
+            </div>
+            <div>
+              <span class="lbl-conf">Recepient's Email Address:</span> <span id="cust-rec-email" class="confirmed"></span>
+            </div>
+            <div>
+              <span class="lbl-conf">Amount:</span> <span id="cust-amount" class="confirmed"></span>
+            </div>
+            <div>
+              <span class="lbl-conf">Message:</span> <div id="cust-msg" class="confirmed"></div>
+            </div>
           </div>
         </div>
       </main>
