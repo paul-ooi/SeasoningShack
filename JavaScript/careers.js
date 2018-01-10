@@ -1,3 +1,5 @@
+// CAREERS JAVASCRIPT CODE BY CZARINA GAHUNIA
+
 window.onload = pageReady;
 
 function pageReady() {
@@ -105,7 +107,7 @@ function pageReady() {
   var jobList = jobVacancy.name;
 
   for (i = 0; i < jobList.length; i++) {
-    jobName[i].innerHTML = jobList[i].name;
+    jobName[i].innerHTML = "<h3>" + jobList[i].name + "</h3>";
   }
 
   for (i = 0; i < jobList.length; i++) {
@@ -225,7 +227,5 @@ function pageReady() {
     resumeErr.innerHTML = "";
     
     document.getElementById("job-form-id").reset();
-
   }
-
-} //end of ONLOAD function
+} //END OF pageReady FUNCTION
