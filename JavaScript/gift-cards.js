@@ -13,9 +13,7 @@ function pageReady() {
   
   var subForm = document.forms.gift_card_name;
   var confirmCard = document.getElementById("confirmation");
-  
-  
-  
+
   giftC100.onclick = card100;
   giftC50.onclick = card50;
 
@@ -101,7 +99,7 @@ function pageReady() {
     
     //Email Validation
     if (!emailPattern.test(gcInfo.email)) {
-      emailErr.innerHTML = "*Please enter a valid email";
+      emailErr.innerHTML = "*Please enter a valid email address";
       isValid = false;
     } else {
       emailErr.innerHTML = "";
@@ -140,7 +138,7 @@ function pageReady() {
       msgErr.innerHTML = "*Your message should be at most 100 characters";
       isValid = false;
     } else { 
-      msgErr.innerHTML = ""
+      msgErr.innerHTML = "";
     }
     
     if (!isValid) {
@@ -177,15 +175,7 @@ function pageReady() {
     rNameErr.innerHTML = "";
     rEmailErr.innerHTML = "";
     msgErr.innerHTML = "";
-    
-    
-    
-    
-    
-    
-    
+
   }
-  
-  
 
 }
