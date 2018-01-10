@@ -145,7 +145,7 @@ function subjectSuggestion() {
       message = "Tip: You can find our menu from this page. <a href='menu.html'>Menu</a>";
       break;
     case "careers":
-      message = "Tip: Please find the opning positions from this page. <a href='careers.html'>Careers</a>";
+      message = "Tip: Please find the opening positions from this page. <a href='careers.html'>Careers</a>";
       break;
     case "others":
       message = "";

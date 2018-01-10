@@ -55,7 +55,7 @@ input, select, option, textarea{
 }
 input:focus, select:focus, option:focus, textarea:focus{
   outline: 0;
-  background-color: #ffdec080;
+  background-color: #ffedda;
   width: 80%;
 }
 #promotion{
