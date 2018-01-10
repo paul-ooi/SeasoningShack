@@ -68,7 +68,6 @@ function formValidation() {
     validationFlag = false;
   }
   else{
-    console.log("test");
     displayMessage(name, phone, email, subject, promotion, message);
     validationFlag = false; // should be true, but for preventing form submission
   }
