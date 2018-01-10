@@ -11,23 +11,29 @@ function pageReady() {
   var crewMem = document.getElementById("restaurant-banner");
 
   annexBtn.onclick = showAnnex;
-
+  
+  // DISPLAY ANNEX JOB POSTING
   function showAnnex() {
     crewMem.style.display = "none";
     jobListAll.style.display = "block";
     annexJob.style.display = "block";
     kenJob.style.display = "none";
     appliForm.style.display = "none";
+    
+    resetGCForm();
   }
   
   kenBtn.onclick = showKen;
   
+  // DISPLAY KENSINGTON JOB POSTING
   function showKen() {
     crewMem.style.display = "none";
     jobListAll.style.display = "block";
     kenJob.style.display = "block";
     annexJob.style.display = "none";
     appliForm.style.display = "none";
+    
+    resetGCForm();
   }
 
   // SHOW PANEL CONTENT
@@ -50,7 +56,6 @@ function pageReady() {
   }
 
   // JOB OBJECT
-  
   var jobPost1 = {
     name: "Host/Hostess",
     duties: [
@@ -93,6 +98,7 @@ function pageReady() {
     name:[jobPost1, jobPost2]
   };
 
+  // DISPLAY LISTS
   var classDuties = document.getElementsByClassName("list-container");
   var classDuties2 = document.getElementsByClassName("list2-container");
   var jobName = document.getElementsByClassName("job-name");
@@ -111,29 +117,115 @@ function pageReady() {
     }
   }
   
+  // DISPLAYING FORMS
   var applyBtn = document.getElementById("apply-btn");
   var applyBtn2 = document.getElementById("apply2-btn");
   var appliForm = document.getElementById("form-container");
-  
 
   function showAppliForm() {
     appliForm.style.display = "block";
   }
-    
+  
   applyBtn.onclick = showAppliForm;
   applyBtn2.onclick = showAppliForm;
-    
+  
   var subForm = document.forms.job_fm_name;
   var formSubmit = document.getElementById("confirmation");
 
-  subForm.onsubmit = function () {
+  subForm.onsubmit = subApplication;
+  
+  // SUBMITTING THE FORM
+  function subApplication() {
+  
+    var userApplicant = {
+      fName: "",
+      lName: "",
+      eMail: "",
+      resumeDoc: ""
+    };
+    
+    var isValid = true;
+    
+    userApplicant.fName = subForm.f_Name.value;
+    userApplicant.lName = subForm.l_Name.value;
+    userApplicant.eMail = subForm.e_Mail.value;
+    userApplicant.resumeDoc = subForm.user_Resume.value;
+    
+    var fNameErr = document.getElementById("first-name-err");
+    var lNameErr = document.getElementById("last-name-err");
+    var emailErr = document.getElementById("email-err");
+    var resumeErr = document.getElementById("resume-err");
+    
+    var emailPattern = /[^\s@]+@[^\s@]+\.[^\s@]+/;
+    
+    var allowedFiles = [".doc", ".docx"];
+    
+    var resumeRegEx = new RegExp("([a-zA-Z0-9\s_\\.\-:])+(" + allowedFiles.join('|') + ")$");
+    
+    // FORM VALIDATION
+    // First Name Validation
+    if (!userApplicant.fName) {
+      fNameErr.innerHTML = "*Please enter your first name";
+      isValid = false;
+    } else {
+      fNameErr.innerHTML = "";
+    }
+    
+    // Last Name Validation
+    if (!userApplicant.lName) {
+      lNameErr.innerHTML = "*Please enter your last name";
+      isValid = false;
+    } else {
+      lNameErr.innerHTML = "";
+    }
+    
+    // Email Validation
+    if (!emailPattern.test(userApplicant.eMail)) {
+      emailErr.innerHTML = "*Please enter a valid email address";
+      isValid = false;
+    } else {
+      emailErr.innerHTML = "";
+    }
+    
+    // Resume Validation
+    if (!resumeRegEx.test(userApplicant.resumeDoc.toLowerCase())) {
+      resumeErr.innerHTML = "*Please upload " + allowedFiles.join(', ') + " only";
+      isValid = false;
+    } else {
+      resumeErr.innerHTML = "";
+    }
+    
+    if (!isValid) {
+			return false;
+		}
+    
     scrollTo(document.body, 0);
-    setTimeout(function(){window.location.href='index.html'},5000);
     formSubmit.style.display = "block";
     crewMem.style.display = "none";
     appliForm.style.display = "none";
     jobListAll.style.display = "none";
+    
+    setTimeout(function(){window.location.href='index.html'},5000);
     return false;
+  }
+  
+  // RESETING THE FORM
+  subForm.onreset = resetGCForm;
+  
+  function resetGCForm() {
+    
+    var fNameErr = document.getElementById("first-name-err");
+    var lNameErr = document.getElementById("last-name-err");
+    var emailErr = document.getElementById("email-err");
+    var resumeErr = document.getElementById("resume-err");
+
+    fNameErr.innerHTML = "";
+    lNameErr.innerHTML = "";
+    emailErr.innerHTML = "";
+    resumeErr.innerHTML = "";
+    
+    document.getElementById("job-form-id").reset();
+
   }
 
 } //end of ONLOAD function

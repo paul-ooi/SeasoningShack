@@ -133,6 +133,8 @@ p {
 }
 .sub-btn:hover, .sub-btn:focus{
   font-weight:bold;
+  width:20rem;
+  background-color: #a54f50;
 }
 
 /* FORM */
@@ -160,6 +162,7 @@ input {
   width: 90%;
   color: #404040;
   height: 3.2rem;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
   border: none;
   border-bottom: 2px solid #9ab997;
@@ -181,6 +184,13 @@ input:focus {
   display:none;
   float:right;
   width:68%;
+}
+.error {
+  font-weight:bold;
+  text-align:left;
+  position:relative;
+  color:#a54f50;
+  padding-left:2rem;
 }
 /* FOOTER */
 
