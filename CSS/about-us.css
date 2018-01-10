@@ -1,30 +1,31 @@
-/* BODY - IMAGES */
+/* ABOUT US CSS CODES BY CZARINA GAHUNIA */
 
+/* IMAGE SLIDESHOW */
 .image-container {
   max-width:1000px;
-  position: relative;
+  position:relative;
   margin:0 auto;
   padding-bottom:1rem;
 }
 .arrowPrev, .arrowNext {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  cursor:pointer;
+  position:absolute;
+  top:50%;
+  width:auto;
+  padding:16px;
+  margin-top:-22px;
+  color:white;
+  font-weight:bold;
+  font-size:18px;
+  transition:0.6s ease;
+  border-radius:0 3px 3px 0;
 }
 .arrowNext {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+  right:0;
+  border-radius:3px 0 0 3px;
 }
 .arrowPrev:hover, .arrowNext:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color:rgba(0,0,0,0.8);
 }
 .circle-container {
   position:relative;
@@ -33,23 +34,23 @@
   padding-bottom:2.5rem;
 }
 .circle {
-  cursor: pointer;
-  height: 12px;
-  width: 12px;
-  margin: 0 2px;
-  background-color: #fff;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+  cursor:pointer;
+  height:12px;
+  width:12px;
+  margin:0 2px;
+  background-color:#fff;
+  border-radius:50%;
+  display:inline-block;
+  transition:background-color 0.6s ease;
 }
 .active, .cirle:hover {
-  background-color: #717171;
+  background-color:#717171;
 }
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+  -webkit-animation-name:fade;
+  -webkit-animation-duration:1.5s;
+  animation-name:fade;
+  animation-duration:1.5s;
 }
 @-webkit-keyframes fade {
   from {opacity: .4} 
@@ -64,54 +65,56 @@
   max-width:100%;
 }
 .img-slides img {
-  vertical-align: middle;
+  vertical-align:middle;
   max-width:100%;
 }
+/* CHEF IMAGE */
 #img-left {
   cursor:pointer;
   transition:0.3s;
   float:left;
   width:350px;
-  margin: 0.8rem 2rem 0.8rem 1.6rem;
+  margin:0.8rem 2rem 0.8rem 1.6rem;
   max-width:100%;
 }
 #img-left:hover {
   opacity: 0.7;
 }
+/* MODAL */
 .my-modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  padding-top: 200px; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.9); 
+  display:none; 
+  position:fixed; 
+  z-index:1; 
+  padding-top:200px; 
+  left:0;
+  top:0;
+  width:100%; 
+  height:100%; 
+  overflow:auto; 
+  background-color:rgb(0,0,0); 
+  background-color:rgba(0,0,0,0.9); 
 }
 .modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 596px;
+  margin:auto;
+  display:block;
+  width:80%;
+  max-width:596px;
 }
 #modal-caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 596px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
+  margin:auto;
+  display:block;
+  width:80%;
+  max-width:596px;
+  text-align:center;
+  color:#ccc;
+  padding:10px 0;
+  height:150px;
 }
 .modal-content, #modal-caption {    
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
+  -webkit-animation-name:zoom;
+  -webkit-animation-duration:0.6s;
+  animation-name:zoom;
+  animation-duration:0.6s;
 }
 @-webkit-keyframes zoom {
   from {-webkit-transform:scale(0);} 
@@ -122,18 +125,18 @@
   to {transform:scale(1);}
 }
 .modal-close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
+  position:absolute;
+  top:15px;
+  right:35px;
+  color:#f1f1f1;
+  font-size:40px;
+  font-weight:bold;
+  transition:0.3s;
 }
 .modal-close:hover, .modal-close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
+  color:#bbb;
+  text-decoration:none;
+  cursor:pointer;
 }
 p {
   text-align:justify;
