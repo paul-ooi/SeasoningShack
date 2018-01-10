@@ -22,7 +22,7 @@ h1 {
   opacity:0.5;
   transition:0.5s;
   width:32%;
-  margin:0 2.5rem 3rem 0;
+  margin:0 2.5rem 3rem 2.5rem;
 }
 #gc-container img:hover {
   opacity:1;
