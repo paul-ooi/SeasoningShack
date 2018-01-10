@@ -1,9 +1,12 @@
+/* GIFT CARDS CSS CODE BY CZARINA GAHUNIA */
+
+/* 1. GENERAL */
 main {
   text-align:center;
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x:hidden;
 }
 h1 {
   padding-bottom:3rem;
@@ -11,6 +14,9 @@ h1 {
 .subhead  {
   padding-bottom:3rem;
 }
+
+/* 2. MAIN */
+/* GIFT CARD */
 #gc-container img {
   position:relative;
   opacity:0.5;
@@ -24,17 +30,15 @@ h1 {
 #gc-container img:focus {
   opacity:1;
 }
-
-/* GIFT CARD */
 .gc-selector > input{ 
-  visibility: hidden; 
-  position: absolute; 
+  visibility:hidden; /* HIDES THE RADIO BUTTON AND REPLACED BY IMAGE INSTEAD */
+  position:absolute; 
 }
 .gc-selector > input + img{ 
   cursor:pointer;
   border:2px solid transparent;
-
 }
+/* FORM */
 #buyer-details {
   display:none;
   position:relative;
@@ -42,7 +46,6 @@ h1 {
   width:700px;
   transition:0.5s;
 }
-
 .lbl-label {
   font-weight:bold;
   text-align:left;
@@ -56,16 +59,16 @@ h1 {
   padding-left:2rem;
 }
 input, textarea {
-  margin-top: 0.8rem;
-  width: 100%;
-  color: #404040;
-  height: 3.2rem;
-  font-family: 'Lato', Helvetica, Arial, sans-serif;
-  font-size: 1.6rem;
-  border: none;
-  border-bottom: 2px solid #9ab997;
-  padding-left: 0.8rem;
-  transition: 0.5s;
+  margin-top:0.8rem;
+  width:100%;
+  color:#404040;
+  height:3.2rem;
+  font-family:'Lato', Helvetica, Arial, sans-serif;
+  font-size:1.6rem;
+  border:none;
+  border-bottom:2px solid #9ab997;
+  padding-left:0.8rem;
+  transition:0.5s;
   margin-bottom:2rem;
 }
 textarea {
@@ -95,21 +98,22 @@ textarea:focus {
   border:0;
   width:20rem;
   height:4rem;
-  background-color: #a54f50;
-  color: #fff;
+  background-color:#a54f50;
+  color:#fff;
   font-weight:bold;
-  font-size: 1.75rem;
-  font-family: 'Lato', Helvetica, Arial, sans-serif;
-  border-radius: 0.75rem;
-  text-align: center;
-  border-bottom: none;
-  cursor: pointer;
+  font-size:1.75rem;
+  font-family:'Lato', Helvetica, Arial, sans-serif;
+  border-radius:0.75rem;
+  text-align:center;
+  border-bottom:none;
+  cursor:pointer;
 }
 .sub-btn:hover, .sub-btn:focus{
   font-weight:bold;
   width:20rem;
-  background-color: #a54f50;
+  background-color:#a54f50;
 }
+/* DISPLAY USER INFORMATION */
 #confirmation {
   display:none;
   position:relative;
@@ -117,12 +121,11 @@ textarea:focus {
 }
 #conf-details {
   position:relative;
-  width:500px;
+  width:400px;
   margin:0 auto;
   text-align:left;
 }
 #conf-details div {
-
   padding-bottom:1rem;
 }
 .lbl-conf {
@@ -134,7 +137,7 @@ textarea:focus {
   font-weight:bold;
 }
 
-
+/* 3. FOOTER */
 footer {
   clear:both;
 }

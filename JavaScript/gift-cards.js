@@ -1,8 +1,10 @@
+// GIFT CARDS JAVASCRIPT CODE BY CZARINA GAHUNIA
+
 window.onload = pageReady;
 
 function pageReady() {
   
-  // VARIABLES
+  // SELECT/OPTION BETWEEN TWO GIFT CARDS
   var giftC50 = document.getElementById("gc-50");
   var giftC100 = document.getElementById("gc-100");
   var gift50 = document.getElementById("50gc");
@@ -10,8 +12,7 @@ function pageReady() {
   var giftCardBox = document.getElementById("gift-card-content");
   
   var buyerForm = document.getElementById("buyer-details");
-  
-  var subForm = document.forms.gift_card_name;
+
   var confirmCard = document.getElementById("confirmation");
 
   giftC100.onclick = card100;
@@ -48,12 +49,13 @@ function pageReady() {
     } 
   }
   
-  // SUBMITTING FORM
+  // SUBMITTING THE FORM
+  var subForm = document.forms.gift_card_name;
   subForm.onsubmit = submitGCForm;
   
   function submitGCForm() {
-    scrollTo(document.body, 0);
-
+    
+    // FORM OBJECT
     var gcInfo = {
       gcamount: "",
       name: "",
@@ -63,6 +65,7 @@ function pageReady() {
       userMsg: "" 
     };
     
+    // DISPLAYING USER DETAILS
     var gName = document.getElementById("cust-name");
     var gEmail = document.getElementById("cust-email");
     var gRName = document.getElementById("cust-rec-name");
@@ -70,6 +73,7 @@ function pageReady() {
     var gAmt = document.getElementById("cust-amount");
     var gMsg = document.getElementById("cust-msg");
     
+    // DISPLAYING ERRORS FOR VALIDATION
     var nameErr = document.getElementById("buy-name-err");
     var emailErr = document.getElementById("email-err");
     var rNameErr = document.getElementById("recepient-name-err");
@@ -88,7 +92,7 @@ function pageReady() {
     gcInfo.recemail = subForm.rec_Email.value; 
     gcInfo.userMsg = subForm.buy_Msg.value;
     
-    
+    // FORM VALIDATION
     //Name Validation
     if (!gcInfo.name) {
       nameErr.innerHTML = "*Please enter your name";
@@ -124,7 +128,6 @@ function pageReady() {
       emailErr.innerHTML = "";
     }
     
-    
     // Selected Amount
     if (giftC50.checked === true) {
       gAmt.innerHTML = "$50.00";
@@ -145,6 +148,8 @@ function pageReady() {
 			return false;
 		}
     
+    scrollTo(document.body, 0);
+    
     gName.innerHTML = gcInfo.name; 
     gEmail.innerHTML = gcInfo.email;
     gRName.innerHTML = gcInfo.recname; 
@@ -155,11 +160,10 @@ function pageReady() {
     confirmCard.style.display = "block";
 
     return false;
-
   }
+  // console.log(submitGCForm);
   
-  console.log(submitGCForm);
-  
+  // RESETTING THE FORM
   subForm.onreset = resetGCForm;
   
   function resetGCForm() {
@@ -175,7 +179,7 @@ function pageReady() {
     rNameErr.innerHTML = "";
     rEmailErr.innerHTML = "";
     msgErr.innerHTML = "";
-
+    
+    document.getElementById("gift-card-form").reset();
   }
-
-}
+} // END OF pageReady FUNCTION
