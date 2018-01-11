@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Kalam:700|Lato:400,400i,700,900');
 /*************************************************
 TABLE OF CONTENTS - Header and Footer Styling (by Paul Ooi)
 **************************************************
@@ -36,7 +35,6 @@ transition: all 500ms linear;
 /*2) HEADER*/
 header.large {
 height: 16rem;
-flex-direction: column;
 justify-content: center;
 align-items: center;
 }
