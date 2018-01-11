@@ -2,7 +2,6 @@ window.addEventListener('load', pageReady, false);
 
 function pageReady() {
 var todayDate = new Date();
-// var weekDays = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
 var today = todayDate.getDay();
 var currentHH = todayDate.getHours();
 var openingHH;

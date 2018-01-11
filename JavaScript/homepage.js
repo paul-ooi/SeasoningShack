@@ -64,4 +64,8 @@ runInterval = setInterval(changeSlide,2500);
 
 
 addListener (promoIndex, "click", changeNow);
+
+
+
+
 }//end of pageReady
