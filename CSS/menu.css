@@ -11,6 +11,8 @@ main section img {
 	max-width:30%;
 	height:auto;
 	padding-right:5%;
+	-webkit-filter: drop-shadow(5px 5px 5px grey);
+	filter: drop-shadow(5px 5px 5px grey);
 }
 main section ul {
 	clear:both;
@@ -74,10 +76,6 @@ main section h3 {
 	position:absolute;
 	top:-10000px;
 	transition: all 0.2s;
-}
-#first-section {
-	position:relative;
-	top:0;
 }
 @media all and (max-width:768px) {
 	.column-2 {
