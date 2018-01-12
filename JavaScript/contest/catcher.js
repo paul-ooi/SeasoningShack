@@ -4,7 +4,6 @@ function Catcher(p_fieldWidth) {
   var catcherX = p_fieldWidth/2; // For JS. Initial value of the catcher = Centre of the field
   htmlCatcher.style.left = catcherX - this.width/2 + 'px'; // For CSS. Place img on the centre of the field
 
-  // this.image = "/img/catcher.png"; // img url. necessary??
   this.width = 80;
   this.height = 30;
   this.speed = 250; // moving speed (move 250px/sec)

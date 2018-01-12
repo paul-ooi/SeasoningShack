@@ -3,9 +3,6 @@ function Game() {
   this.field = new Field();
   var timeIndicator = 240;
   var substractRemainingTime = timeIndicator/60;
-  // this.time = 60;
-  // this.health = 3;
-  // this.score = 0;
 
   // Called when the start button is clicked
   this.start = function() {
@@ -39,14 +36,6 @@ function Game() {
     htmlGameover.style.height = '100%';
   }
 
-  // this.decreaseHealth = function() {
-  //
-  // }
-  // this.addScore = function() {
-  //
-  // }
-  // this.updateTimer = function() {
-  //
-  // }
+
 
 }

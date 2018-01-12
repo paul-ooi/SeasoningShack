@@ -2,7 +2,6 @@ function Field() {
   var self = this;
   this.width = 400;
   this.height = 500;
-  // this.catcher = _gid("htmlCatcher");
   this.fallingItems = [];
   this.catcher = new Catcher(this.width);
 
@@ -44,7 +43,7 @@ function Field() {
       } else {
         score += 0;
       }
-      itemId++; // may not necessary
+      itemId++; 
       var newItem = new FallingItem(imgOfItem[indexOfArray], typeOfItem, speed, score, xPos, itemId);
 
       // Store newItem into fallingItems[]
@@ -77,11 +76,12 @@ function Field() {
       probability = random(89); // 2/90 chance to create a new item
     }
     else {
-      probability = random(49); // 2/50 chance to create a new item
+      probability = random(39); // 2/40 chance to create a new item
     }
     return probability;
   }
 
+  // change the speed of the falling items
   this.speedControl = function () {
     var speed;
     if (remainingTime > 15) {
