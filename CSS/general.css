@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Kalam:700%7CLato:400,400i,700,900');
 
 /*************************************************
 TABLE OF CONTENTS
@@ -7,8 +6,6 @@ TABLE OF CONTENTS
  2. MAIN CONTENTS SELECTOR
  3. GENERAL CLASS SELECTOR
 
-* Please use general.html as a template
-* LAST UPDATE Jan 03, 12:00pm
 *************************************************/
 /* 1. GENERAL ELEMENTS */
 
@@ -61,20 +58,15 @@ main a:hover, main a:focus{
 }
 main ul>li{
   list-style: none;
-  /* padding: -2.2rem; */
-  /* remove margin-left to make indent */
   line-height: 2rem;
 }
 main ol>li{
-  /* margin-left: -2.2rem; */
-  /* remove margin-left to make indent */
   line-height: 2rem;
 }
 
 
 /* 3. GENERAL CLASS SELECTOR */
 .hidden{
-  position: absolute;
   left: -10000px; /* Changed DEC 12, from -100% to -10000px because hidden element was shown when minimize the browser*/
 }
 .flex-container{
@@ -105,49 +97,3 @@ main ol>li{
   text-transform: capitalize;
 }
 
-
-/*=== Remove those once you have header and footer ===*/
-/* header {
-  position: fixed;
-  max-width: 1024px;
-  top: 0px;
-  z-index: 20;/*This keeps the Header and Navigavtion visible above the rest of the page*/
-  /* width: 100%;
-  height: 16rem;
-  background-color: rgba(165, 79, 80, 0.85);
-  color:  rgb(255, 222, 192);
-} */
-
-/* footer {
-  padding: 2.4rem 0.8rem;
-  background-color:  rgba(165, 79, 80, 0.85);
-  color: rgb(255, 222, 192);
-} */
-
-/*Place holder for header and footer*/
-/* .placeholder{
-  width: 100%;
-  height: 16rem;
-  font-size: 4rem;
-  text-align: center;
-} */
-
-/*=== Remove those once you don't need anymore ===*/
-  /* add class="border" and you can see the border of the elements */
-  /* .border {
-    border: 1px solid red;
-  } */
-  /* set width for button container */
-  /* .div-container{
-    width: 500px;
-    border: tomato 1px dotted;
-  } */
-  /* Color boxes*/
-  /* .box{
-    width: 100px;
-    height: 100px;
-  }
-  .gray{background-color: rgb(43,54,58); color: white;}
-  .red{background-color: #ae3721; color: white}
-  .green{background-color:   rgb(154, 185, 151) ;}
-  .peach{background-color: rgb(255, 222, 192);} */
