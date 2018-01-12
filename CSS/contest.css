@@ -2,6 +2,11 @@ body, html {
   margin: 0 auto;
 }
 
+.wrapper{
+  top: 4rem;
+}
+
+
 /* Style */
 .description{
   margin: 0 auto;
