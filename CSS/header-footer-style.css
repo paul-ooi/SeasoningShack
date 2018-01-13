@@ -2,7 +2,7 @@
 /*************************************************
 TABLE OF CONTENTS - Header and Footer Styling (by Paul Ooi)
 **************************************************
-1) GENERAL STYLING (AS LAID OUT TOP TO BOTTOM)
+1) GENERAL STYLING
 2) HEADER
 3) NAVIGATION
 4) COPYRIGHT & FOOTER
@@ -12,12 +12,6 @@ TABLE OF CONTENTS - Header and Footer Styling (by Paul Ooi)
 /*1) GENERAL STYLING*/
 .hidden {
 position: absolute;
-}
-
-.wrapper {
-/*This should be wrapped around the items below the header to ensure it starts below the fixed navbar*/
-position: relative;
-/* top: 40rem; */
 }
 
 header {

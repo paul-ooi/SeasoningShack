@@ -1,5 +1,14 @@
+/*************************************************
+TABLE OF CONTENTS - Event Booking Styling (by Paul Ooi)
+**************************************************
+1) GENERAL STYLING
+2) RESTAURANT DETAILS
+3) RESTAURANT GALLERY
+4) FORM STYLING
+5) CLOSE BUTTON
+*************************************************/
 
-/* GENERAL STYLING */
+/*1) GENERAL STYLING*/
 main {
 padding: 0;
 }
@@ -8,6 +17,8 @@ button {
 font-size: 1.6rem;
 }
 
+
+/*2) RESTAURANT DETAILS*/
 .button {
 display: block;
 background-color: rgb(165, 79, 80);
@@ -84,7 +95,7 @@ display: inline-block;
 content: ", ";
 }
 
-/* LOCATION GALLERY */
+/*3) RESTAURANT GALLERY */
 .gallery {
 height: 300px;
 width: 100%;
@@ -106,7 +117,7 @@ flex: 1 0 auto;
 opacity: 0.7;
 }
 
-/* FORM STYLING */
+/*4) FORM STYLING */
 #thanks {
 display: none;
 position: fixed;
@@ -121,7 +132,6 @@ z-index: 35;
 #quote {
 position: fixed;
 top: 5%;
-/* left: 10000px; */
 background-color: rgba(165, 79, 80, 0.95);
 padding: 2em;
 display: flex;
@@ -258,6 +268,7 @@ opacity: 0.5;
 transition: all 200ms ease-in-out;
 }
 
+/*5) CLOSE BUTTON*/
 #close div , #close2 div {
 position: relative;
 }

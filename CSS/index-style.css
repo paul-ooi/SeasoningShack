@@ -1,34 +1,26 @@
-@import url('https://fonts.googleapis.com/css?family=Kalam:700|Lato:400,400i,700,900');
 /*************************************************
 TABLE OF CONTENTS - Index-HomePage Styling (by Paul Ooi)
 **************************************************
 1) GENERAL STYLING (AS LAID OUT TOP TO BOTTOM)
-2) HEADINGS & LINKS
-3) MEDIA QUERIES
+2) FEATURED SLIDES
+3) LOCATION SECTION
+4) FOOD MENU SECTION 
+5) ADDITIONAL SERVICES
 *************************************************/
 
 /*1) GENERAL STYLING*/
-.border {
-border: 1px solid red;
-} /*This is to help find the spacing on the page, delete this as a final step before submitting*/
-
-.hidden {
-position: absolute;
-}
-
 body {
 position: relative;
 margin: 0 auto;
 font-family: 'Lato', Helvetica, Arial, sans-serif;
 }
 
-.wrapper {
-/*This should be wrapped around the items below the header to ensure it starts below the fixed navbar*/
-position: relative;
-}
-
 main {
 padding: 0;
+}
+
+main p {
+  margin: 1em 0;
 }
 
 #company-branding h1 {
@@ -54,7 +46,7 @@ width: 100%;
 height: 40rem;
 }
 
-/* FEATURED SLIDES */
+/*2) FEATURED SLIDES */
 #feature-slides ul {
 position: relative;
 height: 100%;
@@ -135,7 +127,7 @@ background-color: rgb(255, 222, 192);
 border: 0;
 }
 
-/* LOCATION SECTION */
+/*3) LOCATION SECTION */
 #locations {
 position: relative;
 width: 100%;
@@ -155,6 +147,10 @@ margin-bottom: 2rem;
 #locations h4 {
 margin-bottom: 6rem;
 text-transform: unset;
+}
+
+#location1, #location2 {
+  margin: 0 auto;
 }
 
 .details {
@@ -185,7 +181,7 @@ height: 100%;
 width: auto;
 }
 
-/* FOOD MENU SECTION */
+/*4) FOOD MENU SECTION */
 #food {
 position: relative;
 flex-direction: column;
@@ -221,7 +217,7 @@ z-index: -10;
 width: 100%;
 }
 
-/* ADDITIONAL SERVICES */
+/*5) ADDITIONAL SERVICES */
 #services {
 position: relative;
 flex-flow: row nowrap;
