@@ -9,9 +9,9 @@ var closingHH;
 var todayDay;
 
 //Array of weekday values as displayed in HTML
-var weekDays = [1,2,3,4,5,6,0];
-//If today = to Value of table header Day
-// console.log();
+var weekDays = [1,2,3,4,5,6,0]; //Monday to Sunday
+//If today = to Value of <th> Day
+
 var rowIndex = weekDays.indexOf(today)
 
 //Target today's table row in each locations table pageReady
