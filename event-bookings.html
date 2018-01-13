@@ -170,7 +170,7 @@
           </table>
         </div>
       </section>
-      <form action="#" method="post" name="quote" id="quote">
+      <form class="hidden" action="#" method="post" name="quote" id="quote">
         <h2>Quote Request Form</h2>
         <h3>Submit a complete form for a quote</h3>
 
@@ -221,44 +221,25 @@
             <input type="date" id="event_date" name="event_date">
             <label for="event_date" class="feedback_msg"></label>
           </div>
-        <!-- <fieldset id="event_date">
-          <legend>Event date: </legend>
-          <label for="event_year">Year</label>
-          <select id="event_year" name="event_year">
-            <option value="" selected>--</option>
-          </select>
-
-          <label for="event_month">Month</label>
-          <select id="event_month" name="event_month">
-            <option value="" selected>--</option>
-            <option value="1" >January</option>
-            <option value="2" >February</option>
-            <option value="3" >March</option>
-            <option value="4" >April</option>
-            <option value="5" >May</option>
-            <option value="6" >June</option>
-            <option value="7" >July</option>
-            <option value="8" >August</option>
-            <option value="9" >September</option>
-            <option value="10" >October</option>
-            <option value="11" >November</option>
-            <option value="12" >December</option>
-          </select>
-
-          <label for="event_day">Day</label>
-          <select id="event_day" name="event_day">
-            <option value="" selected>--</option>
-          </select>
-        </fieldset> -->
-
         </fieldset>
+
         <button class="button" type="submit" form="quote" formmethod="post" title="Submit request for quote">Submit for Quote</button>
+
         <div id="close">
           <h3 class="hidden">Close</h3>
           <div><span id="line1"></span>
           <span id="line2"></span></div>
         </div>
       </form>
+      <div id="thanks">
+        <h2>Thanks for your request!</h2>
+        <h3>We'll be in touch within 48 hours.</h3>
+        <div id="close2">
+          <h3 class="hidden">Close</h3>
+          <div><span id="line3"></span>
+          <span id="line4"></span></div>
+        </div>
+      </div>
     </main>
     <footer>
         <section id="social-media">

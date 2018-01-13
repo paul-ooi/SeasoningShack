@@ -1,14 +1,9 @@
-/* .border {
-border: 1px solid red;
-} */
-
 main {
 padding: 0;
 margin: 0;
 }
 
 h1 {
-/* color: #404040; */
 margin: 1.5em auto;
 text-align: center;
 font-size: 2.5rem;
@@ -48,13 +43,7 @@ max-width: 30%;
 .details {
 flex-flow: row nowrap;
 padding: 3rem 0 5rem;
-/* height: 40em; */
 }
-
-/* .details > * {
-display: inline-block;
-flex: 1 0 30%;
-} */
 
 .details div:first-of-type {
 flex: 1 0 30%;
@@ -69,10 +58,13 @@ background-color: rgb(165, 79, 80);
 color: #FFF;
 border-radius: 0.75rem;
 padding: 0.75rem 0;
-font-weight: 700;
 font-size: 1.75rem;
 text-align: center;
 vertical-align: middle;
+}
+
+a.button:hover {
+  font-weight:normal;
 }
 
 .contact {

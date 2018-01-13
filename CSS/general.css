@@ -97,3 +97,9 @@ main ol>li{
   text-transform: capitalize;
 }
 
+
+/* INCLUDE CITATIONS FOR IMAGES */
+cite {
+  position: absolute;
+  opacity: 0;
+}

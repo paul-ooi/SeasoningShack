@@ -14,21 +14,20 @@ function pageReady () {
   var labelFields = document.querySelectorAll('#cust_info label:not(.feedback_msg)');
   var inputFields = document.querySelectorAll('#cust_info input');
   var feedback = document.getElementsByClassName('feedback_msg');
+  var thanks = document.getElementById('thanks');
+  var closeThanksBtn = document.getElementById('close2');
 
-//HELPER FUNCTIONS
+
+  //HELPER FUNCTION
   //add event listeners to elements
   function addListener (listVar, eventString, funcName) {
     for (var i=0; i < listVar.length; i++) {
       listVar[i].addEventListener(eventString, funcName, false);
-    }//end of for loop
+    }
   }//end of addListener
 
-  //Check form item is valid, if not set feedback msg
-  function validate(fValue, valid, Label) {
-      //If the value does not
-  }
 
-// GALLERY SCRIPTS
+  // GALLERY SCRIPTS
   //enlarge selected gallery item
   function focusItem () {
     var currentHero = this.parentElement.querySelector('.hero'); //get the current Hero item
@@ -36,24 +35,49 @@ function pageReady () {
     this.classList.add('hero');//make the clicked target the new Hero
   }//end of focusItem
 
+
+//ADD LISTENERS
   //add click listeners to all images in gallery
   addListener(gallery1Images, "click", focusItem);
   addListener(gallery2Images, "click", focusItem);
 
-  //add click listener for Form elements
+  //add Event listeners to the inputFields and labelFields
+  for (var i = 0; i < inputFields.length; i ++ ) {
+    let targetLabel = labelFields[i];
+    inputFields[i].addEventListener("focus", function(){
+    labelSmall(targetLabel);
+    },false);
+    inputFields[i].addEventListener("blur", function(){
+    labelNormal(targetLabel);
+    },false);
+    inputFields[i].addEventListener("change", function(){
+    checkValue(targetLabel); //when there's a change in the value, check if there's anything in the input
+    },false);
+  }
+
+  //add Event listeners to the Form Buttons
+  formHandler.addEventListener('submit', onSubmission, false);
   addListener(quoteBtns, "click", showForm);
   closeBtn.addEventListener("click", hideForm, false);
-
+  closeThanksBtn.addEventListener("click", closeThanks, false);
 
 // FORM SCRIPTS
   function showForm() {
-  formHandler.style.left = "2%";
+  formHandler.reset(); //reset the form for a new submission
+  formHandler.style.left = "5%";
   }//end of showForm
 
   function hideForm() {
   formHandler.removeAttribute("style");
-  formHandler.reset();
   }//end of hideForm
+
+  function showThanks() {
+  thanks.style.display = "block";
+  }//end of showThanks
+
+  function closeThanks() {
+  thanks.removeAttribute("style");
+  }//end of showThanks
 
   function labelSmall (label) {
     label.classList.add('small');
@@ -79,138 +103,117 @@ function pageReady () {
     }
   }//end of checkValue
 
-//add Event listeners to the inputFields and labelFields
-for (var i = 0; i < inputFields.length; i ++ ) {
-  let targetLabel = labelFields[i];
-  inputFields[i].addEventListener("focus", function(){
-  labelSmall(targetLabel);
-  },false);
-  inputFields[i].addEventListener("blur", function(){
-  labelNormal(targetLabel);
-  },false);
-  inputFields[i].addEventListener("change", function(){
-  checkValue(targetLabel); //when there's a change in the value, check if there's anything in the input
-  },false);
-}
 
 
-//Form Handling
-var today = new Date().getTime();
-var maxDate = new Date(today).setDate(60);
-var minDate = new Date(today).setDate(14);
-//figure out Date format and comparing
+  //VALIDATE FORM INPUT
+  var today = new Date();
+  var maxDate = new Date(today.getTime() + 60 * 24 * 60 * 60 * 1000);//this is furthest in advance a customer can book
+  var minDate = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);//this is the soonest a customer can book
 
-var datePicker = document.getElementById("event_date");
-datePicker.setAttribute("min",minDate);
-datePicker.setAttribute("max",maxDate);
+  var eventDetails = {
+    name: "",
+    email: "",
+    phone: "",
+    location: "",
+    size: "",
+    date: ""
+  };
 
-// var dateRegEx = / /;
-//get date picker element
-//restrict min and max of possible event_date
+  //setup regEx Object validator
+  var validator = {
+    alphaOnly: /^[A-Za-z ]+$/, //check only letters
+    email: /[^@]+@[^@]+$/, //valid email
+    phone: /^(\d{10})|(\d{3}-\d{3}-\d{4})$/, //valid canadian phone number
+    date: /^(\d{2}\/\d{2}\/\d{4})|(\d{4}-\d{2}-\d{2})$/ //check date
+  };
 
-var eventDetails = {
-  name: "",
-  email: "",
-  phone: "",
-  location: "",
-  size: "",
-  date: ""
-};
+  function onSubmission(e) {
+    e.preventDefault();
+    //put form details into eventDetails Object
+    eventDetails.name = formHandler.cust_name.value;
+    eventDetails.email = formHandler.cust_email.value;
+    eventDetails.phone = formHandler.cust_phone.value;
+    eventDetails.location = formHandler.location.value;
+    eventDetails.size = formHandler.party_size.value;
+    eventDetails.date = formHandler.event_date.value;
 
-//setup regEx Object
-var validator = {
-  alphaOnly: /^[A-Za-z ]+$/, //check only letters
-  email: /[^@]+@[^@]+$/, //valid email
-  phone: /^(\d{10})|(\d{3}-\d{3}-\d{4})$/, //valid canadian phone number
-  date: /^(\d{2}\/\d{2}\/\d{4})|(\d{4}-\d{2}-\d{2})$/ //check date
-};
+    //Use validator object to check certain RegEx of the values - results are Bool
+    var name = validator.alphaOnly.test(eventDetails.name);
+    var email = validator.email.test(eventDetails.email);
+    var phone = validator.phone.test(eventDetails.phone);
+    var location = validator.alphaOnly.test(eventDetails.location);
+    var size = validator.alphaOnly.test(eventDetails.size);
+    var date = validator.date.test(eventDetails.date);
 
-console.log(feedback);
-function onSubmission() {
-//put info into eventDetails Object
-eventDetails.name = formHandler.cust_name.value;
-eventDetails.email = formHandler.cust_email.value;
-eventDetails.phone = formHandler.cust_phone.value;
-eventDetails.location = formHandler.location.value;
-eventDetails.size = formHandler.party_size.value;
-eventDetails.date = Date.parse(formHandler.event_date.value);
+    //check valid Name
+    if (name == false) {
+      feedback[0].style.display = "block";
+      feedback[0].textContent = "Must be only letters and spaces";
+    } else {
+      feedback[0].removeAttribute('style');
+      feedback[0].textContent = "";
+    }
 
-//Use validator object to check certain RegEx of the values - results are Bool
-var name = validator.alphaOnly.test(eventDetails.name);
-var email = validator.email.test(eventDetails.email);
-var phone = validator.phone.test(eventDetails.phone);
-var location = validator.alphaOnly.test(eventDetails.location);
-var size = validator.alphaOnly.test(eventDetails.size);
-var date = validator.date.test(eventDetails.date);
+    //check valid email
+    if (email == false) {
+      feedback[1].style.display = "block";
+      feedback[1].textContent = "Must be valid email address";
+    } else {
+      feedback[1].removeAttribute('style');
+      feedback[1].textContent = "";
+    }
 
+    //check valid phone
+    if (phone == false) {
+      feedback[2].style.display = "block";
+      feedback[2].textContent = "Format must be 416-123-4567";
+    } else {
+      feedback[3].removeAttribute('style');
+      feedback[3].textContent = "";
+    }
 
-//check valid Name
-if (name == false) {
-  feedback[0].style.display = "block";
-  feedback[0].textContent = "Must be only letters and spaces";
-  // return false;
-} else {
-  feedback[0].removeAttribute('style');
-  feedback[0].textContent = "";
-}
+    //check valid location as AX or KN
+    if (eventDetails.location == "AX" || eventDetails.location == "KN" ) {
+        feedback[3].removeAttribute('style');
+        feedback[3].textContent = "";
+      } else {
+        feedback[3].style.display = "block";
+        feedback[3].textContent = "Not valid entry";
+        location = false;
+    }
 
-//check valid email
-if (email == false) {
-  feedback[1].style.display = "block";
-  feedback[1].textContent = "Must be valid email address";
-  // return false;
-} else {
-  feedback[1].removeAttribute('style');
-  feedback[1].textContent = "";
-}
+    //check valid size
+    if (eventDetails.size == "small" || eventDetails.size == "medium" || eventDetails.size == "large" ) {
+      feedback[4].removeAttribute('style');
+      feedback[4].textContent = "";
+      } else {
+        feedback[4].style.display = "block";
+        feedback[4].textContent = "Not valid entry";
+        size = false;
+      }
 
+    //check valid date
+    if (eventDetails.date == NaN || eventDetails.date == null || eventDetails.date == "") {
+        feedback[5].style.display = "block";
+        feedback[5].textContent = "Date must not be empty";
+        date = false;
+    } else if (Date.parse(eventDetails.date) > maxDate || Date.parse(eventDetails.date) < minDate) {
+        feedback[5].style.display = "block";
+        feedback[5].textContent = "Event must not be less than 1 week or more than 60 days from today";
+        date = false;
+    } else {
+      feedback[5].removeAttribute('style');
+      feedback[5].textContent = "";
+      date = true;
+    }
 
-//check valid phone
-if (phone == false) {
-  feedback[2].style.display = "block";
-  feedback[2].textContent = "Format must be 416-123-4567";
-  // return false;
-} else {
-  feedback[3].removeAttribute('style');
-  feedback[3].textContent = "";
-}
-//check valid location as AX or KN
-if (location == false || eventDetails.location != "AX" || eventDetails.location != "KN" ) {
-    feedback[3].style.display = "block";
-    feedback[3].textContent = "Not valid entry";
-    // return false;
-  } else {
-  feedback[3].removeAttribute('style');
-  feedback[3].textContent = "";
-}
+    if (name && email && phone && location && size && date) {
+        formHandler.removeAttribute("style");
+        showThanks();
+    }
 
-//check valid size
-if (eventDetails.size != "small" || eventDetails.size != "medium" || eventDetails.size != "large" ) {
-    feedback[4].style.display = "block";
-    feedback[4].textContent = "Not valid entry";
-    // return false;
-  } else {
-    feedback[4].removeAttribute('style');
-    feedback[4].textContent = "";
-  }
-
-console.log(formHandler.event_date.value);
-
-console.log(eventDetails.date);
-console.log(minDate);
-console.log(maxDate);
-//check valid date
-if (date == false || eventDetails.date == " " || eventDetails.date == null || eventDetails.date < minDate || eventDetails.date > maxDate) {
-    feedback[5].style.display = "block";
-    feedback[5].textContent = "Must not be less than 1 week or more than 60 days from today";
-    // return false;
-
-}
-
-//
-// return false; //prevent action attribute
-} //end of onSubmission
-formHandler.addEventListener('submit', onSubmission, false);
+    return false; //prevent action attribute
+  } //end of onSubmission
 
 
 }//end of pageready
