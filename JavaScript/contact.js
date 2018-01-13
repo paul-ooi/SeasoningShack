@@ -1,6 +1,4 @@
-// NOTE:
-// JS: Hours based on day is missing
-
+console.log("Photos are downloaded from https://www.pexels.com/");
 
 // Global Variables and Functions
 var _gid = function(p_id) {
@@ -26,7 +24,6 @@ kensingtonHours.innerHTML = "Open until " + hour + "pm on " + day;
 
 
 // Form Section
-
 // Display Message
 function displayMessage(p_nm, p_phone, p_email, p_subject, p_promo, p_msg) {
   var displayConfirmation = _gid("confirmation");

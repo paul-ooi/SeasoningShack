@@ -1,3 +1,5 @@
+console.log("All images used in this page are downloaded from https://www.vecteezy.com/");
+
 window.onload = pageReady;
 
 function pageReady() {
