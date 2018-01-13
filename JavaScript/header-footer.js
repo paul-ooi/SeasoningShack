@@ -22,4 +22,9 @@ function pageReady() {
 
   fullpage.addEventListener("scroll",resizeHeader,false);//Listen for scrolled movement
 
+  //Update the Copyright to current year
+  var copyright = document.getElementById('copyright-year');
+  var currentYear = new Date();
+  copyright.textContent = currentYear.getFullYear();
+
 }//end of pageReady
