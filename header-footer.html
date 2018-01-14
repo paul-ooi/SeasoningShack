@@ -4,12 +4,20 @@
     <title>Header and Footer Template</title>
     <!-- Header and Footer created by Paul Ooi -->
     <meta charset="utf-8"/>
-    <link href="CSS/header-footer-style.css" type="text/css" rel="stylesheet"/>
+    <link href="CSS/header-footer-style.css" type="text/css" rel="stylesheet"/> <!-- BE SURE TO INCLUDE THE CSS FOR HEADER AND FOOTER -->
     <link href="CSS/general.css" type="text/css" rel="stylesheet"/>
-    <script src="JavaScript/header-footer.js"></script>
+    <script src="JavaScript/header-footer.js"></script> <!-- BE SURE TO INCLUDE THE JS FOR HEADER AND FOOTER -->
+    <!-- ORDER TO INCLUDE LINKED FILES
+    CSS - HEADER AND FOOTER
+    CSS - GENERAL STYLES
+    CSS - YOUR PAGE STYLES
+    JS - HEADER AND FOOTER
+    JS - YOUR PAGE JS    
+     -->
   </head>
   <body>
-  <header class="large">
+    <!-- THIS HEADER CAN BE COPIED DIRECTLY ONTO YOUR PAGE ABOVE YOUR "MAIN SECTION", BEFORE OPENING WRAPPER DIV TAG -->
+    <header class="large">
       <nav id="main-nav">
         <ul>
           <li><a href="menu.html">menu</a></li>
@@ -24,9 +32,10 @@
   </header>
     <div class="wrapper">
       <main>
-
+        <!-- THIS IS WHERE YOUR CONTENT WILL GO -->
       </main>
-    <footer>
+      <!-- THIS FOOTER CAN BE COPIED DIRECTLY ONTO YOUR PAGE BELOW YOUR "MAIN SECTION", BEFORE CLOSING THE WRAPPER DIV TAG -->
+      <footer>
         <section id="social-media">
           <h2 class="hidden">Social Media Icons</h2>
           <div class="social" id="fbook"><a href="http://www.facebook.com"><img src="images/social-icons/facebook.png" alt="Like and Follow us on Facebook" title="Like and Follow us on Facebook"/></a></div>
@@ -53,7 +62,8 @@
               <li><a href="#">Privacy</a></li>
               <li><a href="#">Terms of Use</a></li>
           </ul>
-              &copy; Seasoning Shack <span id="copyright-year">2017</span>
+          <!-- THE COPYRIGHT YEAR WILL BE AUTOMATICALLY CHANGED TO BE UPDATED TO THE CURRENT YEAR -->
+          &copy; Seasoning Shack <span id="copyright-year">2017</span>
       </div>
       <img class="background" src="images/pexels-photo-672046.jpg" alt="spices on worksurface"/>
       <cite>pexels-photo-672046.jpg - Original photo (https://www.pexels.com/photo/macro-photography-of-pepper-powder-672046/)</cite>
