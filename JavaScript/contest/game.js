@@ -36,6 +36,4 @@ function Game() {
     htmlGameover.style.height = '100%';
   }
 
-
-
 }

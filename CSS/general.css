@@ -67,7 +67,7 @@ main ol>li{
 
 /* 3. GENERAL CLASS SELECTOR */
 .hidden{
-  left: -10000px; /* Changed DEC 12, from -100% to -10000px because hidden element was shown when minimize the browser*/
+  left: -10000px;
 }
 .flex-container{
   display: flex;
@@ -81,7 +81,7 @@ main ol>li{
   margin: 0 auto;
   text-align: center;
 }
-/*Remove if you don't need a button on your page.*/
+
 .link-button{
   display: block;
   width: 20rem;

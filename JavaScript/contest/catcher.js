@@ -28,11 +28,8 @@ this.moveCatcher = function() {
     catcherX = mouseX;
   }
     htmlCatcher.style.left = catcherX - self.width/2 + "px";
-
+    
     return catcherX;
   }
-
-
-
 
 }
