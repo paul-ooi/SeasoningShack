@@ -13,12 +13,14 @@ var kensingtonHours = _gid("kensington-hours");
 var today = new Date();
 var day = dayArray[today.getDay()];
 var hour = 0;
-if (day == 0|| day==6) {
+if (today.getDay() == 0 || today.getDay()==6) {
   hour = 11;
 }
 else {
   hour = 10;
 }
+console.log();
+
 annexHours.innerHTML = "Open until " + hour + "pm on " + day;
 kensingtonHours.innerHTML = "Open until " + hour + "pm on " + day;
 
