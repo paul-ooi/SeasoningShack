@@ -102,4 +102,5 @@ main ol>li{
 cite {
   position: absolute;
   opacity: 0;
+  z-index: -10;
 }
