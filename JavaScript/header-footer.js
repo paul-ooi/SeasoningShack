@@ -19,7 +19,8 @@ function pageReady() {
       header.classList.add('small');
       }
   }//End of resizeHeader
-  resizeHeader();
+  
+  resizeHeader();//Resize the header on page load, to accomodate links down a page (like Specials)
   fullpage.addEventListener("scroll",resizeHeader,false);//Listen for scrolled movement
 
   //Update the Copyright to current year
