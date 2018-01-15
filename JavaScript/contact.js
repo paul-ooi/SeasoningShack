@@ -1,5 +1,3 @@
-console.log("Photos are downloaded from https://www.pexels.com/");
-
 // Global Variables and Functions
 var _gid = function(p_id) {
   var id = document.getElementById(p_id);
