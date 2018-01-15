@@ -19,7 +19,7 @@ function pageReady() {
       header.classList.add('small');
       }
   }//End of resizeHeader
-
+  resizeHeader();
   fullpage.addEventListener("scroll",resizeHeader,false);//Listen for scrolled movement
 
   //Update the Copyright to current year
