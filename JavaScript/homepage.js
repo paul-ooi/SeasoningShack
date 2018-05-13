@@ -1,21 +1,22 @@
 window.addEventListener('load', pageReady, false);
 
 function pageReady() {
-  //Grab Slides and Slider Index
+  //Grab Slides
   var promoSlides = document.getElementsByClassName('promo-detail');
-  // console.log(promoSlides);
+  
+  //Get Slider Index
   var promoIndexContainer = document.getElementById('feature-index');
-  // console.log(promoIndexContainer);
   var promoIndex = promoIndexContainer.getElementsByTagName('li');
-  // console.log(promoIndex);
+
   var currentSlide;
   var currentIndex;
 
 
-  //Setup the Interval and counter variables
+  //Setup the Interval and counter variables for Slider
   var runInterval;
   var counter = 0;
 
+  //Function that advances the slide in order
   function changeSlide() {
     counter++; //advance counter to be used to target the next sibling
     //If the counter goes past the max number of slides, it goes back to the start
@@ -53,7 +54,6 @@ function pageReady() {
   //Helper function to add Listener to a List of elements
   function addListener (listVar, eventString, funcName) {
     for (var i=0; i < listVar.length; i++) {
-      // console.log(listVar[i]);
       //Pass the target object to the function called by the eventListener
       listVar[i].addEventListener(eventString,function(){funcName(this)}, false);
     }//end of for loop

@@ -21,18 +21,18 @@ function pageReady () {
   //HELPER FUNCTION
   //add event listeners to elements
   function addListener (listVar, eventString, funcName) {
-    for (var i=0; i < listVar.length; i++) {
-      listVar[i].addEventListener(eventString, funcName, false);
-    }
+      for (var i=0; i < listVar.length; i++) {
+        listVar[i].addEventListener(eventString, funcName, false);
+      }
   }//end of addListener
 
 
   // GALLERY SCRIPTS
   //enlarge selected gallery item
   function focusItem () {
-    var currentHero = this.parentElement.querySelector('.hero'); //get the current Hero item
-    currentHero.classList.remove('hero');
-    this.classList.add('hero');//make the clicked target the new Hero
+      var currentHero = this.parentElement.querySelector('.hero'); //get the current Hero item
+      currentHero.classList.remove('hero');
+      this.classList.add('hero');//make the clicked target the new Hero
   }//end of focusItem
 
 
@@ -43,16 +43,16 @@ function pageReady () {
 
   //add Event listeners to the inputFields and labelFields
   for (var i = 0; i < inputFields.length; i ++ ) {
-    let targetLabel = labelFields[i];
-    inputFields[i].addEventListener("focus", function(){
-    labelSmall(targetLabel);
-    },false);
-    inputFields[i].addEventListener("blur", function(){
-    labelNormal(targetLabel);
-    },false);
-    inputFields[i].addEventListener("change", function(){
-    checkValue(targetLabel); //when there's a change in the value, check if there's anything in the input
-    },false);
+      let targetLabel = labelFields[i];
+      inputFields[i].addEventListener("focus", function(){
+      labelSmall(targetLabel);
+      },false);
+      inputFields[i].addEventListener("blur", function(){
+      labelNormal(targetLabel);
+      },false);
+      inputFields[i].addEventListener("change", function(){
+      checkValue(targetLabel); //when there's a change in the value, check if there's anything in the input
+      },false);
   }
 
   //add Event listeners to the Form Buttons
@@ -63,44 +63,44 @@ function pageReady () {
 
 // FORM SCRIPTS
   function showForm() {
-  formHandler.reset(); //reset the form for a new submission
-  formHandler.style.left = "5%";
+      formHandler.reset(); //reset the form for a new submission
+      formHandler.style.left = "5%";
   }//end of showForm
 
   function hideForm() {
-  formHandler.removeAttribute("style");
+      formHandler.removeAttribute("style");
   }//end of hideForm
 
   function showThanks() {
-  thanks.style.display = "block";
+      thanks.style.display = "block";
   }//end of showThanks
 
   function closeThanks() {
-  thanks.removeAttribute("style");
+      thanks.removeAttribute("style");
   }//end of showThanks
 
   function labelSmall (label) {
-    label.classList.add('small');
+      label.classList.add('small');
   }//end of labelSmall
 
   function labelNormal (label) {
-    label.removeAttribute('class');
+      label.removeAttribute('class');
   }//end of labelNormal
 
   function checkValue(label) {
-    var content = label.nextElementSibling.value;
-    var feedbackLabel = label.parentElement.children[2];
-    //If there's content in the Input, keep the label hidden
-    if (content != "" || content != null) {
-    //If the content is present
-    label.style.display = "none";
-    feedbackLabel.removeAttribute('style');
-    } else {
-    //content is not present, bring back the label
-    label.removeAttribute('style');
-    feedbackLabel.style.display = "block";
-    feedbackLabel.textContent = "Must not be empty";
-    }
+      var content = label.nextElementSibling.value;
+      var feedbackLabel = label.parentElement.children[2];
+      //If there's content in the Input, keep the label hidden
+      if (content != "" || content != null) {
+          //If the content is present
+          label.style.display = "none";
+          feedbackLabel.removeAttribute('style');
+      } else {
+          //content is not present, bring back the label
+          label.removeAttribute('style');
+          feedbackLabel.style.display = "block";
+          feedbackLabel.textContent = "Must not be empty";
+      }
   }//end of checkValue
 
 
@@ -111,20 +111,20 @@ function pageReady () {
   var minDate = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);//this is the soonest a customer can book
 
   var eventDetails = {
-    name: "",
-    email: "",
-    phone: "",
-    location: "",
-    size: "",
-    date: ""
+      name: "",
+      email: "",
+      phone: "",
+      location: "",
+      size: "",
+      date: ""
   };
 
   //setup regEx Object validator
   var validator = {
-    alphaOnly: /^[A-Za-z ]+$/, //check only letters
-    email: /[^@]+@[^@]+$/, //valid email
-    phone: /^(\d{10})|(\d{3}-\d{3}-\d{4})$/, //valid canadian phone number
-    date: /^(\d{2}\/\d{2}\/\d{4})|(\d{4}-\d{2}-\d{2})$/ //check date
+      alphaOnly: /^[A-Za-z ]+$/, //check only letters
+      email: /[^@]+@[^@]+$/, //valid email
+      phone: /^(\d{10})|(\d{3}-\d{3}-\d{4})$/, //valid canadian phone number
+      date: /^(\d{2}\/\d{2}\/\d{4})|(\d{4}-\d{2}-\d{2})$/ //check date
   };
 
   function onSubmission(e) {
@@ -147,69 +147,69 @@ function pageReady () {
 
     //check valid Name
     if (name == false) {
-      feedback[0].style.display = "block";
-      feedback[0].textContent = "Must be only letters and spaces";
+        feedback[0].style.display = "block";
+        feedback[0].textContent = "Must be only letters and spaces";
     } else {
-      feedback[0].removeAttribute('style');
-      feedback[0].textContent = "";
+        feedback[0].removeAttribute('style');
+        feedback[0].textContent = "";
     }
 
     //check valid email
     if (email == false) {
-      feedback[1].style.display = "block";
-      feedback[1].textContent = "Must be valid email address";
+        feedback[1].style.display = "block";
+        feedback[1].textContent = "Must be valid email address";
     } else {
-      feedback[1].removeAttribute('style');
-      feedback[1].textContent = "";
+        feedback[1].removeAttribute('style');
+        feedback[1].textContent = "";
     }
 
     //check valid phone
     if (phone == false) {
-      feedback[2].style.display = "block";
-      feedback[2].textContent = "Format must be 416-123-4567";
+        feedback[2].style.display = "block";
+        feedback[2].textContent = "Format must be 416-123-4567";
     } else {
-      feedback[3].removeAttribute('style');
-      feedback[3].textContent = "";
+        feedback[3].removeAttribute('style');
+        feedback[3].textContent = "";
     }
 
     //check valid location as AX or KN
     if (eventDetails.location == "AX" || eventDetails.location == "KN" ) {
-        feedback[3].removeAttribute('style');
-        feedback[3].textContent = "";
+          feedback[3].removeAttribute('style');
+          feedback[3].textContent = "";
       } else {
-        feedback[3].style.display = "block";
-        feedback[3].textContent = "Not valid entry";
-        location = false;
+          feedback[3].style.display = "block";
+          feedback[3].textContent = "Not valid entry";
+          location = false;
     }
 
     //check valid size
     if (eventDetails.size == "small" || eventDetails.size == "medium" || eventDetails.size == "large" ) {
-      feedback[4].removeAttribute('style');
-      feedback[4].textContent = "";
+          feedback[4].removeAttribute('style');
+          feedback[4].textContent = "";
       } else {
-        feedback[4].style.display = "block";
-        feedback[4].textContent = "Not valid entry";
-        size = false;
+          feedback[4].style.display = "block";
+          feedback[4].textContent = "Not valid entry";
+          size = false;
       }
 
     //check valid date
     if (eventDetails.date == NaN || eventDetails.date == null || eventDetails.date == "") {
-        feedback[5].style.display = "block";
-        feedback[5].textContent = "Date must not be empty";
-        date = false;
+          feedback[5].style.display = "block";
+          feedback[5].textContent = "Date must not be empty";
+          date = false;
     } else if (Date.parse(eventDetails.date) > maxDate || Date.parse(eventDetails.date) < minDate) {
-        feedback[5].style.display = "block";
-        feedback[5].textContent = "Event must not be less than 1 week or more than 60 days from today";
-        date = false;
+          feedback[5].style.display = "block";
+          feedback[5].textContent = "Event must not be less than 1 week or more than 60 days from today";
+          date = false;
     } else {
-      feedback[5].removeAttribute('style');
-      feedback[5].textContent = "";
-      date = true;
+          feedback[5].removeAttribute('style');
+          feedback[5].textContent = "";
+          date = true;
     }
 
     if (name && email && phone && location && size && date) {
-        formHandler.removeAttribute("style");
-        showThanks();
+          formHandler.removeAttribute("style");
+          showThanks();
     }
 
     return false; //prevent action attribute

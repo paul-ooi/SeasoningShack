@@ -9,289 +9,305 @@ TABLE OF CONTENTS - Event Booking Styling (by Paul Ooi)
 *************************************************/
 
 /*1) GENERAL STYLING*/
+
 main {
-padding: 0;
+    padding: 0;
 }
 
 button {
-font-size: 1.6rem;
+    font-size: 1.6rem;
 }
 
-
 /*2) RESTAURANT DETAILS*/
+
 .button {
-display: block;
-background-color: rgb(165, 79, 80);
-color: #fff;
-padding: 0.5em 1em;
-border: 0;
-border-radius: 0.5em;
-min-width: 10em;
-width: 30%;
-height: 2.5em;
-margin: 2rem auto;
+    display: block;
+    background-color: rgb(165, 79, 80);
+    color: #fff;
+    padding: 0.5em 1em;
+    border: 0;
+    border-radius: 0.5em;
+    min-width: 10em;
+    width: 30%;
+    height: 2.5em;
+    margin: 2rem auto;
 }
 
 .button:hover {
-font-weight: normal;
-cursor: pointer;
+    font-weight: normal;
+    cursor: pointer;
 }
 
 h1 {
-color: #404040;
-margin: 1.5em auto;
-text-align: center;
-font-size: 2rem;
+    color: #404040;
+    margin: 1.5em auto;
+    text-align: center;
+    font-size: 2rem;
 }
 
 .details {
-position: relative;
-display: flex;
-justify-content: flex-end;
-align-items: flex-start;
-flex-wrap: wrap;
-margin-bottom: 3em;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 3em;
 }
 
 .details h3 {
-flex: 0 0 50%;
-padding: 0.5em 1em 0.5em 0.75em;
-margin: 0 0 1em 0;
-background-color: #404040;
-color: rgb(154, 185, 151);
+    flex: 0 0 50%;
+    padding: 0.5em 1em 0.5em 0.75em;
+    margin: 0 0 1em 0;
+    background-color: #404040;
+    color: rgb(154, 185, 151);
 }
 
 .restaurant_description {
-flex: 0 0 45%;
+    flex: 0 0 45%;
 }
 
 .options {
-flex: 1 1 55%;
-text-align: center;
+    flex: 1 1 55%;
+    text-align: center;
 }
 
 .details th {
-text-align: right;
-vertical-align: top;
-padding-right: 2em;
+    text-align: right;
+    vertical-align: top;
+    padding-right: 2em;
 }
 
 .details td {
-text-align: left;
-vertical-align: top;
+    text-align: left;
+    vertical-align: top;
 }
 
 .details table ul {
-padding: 0;
-margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .details table li {
-margin: 0;
-display: inline-block;
+    margin: 0;
+    display: inline-block;
 }
 
 .details table li:not(:last-child)::after {
-content: ", ";
+    content: ", ";
 }
 
 /*3) RESTAURANT GALLERY */
+
 .gallery {
-height: 300px;
-width: 100%;
-overflow: hidden;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .gallery figure {
-flex: 1 1 auto;
-margin: 0;
-padding: 0;
-overflow: hidden;
+    flex: 1 1 auto;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 .gallery figure.hero {
-flex: 1 0 auto;
+    flex: 1 0 auto;
 }
 
 .gallery figure:not(.hero):hover img {
-opacity: 0.7;
-transform: scale(1.05);
+    opacity: 0.7;
+    transform: scale(1.05);
 }
 
 /*4) FORM STYLING */
+
 #thanks {
-display: none;
-position: fixed;
-background-color: rgba(165, 79, 80, 0.95);
-color: rgb(255, 222, 192);
-padding: 6rem;
-top: 10%;
-margin: 0 auto;
-z-index: 35;
+    display: none;
+    position: fixed;
+    background-color: rgba(165, 79, 80, 0.95);
+    color: rgb(255, 222, 192);
+    padding: 6rem;
+    top: 10%;
+    margin: 0 auto;
+    z-index: 35;
 }
 
 #quote {
-position: fixed;
-top: 5%;
-background-color: rgba(165, 79, 80, 0.95);
-padding: 2em;
-display: flex;
-flex-wrap: wrap;
-flex-direction: row;
-justify-content: flex-end;
-max-width: 50%;
-box-shadow: 0.2em 0.2em 4em #404040;
-z-index: 30;
+    position: fixed;
+    top: 5%;
+    background-color: rgba(165, 79, 80, 0.95);
+    padding: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    max-width: 50%;
+    box-shadow: 0.2em 0.2em 4em #404040;
+    z-index: 30;
 }
 
-#quote > *:not(fieldset) {
-flex: 1 1 100%;
+#quote>*:not(fieldset) {
+    flex: 1 1 100%;
 }
 
-#quote > fieldset {
-flex: 1 0 40%;
+#quote>fieldset {
+    flex: 1 0 40%;
 }
 
-#quote h2, #quote h3, #event_info label:not(.feedback_msg) {
-color: rgb(255, 222, 192);
-margin: 0 0 2rem;
-text-transform: unset;
+#quote h2,
+#quote h3,
+#event_info label:not(.feedback_msg) {
+    color: rgb(255, 222, 192);
+    margin: 0 0 2rem;
+    text-transform: unset;
 }
 
-#cust_info div, #event_info div {
-margin: 1.25rem auto;
+#cust_info div,
+#event_info div {
+    margin: 1.25rem auto;
 }
 
 #cust_info input {
-border-radius: 0.5rem;
-border: 0;
-width: 90%;
-padding: 1rem;
+    border-radius: 0.5rem;
+    border: 0;
+    width: 90%;
+    padding: 1rem;
 }
 
 #event_info select {
-margin: 0 1em;
-padding: 0.5rem;
-border: 0;
-border-radius: 0.5rem;
+    margin: 0 1em;
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 0.5rem;
 }
 
 #cust_info label:not(.feedback_msg) {
-position: absolute;
-padding-left: 1.5rem;
-margin: 0.5em auto;
-color: #404040;
+    position: absolute;
+    padding-left: 1.5rem;
+    margin: 0.5em auto;
+    color: #404040;
 }
 
-#quote input:focus, #quote select:focus {
-background-color: rgb(255, 222, 192);
-color: #404040;
+#quote input:focus,
+#quote select:focus {
+    background-color: rgb(255, 222, 192);
+    color: #404040;
 }
 
 #cust_info label.small {
-right: 15%;
-text-align: right;
-transform-origin: right top;
-font-size: 1rem;
+    right: 15%;
+    text-align: right;
+    transform-origin: right top;
+    font-size: 1rem;
 }
 
 fieldset {
-position: relative;
-border: 0;
-padding: 0 0 0 1.5rem;
-margin: 0 0 1rem;
+    position: relative;
+    border: 0;
+    padding: 0 0 0 1.5rem;
+    margin: 0 0 1rem;
 }
 
 legend {
-margin-bottom: 1.5rem;
-font-weight: 700;
-font-size: 2rem;
-line-height: 2rem;
-position: relative;
-left: -1.5rem;
-color: #FFF;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2rem;
+    position: relative;
+    left: -1.5rem;
+    color: #FFF;
 }
 
 #event_date {
-padding: 0;
-margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 #event_date legend {
-color: rgb(255, 222, 192);
-font-weight: normal;
-font-size: unset;
-left: unset;
-margin: 0;
-padding: 0;
+    color: rgb(255, 222, 192);
+    font-weight: normal;
+    font-size: unset;
+    left: unset;
+    margin: 0;
+    padding: 0;
 }
 
 .feedback_msg {
-display: none;
-background-color: rgb(43,54,58);
-color: rgb(154, 185, 151);
-padding: 0.25em;
-vertical-align: middle;
-border-radius: 0.5rem;
-margin-bottom: 3rem;
-margin-top: 0.25em;
-max-width: 90%;
+    display: none;
+    background-color: rgb(43, 54, 58);
+    color: rgb(154, 185, 151);
+    padding: 0.25em;
+    vertical-align: middle;
+    border-radius: 0.5rem;
+    margin-bottom: 3rem;
+    margin-top: 0.25em;
+    max-width: 90%;
 }
 
 #quote button {
-font-size: 1.3rem;
-cursor: pointer;
-margin: unset;
-width: unset;
-margin-top: 2rem;
-max-width: 25em;
-border: 2px solid rgb(255, 222, 192);
-text-transform: uppercase;
-font-kerning: auto;
-flex: 1 0 100%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin: unset;
+    width: unset;
+    margin-top: 2rem;
+    max-width: 25em;
+    border: 2px solid rgb(255, 222, 192);
+    text-transform: uppercase;
+    font-kerning: auto;
+    flex: 1 0 100%;
 }
 
 #quote button:hover {
-background-color: rgba(255, 222, 192, 0.45);
-font-weight: 900;
-color: #404040;
+    background-color: rgba(255, 222, 192, 0.45);
+    font-weight: 900;
+    color: #404040;
 }
 
-#close, #close2 {
-cursor: pointer;
-position: absolute;
-transform-origin: right top;
-top: 1em;
-right: 1em;
-width: 3em;
-height: 3em;
-opacity: 0.5;
-transition: all 200ms ease-in-out;
+#close,
+#close2 {
+    cursor: pointer;
+    position: absolute;
+    transform-origin: right top;
+    top: 1em;
+    right: 1em;
+    width: 3em;
+    height: 3em;
+    opacity: 0.5;
+    transition: all 200ms ease-in-out;
 }
 
 /*5) CLOSE BUTTON*/
-#close div , #close2 div {
-position: relative;
+
+#close div,
+#close2 div {
+    position: relative;
 }
 
-#close:hover , #close2:hover {
-opacity: 1;
+#close:hover,
+#close2:hover {
+    opacity: 1;
 }
 
-#line1, #line2, #line3, #line4 {
-position: absolute;
-top: 2rem;
-width: 3em;
-height: 0.5rem;
-background-color: rgb(255, 222, 192);
-border: 0;
-border-radius: 0.25rem;
+#line1,
+#line2,
+#line3,
+#line4 {
+    position: absolute;
+    top: 2rem;
+    width: 3em;
+    height: 0.5rem;
+    background-color: rgb(255, 222, 192);
+    border: 0;
+    border-radius: 0.25rem;
 }
 
-#line1, #line3 {
-transform: rotate(45deg);
+#line1,
+#line3 {
+    transform: rotate(45deg);
 }
 
-#line2, #line4 {
-transform: rotate(-45deg);
+#line2,
+#line4 {
+    transform: rotate(-45deg);
 }

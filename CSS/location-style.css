@@ -8,102 +8,107 @@ TABLE OF CONTENTS - Location Styling (by Paul Ooi)
 *************************************************/
 
 /*1) GENERAL STYLING*/
+
 main {
-padding: 0;
-margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
-margin: 1.5em auto;
-text-align: center;
-font-size: 2.5rem;
+  margin: 1.5em auto;
+  text-align: center;
+  font-size: 2.5rem;
 }
 
 /*2) RESTAURANT MAP AND STOREFRONT */
+
 .restaurant {
-position: relative;
+  position: relative;
 }
 
 .restaurant h2 {
-position: absolute;
-right: 0;
-bottom: 0;
-width: 30%;
-background-color: #404040;
-color: rgb(154, 185, 151);
-padding: 0.25em;
-margin: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 30%;
+  background-color: #404040;
+  color: rgb(154, 185, 151);
+  padding: 0.25em;
+  margin: 0;
 }
 
-.restaurant > div:first-of-type {
-position: relative;
-height: 30rem;
-overflow: hidden;
+.restaurant>div:first-of-type {
+  position: relative;
+  height: 30rem;
+  overflow: hidden;
 }
 
-img.map, iframe.map {
-object-fit: cover;
-flex: 1 1 70%;
+img.map,
+iframe.map {
+  object-fit: cover;
+  flex: 1 1 70%;
 }
 
 img.storefront {
-object-fit: cover;
-max-width: 30%;
+  object-fit: cover;
+  max-width: 30%;
 }
 
 .details {
-flex-flow: row nowrap;
-padding: 3rem 0 5rem;
+  flex-flow: row nowrap;
+  padding: 3rem 0 5rem;
 }
 
 .details div:first-of-type {
-flex: 1 0 30%;
-position: relative;
+  flex: 1 0 30%;
+  position: relative;
 }
 
 /*3) CONTACT DETAILS */
+
 .button {
-display: block;
-position: relative;
-width: 50%;
-background-color: rgb(165, 79, 80);
-color: #FFF;
-border-radius: 0.75rem;
-padding: 0.75rem 0;
-font-size: 1.75rem;
-text-align: center;
-vertical-align: middle;
+  display: block;
+  position: relative;
+  width: 50%;
+  background-color: rgb(165, 79, 80);
+  color: #FFF;
+  border-radius: 0.75rem;
+  padding: 0.75rem 0;
+  font-size: 1.75rem;
+  text-align: center;
+  vertical-align: middle;
 }
 
 a.button:hover {
-  font-weight:normal;
+  font-weight: normal;
 }
 
 .contact {
-flex: 1 0 40%;
-text-align: right;
-padding-right: 10%;
+  flex: 1 0 40%;
+  text-align: right;
+  padding-right: 10%;
 }
 
 .contact p {
-margin: 2rem 0;
+  margin: 2rem 0;
 }
 
 .contact span {
-display: block;
+  display: block;
 }
 
 .contact p:first-of-type {
-padding-top: 0;
+  padding-top: 0;
 }
 
 /*4) STORE HOURS */
+
 .details table {
-flex: 0 0 30%;
-line-height: 1.75em;
+  flex: 0 0 30%;
+  line-height: 1.75em;
 }
 
 .details th {
-text-align: left;
-padding-right: 2em;
+  text-align: left;
+  padding-right: 2em;
 }

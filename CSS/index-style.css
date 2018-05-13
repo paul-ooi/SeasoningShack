@@ -9,14 +9,15 @@ TABLE OF CONTENTS - Index-HomePage Styling (by Paul Ooi)
 *************************************************/
 
 /*1) GENERAL STYLING*/
+
 body {
-position: relative;
-margin: 0 auto;
-font-family: 'Lato', Helvetica, Arial, sans-serif;
+  position: relative;
+  margin: 0 auto;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
 }
 
 main {
-padding: 0;
+  padding: 0;
 }
 
 main p {
@@ -24,244 +25,250 @@ main p {
 }
 
 #company-branding h1 {
-margin: 0.4rem 1rem;
-font-size: 2.4rem;
-font-family: 'Kalam', Helvetica, Arial, sans-serif;
-text-align: center;
-text-transform: capitalize;
-font-weight:700;
-color: rgb(255, 222, 192);
-transition: all 300ms linear;
+  margin: 0.4rem 1rem;
+  font-size: 2.4rem;
+  font-family: 'Kalam', Helvetica, Arial, sans-serif;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 700;
+  color: rgb(255, 222, 192);
+  transition: all 300ms linear;
 }
 
 #food {
-position: relative;
-width: 100%;
-height: 44.2rem;
+  position: relative;
+  width: 100%;
+  height: 44.2rem;
 }
 
 #feature-slides {
-position: relative;
-width: 100%;
-height: 40rem;
+  position: relative;
+  width: 100%;
+  height: 40rem;
 }
 
 /*2) FEATURED SLIDES */
+
 #feature-slides ul {
-position: relative;
-height: 100%;
-list-style: none;
-padding: 0;
-margin: 0;
-overflow: hidden;
+  position: relative;
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 }
 
 li.promo-detail {
-position: absolute;
-display: inline-block;
-margin: 0;
-padding: 0;
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 
-li.promo-detail:not(.active){
-transform: translateX(100%);
-top: 0;
+li.promo-detail:not(.active) {
+  transform: translateX(100%);
+  top: 0;
 }
 
 .promo-detail a {
-position: absolute;
-display: block;
-width: 100%;
-height: 100%
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%
 }
 
 .promo_caption {
-position: absolute;
-right: 0;
-bottom: 3em;
-background-color: rgb(43, 54, 58);
-color: rgb(154, 185, 151);
-padding: 0.3em;
-line-height: 2.25em;
+  position: absolute;
+  right: 0;
+  bottom: 3em;
+  background-color: rgb(43, 54, 58);
+  color: rgb(154, 185, 151);
+  padding: 0.3em;
+  line-height: 2.25em;
 }
 
 .promo-detail h2 {
-font-size: 4.5rem;
+  font-size: 4.5rem;
 }
 
 .promo-detail h3 {
-font-size: 2.4rem;
-font-weight: 400;
-font-style: italic;
-text-transform: unset;
+  font-size: 2.4rem;
+  font-weight: 400;
+  font-style: italic;
+  text-transform: unset;
 }
 
 .promo-detail img {
-object-fit: cover;
-z-index: -10;
+  object-fit: cover;
+  z-index: -10;
 }
 
 #feature-index {
-position: absolute;
-bottom: 0;
-right: 0;
-margin: 0.5em 2em;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0.5em 2em;
 }
 
 #feature-index ol {
-padding: 0;
-margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 #feature-index li {
-display: inline-block;
-margin: 0 0.25em;
-width: 0.75em;
-height: 0.75em;
-border-radius: 100%;
-border: 1px solid rgb(255, 222, 192);
+  display: inline-block;
+  margin: 0 0.25em;
+  width: 0.75em;
+  height: 0.75em;
+  border-radius: 100%;
+  border: 1px solid rgb(255, 222, 192);
 }
 
 #feature-index li.current {
-background-color: rgb(255, 222, 192);
-border: 0;
+  background-color: rgb(255, 222, 192);
+  border: 0;
 }
 
 /*3) LOCATION SECTION */
+
 #locations {
-position: relative;
-width: 100%;
-padding: 2rem;
-margin-bottom: 4rem;
-flex-wrap: wrap;
-justify-content: space-between;
+  position: relative;
+  width: 100%;
+  padding: 2rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #locations h2 {
-width: 100%;
-color: rgb(43, 54, 58);
-text-align: center;
-margin-bottom: 2rem;
+  width: 100%;
+  color: rgb(43, 54, 58);
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 #locations h4 {
-margin-bottom: 6rem;
-text-transform: unset;
+  margin-bottom: 6rem;
+  text-transform: unset;
 }
 
-#location1, #location2 {
+#location1,
+#location2 {
   margin: 0 auto;
 }
 
 .details {
-text-align: center;
-flex-direction: row;
-flex-wrap: nowrap;
-align-items: center;
-justify-content: center;
-width: 50%;
-border-right: 1px solid rgb(43,54,58);
+  text-align: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  border-right: 1px solid rgb(43, 54, 58);
 }
 
 .details:last-of-type {
-border: unset;
-flex-direction: row-reverse;
+  border: unset;
+  flex-direction: row-reverse;
 }
 
 .store-front {
-width: 22.2rem;
-height: 22.2rem;
-margin: 0 2em;
-border-radius: 100%;
-overflow: hidden;
+  width: 22.2rem;
+  height: 22.2rem;
+  margin: 0 2em;
+  border-radius: 100%;
+  overflow: hidden;
 }
 
 .store-front img {
-height: 100%;
-width: auto;
+  height: 100%;
+  width: auto;
 }
 
 /*4) FOOD MENU SECTION */
+
 #food {
-position: relative;
-flex-direction: column;
-align-items: flex-end;
-overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-end;
+  overflow: hidden;
 }
 
 #food a {
-display: block;
-padding: 0.75rem 3rem;
-text-decoration: none;
-color: inherit;
+  display: block;
+  padding: 0.75rem 3rem;
+  text-decoration: none;
+  color: inherit;
 }
 
 #food div {
-position: relative;
-top: 20%;
-width: 30%;
+  position: relative;
+  top: 20%;
+  width: 30%;
 }
 
 #food h3 {
-font-size: 1.75em;
-font-weight: 900;
-background-color: rgb(43, 54, 58);
-color: rgb(154, 185, 151);
-text-transform: capitalize;
-margin: 1rem 0;
+  font-size: 1.75em;
+  font-weight: 900;
+  background-color: rgb(43, 54, 58);
+  color: rgb(154, 185, 151);
+  text-transform: capitalize;
+  margin: 1rem 0;
 }
 
 #food img {
-position:absolute;
-z-index: -10;
-width: 100%;
+  position: absolute;
+  z-index: -10;
+  width: 100%;
 }
 
 /*5) ADDITIONAL SERVICES */
+
 #services {
-position: relative;
-flex-flow: row nowrap;
-width: 100%;
-height: 28em;
+  position: relative;
+  flex-flow: row nowrap;
+  width: 100%;
+  height: 28em;
 }
 
-#services > div {
-position: relative;
-flex-flow: column nowrap;
-justify-content: center;
-align-items: center;
-flex: 1 1 50%;
-text-align: center;
-overflow: hidden;
+#services>div {
+  position: relative;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 50%;
+  text-align: center;
+  overflow: hidden;
 }
 
-#services > div:hover img {
-transform: scale(1.05);
+#services>div:hover img {
+  transform: scale(1.05);
 }
 
 #services span {
-text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 #services a {
-position: absolute;
-display: block;
-width: 100%;
-height: 100%;
-z-index: 5;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
 }
 
 #services img {
-position: absolute;
-height: 100%;
-z-index: -10;
-transition: transform 200ms ease-in;
+  position: absolute;
+  height: 100%;
+  z-index: -10;
+  transition: transform 200ms ease-in;
 }
 
-#bookings div, #gift-cards div {
-background-color: rgba(43, 54, 58, 0.8);
-color: rgb(154, 185, 151);
-padding: 3em 1em 1em;
-position: absolute;
-top: 0;
+#bookings div,
+#gift-cards div {
+  background-color: rgba(43, 54, 58, 0.8);
+  color: rgb(154, 185, 151);
+  padding: 3em 1em 1em;
+  position: absolute;
+  top: 0;
 }
