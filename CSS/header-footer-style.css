@@ -173,6 +173,31 @@ nav li {
     justify-content: space-between;
 }
 
+
+/* MOBILE MENU */
+@media screen and (min-width: 761px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+.menu-toggle {
+	padding: 8px;
+}
+.menu-toggle:hover {
+    cursor: pointer;
+}
+.menu-toggle .bar {
+    display: block;
+    height: 4px;
+    width: 25px;
+    margin-bottom: 5px;
+	background-color:rgb(255, 222, 192);
+	border-radius: 2px;
+}
+.menu-toggle .bar:last-child {
+    margin-bottom: 0;
+}
+
 /*4) COPYRIGHT & FOOTER*/
 
 footer nav {
@@ -297,17 +322,27 @@ footer {
     header {
         justify-content: flex-start;
     }
+    header.large {
+        padding: 0.7em 0;
+        height: auto;
+    }
+    header.small #company-branding {
+        flex: 1 1 70%;
+    }
     #logo {
-        margin-right: 1.5em;
+        margin-right: 0.4em;
+        min-height: 2em;
+        max-height: 3.5em;
+        width: auto;
     }
     #company-branding {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        margin-left: 5%;
+        margin-left: 3%;
         position: relative;
         z-index: 10;
-        flex: 1 1 45%;
+        flex: 1 1 1px;
         align-items: center;
     }
     #company-branding h2 {
@@ -316,10 +351,40 @@ footer {
     #main-nav {
         order: 2;
         flex: 0 1 33%;
+        position: relative;
+        margin-left: auto;
+        margin-right: 15px;
+        text-align: right;
     }
     #main-nav ul {
+        display: block;
         line-height: 2.25rem;
+        position: absolute;
+        top: -500%;
+        background-color: rgba(165, 79, 80, 0.95);
+        height: auto;
     }
+    #main-nav li{
+        display: block;
+        text-align: center;
+    }
+    .menu-toggle {
+        background-color: transparent;
+        border: 0;
+    }
+    .wrapper {
+        top: 5em;
+    }
+    /* .menu-toggle .bar {
+        display: block;
+        height: 5px;
+        width: 35px;
+        border-radius: 3px;
+        background-color:rgb(255, 222, 192);
+    }
+    .menu-toggle .bar:not(:last-child) {
+        margin-bottom: 5px;
+    } */
 }
 
 @media all and (max-width:700px) {
@@ -344,7 +409,10 @@ footer {
 }
 
 @media all and (max-width:670px) {
-    /* Need to put the Hidden Menu and hamburger */
+    #company-branding h1 {
+        left: 10000px;
+        position: absolute;
+    }
 }
 
 @media all and (max-width:400px) {

@@ -67,7 +67,12 @@ main ol>li{
 
 /* 3. GENERAL CLASS SELECTOR */
 .hidden{
-  left: -10000px;
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
 }
 .flex-container{
   display: flex;
